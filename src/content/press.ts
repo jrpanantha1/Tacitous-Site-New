@@ -1,6 +1,5 @@
-// Press articles migrated from the WordPress blog.
-// TODO: paste each article's full text into `body` from a WordPress export
-// (Tools > Export > Posts) and add the original publish date.
+// Press articles. Body entries are paragraphs; an entry starting with "## " is a subheading.
+// TODO: add each article's original publish date.
 export type PressPost = {
   slug: string;
   title: string;
@@ -22,9 +21,17 @@ export const posts: PressPost[] = [
     authors: ['Jordan Richards'],
     tags: ['Partnership'],
     body: [
-      'Tacitous has entered a strategic partnership with Knoco International, the Knowledge Management consulting and training organisation with more than 25 years of experience.',
-      'Knoco contributes KM expertise, methodology, advisory and training experience. Tacitous contributes the digital platform, tools and implementation capability. Together we help organisations retain expertise, share lessons learned and build the knowledge foundations they need to be ready for AI.',
-      '“Knoco brings world-class KM expertise,” said Jordan Richards, Founder of Tacitous.',
+      'Tacitous has entered a strategic partnership with Knoco International, the Knowledge Management consulting and training organisation with more than 25 years of experience helping organisations around the world learn from what they know.',
+      '“Knoco brings world-class KM expertise,” said Jordan Richards, Founder of Tacitous. “Together we can take organisations from KM strategy to a working platform their people actually use.”',
+      '## Why this partnership matters',
+      'Most organisations already value their knowledge. What they often lack is a working model for it. Expertise sits in silos, lessons learned are captured inconsistently or not at all, Communities of Practice start with energy and then stall, and when experienced people retire their knowledge leaves with them. At the same time, AI initiatives are being launched on top of institutional knowledge that has never been structured or validated.',
+      'Solving this takes two things that rarely come from the same place: proven KM methodology, and technology designed around that methodology rather than bolted on afterwards.',
+      '## Who brings what',
+      'Knoco contributes KM expertise, methodology, advisory and training experience. Tacitous contributes the digital platform, tools and implementation capability. Clients get one joined-up approach instead of a consultancy report on one side and a software licence on the other.',
+      '## What we can support together',
+      'KM strategy and governance; Communities of Practice; lessons learned; critical knowledge retention; knowledge transfer from retirees and subject matter experts; KM training and capability building; AI readiness through structured institutional knowledge; digital KM platforms and implementation support; and fractional KM leadership and advisory support.',
+      '## A shared commitment',
+      'Both organisations share the same belief: Knowledge Management is not about storing documents. It is about how organisations learn, collaborate, make decisions and turn experience into performance. If your organisation wants to strengthen its KM or prepare for AI transformation, we would be glad to talk.',
     ],
     external: { label: 'Visit Knoco International', url: 'https://knoco.com/' },
   },
@@ -36,9 +43,19 @@ export const posts: PressPost[] = [
     authors: ['Jordan Richards'],
     tags: ['AI', 'Critical knowledge'],
     body: [
-      'AI makes it faster than ever to produce reports, summaries and insights. It also creates a quieter institutional risk: output that looks authoritative but has lost its connection to real expertise.',
-      'Knowledge used to be tied to the people who held it, the context they worked in and the experience they had built up. We propose a knowledge trust layer that keeps that link, connecting knowledge to expertise, provenance and institutional learning, whether a person or a machine produced it.',
-      'AI is only as reliable as the knowledge environment around it. Fragmented or undocumented knowledge does not disappear when AI arrives; it gets amplified. The question for organisations is not whether to adopt AI, but whether the knowledge guiding it is traceable and trustworthy.',
+      'AI has made it faster than ever to produce reports, summaries, recommendations and insights. A first draft that once took a week now takes a minute. The productivity gains are real, and organisations are right to pursue them.',
+      'But there is a quieter risk that gets far less attention. As more of what an organisation reads is generated rather than written, it becomes harder to tell whether a confident answer is grounded in real expertise or simply sounds like it is.',
+      '## Knowledge used to come with provenance',
+      'Traditionally, knowledge was tied to the people who held it. You knew who wrote the procedure, which project the lesson came from and which engineer to call when something did not add up. That context was what made knowledge trustworthy: it could be traced back to experience.',
+      'AI output often loses that thread. It can look authoritative while having only a loose connection to the expertise and the operational reality it claims to describe.',
+      '## A knowledge trust layer',
+      'We believe organisations need a knowledge trust layer: a way of connecting knowledge to the expertise behind it, to where it came from and to what the organisation has learned since. Whether an insight was produced by a person or a machine, it should be possible to ask who validated this, what experience supports it and whether it is still true.',
+      'In practice that means expert profiles that show who knows what, lessons learned that are reviewed and linked to real projects, and Communities of Practice where knowledge is challenged, refined and kept current.',
+      '## AI amplifies whatever it is given',
+      'AI is only as reliable as the knowledge environment around it. If knowledge is fragmented, undocumented or disconnected from the people who hold it, AI does not fix that; it scales it. Confusion simply arrives faster and in better prose.',
+      'Established KM disciplines, such as the frameworks developed by Knoco International, combined with modern knowledge platforms like Tacitous, give organisations a way to build trusted knowledge flows before they automate on top of them.',
+      '## The real question',
+      'The question for leaders is no longer whether to adopt AI. It is whether the knowledge guiding their AI is still traceable, validated and trustworthy. Organisations that invest in that foundation now will get far more from AI, with far less risk, than those that do not.',
     ],
   },
   {
@@ -48,9 +65,17 @@ export const posts: PressPost[] = [
     authors: ['Jordan Richards'],
     tags: ['Public sector'],
     body: [
-      'We usually measure national strength by infrastructure, industry or defence. We argue that the deeper asset is what a nation knows and remembers.',
-      'Governments suffer from a kind of national amnesia. Experience leaves with retiring staff or stays locked in departmental silos, and costly mistakes are repeated.',
-      'Treating knowledge as a public utility, with systems that connect agencies and make sharing easy, speeds up innovation and economic growth. The nations that succeed will be those that learn to retain and reuse what they know.',
+      'We usually measure the strength of a nation by what we can see: roads and ports, industry, reserves, defence. These matter. But behind every one of them sits something less visible and arguably more valuable: what the nation knows, and how well it remembers.',
+      '## National amnesia',
+      'Every government department holds decades of hard-won experience: how a major infrastructure programme was actually delivered, why a policy failed the first time, which approach finally worked. Too often that experience lives only in the heads of long-serving civil servants and technical officers.',
+      'When those people retire, move roles or change departments, their knowledge leaves with them. Successors start again. Mistakes that were made and fixed ten years ago are made again, at public expense. We call this national amnesia, and it is one of the most expensive problems governments rarely measure.',
+      '## Silos make it worse',
+      'Even when knowledge is retained, it is often trapped. One department solves a problem that another is still struggling with, but there is no easy way for either to know. Lessons learned are written up, filed and never read again.',
+      '## Knowledge as a public utility',
+      'We believe knowledge should be treated more like a public utility: something deliberately built, maintained and made available to everyone who needs it. That means systems that connect agencies, make it easy to find the person who has done this before, and capture lessons in a form the next team can actually use.',
+      'The benefits go beyond efficiency. When knowledge flows freely between institutions, innovation speeds up, service delivery improves and public money goes further. Knowledge becomes an engine of economic growth rather than a cost of turnover.',
+      '## The nations that will lead',
+      'The countries that thrive in the coming decades will not simply be those with the most resources. They will be those that learn to retain and reuse what they know, so that each generation of public servants builds on the last rather than starting again.',
     ],
   },
   {
@@ -60,9 +85,17 @@ export const posts: PressPost[] = [
     authors: ['Jordan Richards', 'Waseem Khan'],
     tags: ['AI', 'Healthcare'],
     body: [
-      'Automation is very good at repeating what it was told. It is much worse at remembering why. When the reasoning behind a process disappears into code, institutional knowledge quietly erodes.',
-      'In a hospital, an automated workflow can keep running smoothly after clinical conditions have changed, because the expert judgement that shaped it was never captured.',
-      'Knowledge management is the layer that preserves the why behind a process, with feedback loops that let automated systems improve over time. Automation and institutional intelligence work best together: the goal is a healthcare enterprise that is fully connected, not just fully automated.',
+      'Automation is very good at doing what it was told. It is much worse at remembering why it was told to do it. As more processes move into workflows, scripts and AI agents, organisations are becoming more efficient and, quietly, more forgetful.',
+      '## Where the reasoning goes',
+      'Every business process encodes decisions made by experienced people: thresholds, exceptions, escalation paths, the order things happen in. When a process is manual, that reasoning is visible and regularly questioned. When it is automated, it disappears into configuration and code. The process keeps running, but the people who understood why it was designed that way move on.',
+      '## A healthcare example',
+      'Consider a hospital that automates a patient flow or referral process. The workflow was designed around the clinical conditions, staffing and guidance of the time, and for a while it works beautifully. Then conditions change: new guidance, a different patient mix, a new service. The automation carries on exactly as before, efficiently doing the wrong thing, because the expert judgement that shaped it was never captured alongside it.',
+      'Nobody made a bad decision. The organisation simply lost the knowledge needed to notice that a good decision had expired.',
+      '## Knowledge management as the missing layer',
+      'Knowledge management is the layer that preserves the why behind a process. That means recording the reasoning and the experts behind each important rule, capturing lessons learned when outcomes drift, and connecting automation owners to the Communities of Practice who understand the domain.',
+      'With those feedback loops in place, automated systems can be reviewed and improved as conditions change, rather than silently going stale.',
+      '## Connected, not just automated',
+      'Automation and institutional intelligence are not competitors; they work best together. The goal for a modern healthcare enterprise, or any complex organisation, should not be to become fully automated. It should be to become fully connected: efficient systems that remain tied to the knowledge and people that keep them right.',
     ],
   },
   {
@@ -72,8 +105,13 @@ export const posts: PressPost[] = [
     authors: ['Jordan Richards'],
     tags: ['Public sector'],
     body: [
-      'Knowledge is a strategic national asset. Together with Kaseane, we are exploring how nations can use knowledge management to build resilience, innovation and institutional memory across the public and private sectors.',
-      'Knowledge systems belong on national development agendas, so that expertise and experience are preserved, shared and usable across generations.',
+      'Knowledge is usually discussed as an organisational resource: something a company or a department manages to work more effectively. We think that framing is too small. Knowledge is a strategic national asset, and it deserves to be managed like one.',
+      '## A partnership to explore the idea',
+      'Together with Kaseane, Tacitous is exploring how nations can use knowledge management to build resilience, innovation and institutional memory across the public and private sectors.',
+      '## Why it matters',
+      'Nations invest heavily in infrastructure, education and research, yet rarely invest in keeping what they learn from those investments. Expertise built over a career can be lost in a single retirement. Insights from one region or ministry rarely reach another. Over time the cost of that forgetting is paid in delay, rework and missed opportunity.',
+      '## Knowledge on the national agenda',
+      'We believe knowledge systems belong on national development agendas alongside digital infrastructure and skills. That means deliberate programmes to capture critical expertise, connect institutions through Communities of Practice, and make lessons learned available to the people who need them, so that experience is preserved, shared and usable across generations.',
     ],
   },
 ];

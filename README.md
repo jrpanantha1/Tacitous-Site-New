@@ -26,6 +26,16 @@ at the top of `src/styles.css`. To add a page, add its route in `src/App.tsx` an
 5. Optional: set a TTL policy on `contactRateLimits.expiresAt` so rate-limit counters clean themselves up.
 6. Optional: set `CONTACT_NOTIFY_TO` in `functions/.env` to change where enquiries are emailed (default info@tacitous.com).
 
+### Automatic deploys (recommended)
+
+`.github/workflows/firebase.yml` builds every push. Merges to `main` deploy hosting, the contact function and
+Firestore rules; pull requests get a temporary preview URL. Deploy jobs are skipped until you set the repository
+variable `FIREBASE_PROJECT_ID` (Settings > Secrets and variables > Actions > Variables). It also needs one repository secret,
+`FIREBASE_SERVICE_ACCOUNT`: the JSON key of a Google Cloud service account with the Firebase Admin role
+(plus Cloud Functions Admin and Service Account User if functions deploys are refused).
+
+### Manual deploys
+
 ```bash
 npm install -g firebase-tools
 firebase login

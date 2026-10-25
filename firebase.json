@@ -1,0 +1,199 @@
+{
+  "hosting": {
+    "public": "dist",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/km-platform{,/**}",
+        "destination": "/platform",
+        "type": 301
+      },
+      {
+        "source": "/km-blueprint{,/**}",
+        "destination": "/blueprint",
+        "type": 301
+      },
+      {
+        "source": "/km-consultancy{,/**}",
+        "destination": "/services#consultancy",
+        "type": 301
+      },
+      {
+        "source": "/km-development{,/**}",
+        "destination": "/services#development",
+        "type": 301
+      },
+      {
+        "source": "/km-testimonials{,/**}",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/business-areas{,/**}",
+        "destination": "/sectors",
+        "type": 301
+      },
+      {
+        "source": "/i-blow-the-whistle{,/**}",
+        "destination": "/partners#whistleblowing",
+        "type": 301
+      },
+      {
+        "source": "/contact-us{,/**}",
+        "destination": "/contact",
+        "type": 301
+      },
+      {
+        "source": "/privacy-gdpr{,/**}",
+        "destination": "/privacy",
+        "type": 301
+      },
+      {
+        "source": "/terms-of-service{,/**}",
+        "destination": "/terms",
+        "type": 301
+      },
+      {
+        "source": "/blog{,/**}",
+        "destination": "/press",
+        "type": 301
+      },
+      {
+        "source": "/category/**",
+        "destination": "/press",
+        "type": 301
+      },
+      {
+        "source": "/tacitous-knoco-international-strategic-partnership{,/}",
+        "destination": "/press/tacitous-knoco-international-strategic-partnership",
+        "type": 301
+      },
+      {
+        "source": "/why-knowledge-needs-a-trust-layer-in-the-age-of-ai{,/}",
+        "destination": "/press/why-knowledge-needs-a-trust-layer-in-the-age-of-ai",
+        "type": 301
+      },
+      {
+        "source": "/the-hidden-wealth-of-nations-a-tacitous-perspective{,/}",
+        "destination": "/press/the-hidden-wealth-of-nations-a-tacitous-perspective",
+        "type": 301
+      },
+      {
+        "source": "/ai-is-making-us-efficient{,/}",
+        "destination": "/press/ai-is-making-us-efficient",
+        "type": 301
+      },
+      {
+        "source": "/4397-2{,/}",
+        "destination": "/press/when-nations-forget",
+        "type": 301
+      },
+      {
+        "regex": "^/20\\d{2}/.*$",
+        "destination": "/press",
+        "type": 301
+      },
+      {
+        "source": "/wp-admin{,/**}",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/wp-login.php",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/feed{,/**}",
+        "destination": "/press",
+        "type": 301
+      },
+      {
+        "source": "/wp-content/uploads/2019/11/tacitous_flyer_001.pdf",
+        "destination": "/contact",
+        "type": 302
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/api/contact",
+        "function": {
+          "functionId": "contact",
+          "region": "europe-west2"
+        }
+      }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "camera=(), microphone=(), geolocation=()"
+          },
+          {
+            "key": "Strict-Transport-Security",
+            "value": "max-age=31536000; includeSubDomains"
+          },
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+          }
+        ]
+      },
+      {
+        "source": "/assets/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      }
+    ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}

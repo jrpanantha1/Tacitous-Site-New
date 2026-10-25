@@ -1,0 +1,54 @@
+# Tacitous marketing site
+
+Static React site for www.tacitous.com, replacing the WordPress site. Built with Vite, React 19 and React Router,
+prerendered to plain HTML at build time and served from Firebase Hosting. The contact form posts to a Firebase
+Cloud Function.
+
+## Develop
+
+```bash
+npm install
+npm run dev          # http://localhost:5173
+npm run build        # type-check, build, prerender every page into dist/ + sitemap.xml
+```
+
+Content lives in `src/content/` (navigation, FAQ, modules, press articles). Pages are in `src/pages/`, brand tokens
+at the top of `src/styles.css`. To add a page, add its route in `src/App.tsx` and its title and description in
+`src/routes.ts` so it is prerendered and listed in the sitemap.
+
+## Firebase setup (once)
+
+1. Create or pick a Firebase project and put its id in `.firebaserc`.
+2. Upgrade it to the Blaze plan (needed for Cloud Functions).
+3. Create a Firestore database (region `europe-west2`, London) and deploy the locked-down rules.
+4. Install the **Trigger Email from Firestore** extension (`firebase ext:install firebase/firestore-send-email`),
+   collection `mail`, with your SMTP details (for example Microsoft 365 or a SendGrid account).
+5. Optional: set a TTL policy on `contactRateLimits.expiresAt` so rate-limit counters clean themselves up.
+6. Optional: set `CONTACT_NOTIFY_TO` in `functions/.env` to change where enquiries are emailed (default info@tacitous.com).
+
+```bash
+npm install -g firebase-tools
+firebase login
+(cd functions && npm install)
+npm run deploy       # builds the site and deploys hosting, the contact function and Firestore rules
+```
+
+Enquiries are stored in the `enquiries` collection and emailed to the team. The form has a honeypot field, a
+consent checkbox and a per-IP limit of 5 messages an hour. If spam becomes a problem, add Firebase App Check with
+reCAPTCHA Enterprise.
+
+## Going live from GoDaddy
+
+1. Deploy, then check the `*.web.app` preview URL.
+2. In Firebase Console > Hosting > Add custom domain, add `www.tacitous.com` and `tacitous.com` (redirect to www).
+3. Add the TXT and A records Firebase shows in GoDaddy DNS, replacing the existing A/CNAME records for the site.
+   Leave the MX records alone so email keeps working.
+4. Firebase issues the SSL certificate automatically (can take up to a few hours).
+5. `firebase.json` 301-redirects every old WordPress URL (pages, posts, categories, archives) to its new home.
+
+## Still to do
+
+- Paste the full text of each press article into `src/content/press.ts` (WordPress: Tools > Export > Posts) and add dates.
+- Replace the draft Privacy and Terms text in `src/pages/Legal.tsx` with your approved wording.
+- Confirm the app sign-in URL in `src/content/site.ts` (`links.app`).
+- Add real testimonials and client logos when you have permission to show them.

@@ -1,7 +1,6 @@
 export const links = {
   bookCall: 'https://zcal.co/tacitous/',
-  // TODO: confirm the new app's sign-in URL.
-  app: 'https://app.tacitous.com/',
+  app: 'https://next.tacitous.com/',
   email: 'info@tacitous.com',
   linkedin: 'https://www.linkedin.com/company/tacitous',
   x: 'https://twitter.com/TacitousKM',

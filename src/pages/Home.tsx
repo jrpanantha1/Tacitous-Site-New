@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
 import { ArrowRight, BookMarked, CalendarDays, Check, Handshake, KeyRound, Network, Plus, ShieldCheck, UserRoundX } from 'lucide-react';
 import { ProductPreview } from '../components/ProductPreview';
-import { Showcase } from '../components/Showcase';
+import { ProductExplorer } from '../components/ProductExplorer';
 import { CtaBand, SectionHead } from '../components/Blocks';
-import { Icon } from '../components/Icon';
-import { approach, benefits, circle, faqs, links, modules } from '../content/site';
+import { approach, benefits, circle, faqs, links } from '../content/site';
+import { highlightIds } from '../content/features';
 import { posts } from '../content/press';
 
 export default function Home() {
@@ -69,20 +69,12 @@ export default function Home() {
 
       <section className="section section-tint" id="features">
         <div className="container">
-          <SectionHead eyebrow="The platform" title="Purpose built around knowledge management" center>
-            Everything your organisation needs to find expertise, preserve what matters and continuously improve.
+          <SectionHead eyebrow="See it in action" title="One hub for the knowledge your organisation runs on" center>
+            Choose a capability to see the real screen, why it matters and what it connects to.
           </SectionHead>
-          <div className="grid four">
-            {modules.map((m) => (
-              <Link to={m.to} className="card feature link-card" key={m.title}>
-                <span className="icon-chip"><Icon name={m.icon} /></span>
-                <h3>{m.title}</h3>
-                <p>{m.body}</p>
-              </Link>
-            ))}
-          </div>
+          <ProductExplorer ids={highlightIds} idPrefix="home" />
           <div className="center-row">
-            <Link to="/platform" className="btn btn-outline">Explore the platform <ArrowRight size={18} /></Link>
+            <Link to="/explore" className="btn btn-primary">Explore every feature <ArrowRight size={18} /></Link>
           </div>
         </div>
       </section>
@@ -101,15 +93,6 @@ export default function Home() {
           <Link to="/solutions/critical-knowledge-retention" className="btn btn-primary">
             Protect critical knowledge <ArrowRight size={18} />
           </Link>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <SectionHead eyebrow="See it in action" title="One hub for the knowledge your organisation runs on" center>
-            Real screens from the Tacitous Knowledge &amp; Expertise Hub.
-          </SectionHead>
-          <Showcase />
         </div>
       </section>
 
@@ -215,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      <CtaBand secondary={{ label: 'Explore the platform', to: '/platform' }} />
+      <CtaBand secondary={{ label: 'Explore the features', to: '/explore' }} />
     </>
   );
 }

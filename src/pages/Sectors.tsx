@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { ArrowRight, Atom, Flame, HeartHandshake, Landmark, Network, Wrench, type LucideIcon } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
-import { toolById } from '../content/tools';
+import { featureById } from '../content/features';
 
 type Sector = {
   id: string;
@@ -141,7 +141,7 @@ export default function Sectors() {
       </nav>
 
       {sectors.map((s, i) => {
-        const tool = s.screen ? toolById(s.screen) : undefined;
+        const tool = s.screen ? featureById(s.screen) : undefined;
         const Icon = s.icon;
         return (
           <section key={s.id} id={s.id} className={`section${i % 2 ? ' section-tint' : ''}`}>
@@ -163,7 +163,7 @@ export default function Sectors() {
                 {tool?.screen && (
                   <figure className="showcase-frame small">
                     <img src={`${import.meta.env.BASE_URL}screens/${tool.screen.file}`} alt={tool.screen.alt} width={tool.screen.w} height={tool.screen.h} loading="lazy" decoding="async" />
-                    <figcaption>{tool.label} in Tacitous Next</figcaption>
+                    <figcaption>{tool.name} in Tacitous Next</figcaption>
                   </figure>
                 )}
               </div>

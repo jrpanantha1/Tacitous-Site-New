@@ -1,9 +1,8 @@
 import { Link } from 'react-router';
 import { ArrowRight, Cloud, KeyRound, Lock, Share2 } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
-import { Icon } from '../components/Icon';
-import { Showcase } from '../components/Showcase';
-import { modules } from '../content/site';
+import { ProductExplorer } from '../components/ProductExplorer';
+import { highlightIds } from '../content/features';
 
 const deploy = [
   { icon: Cloud, title: 'Cloud service', body: 'Tacitous Next runs as a secure cloud service, with each organisation in its own tenant.' },
@@ -36,23 +35,12 @@ export default function Platform() {
         <div className="container">
           <SectionHead eyebrow="Knowledge Management tools" title="See Tacitous Next in action" center>
             Purpose-built tools for each part of Knowledge Management, from finding expertise to capturing and reusing what
-            people learn. Choose a tool to see how it works.
+            people learn. Choose a tool to see the real screen and what it connects to.
           </SectionHead>
-          <Showcase detailed />
-        </div>
-      </section>
-
-      <section className="section section-tint">
-        <div className="container">
-          <SectionHead eyebrow="Modules" title="Everything in one place" center />
-          <div className="grid four">
-            {modules.map((m) => (
-              <Link to={m.to} className="card feature link-card" key={m.title}>
-                <span className="icon-chip"><Icon name={m.icon} /></span>
-                <h3>{m.title}</h3>
-                <p>{m.body}</p>
-              </Link>
-            ))}
+          <ProductExplorer ids={highlightIds} idPrefix="platform" />
+          <div className="center-row gap">
+            <Link to="/explore" className="btn btn-primary">Explore every feature <ArrowRight size={18} /></Link>
+            <Link to="/explore#journeys" className="btn btn-outline">Follow a knowledge journey</Link>
           </div>
         </div>
       </section>

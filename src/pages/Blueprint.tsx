@@ -68,7 +68,7 @@ export default function Blueprint() {
             ))}
           </ol>
           <div className="center-row gap">
-            <Link to="/platform#tools" className="btn btn-outline">Explore the tools <ArrowRight size={18} /></Link>
+            <Link to="/explore" className="btn btn-outline">Explore the tools <ArrowRight size={18} /></Link>
             <Link to="/solutions/critical-knowledge-retention" className="btn btn-outline">Critical Knowledge Retention <ArrowRight size={18} /></Link>
           </div>
         </div>

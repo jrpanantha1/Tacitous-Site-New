@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { metaFor } from './routes';
 import Home from './pages/Home';
 import Platform from './pages/Platform';
+import Explore from './pages/Explore';
 import Blueprint from './pages/Blueprint';
 import About from './pages/About';
 import KnowledgeRetention from './pages/KnowledgeRetention';
@@ -41,6 +42,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/platform" element={<Platform />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/km-blueprint" element={<Blueprint />} />
           <Route path="/solutions/critical-knowledge-retention" element={<KnowledgeRetention />} />
           <Route path="/about" element={<About />} />

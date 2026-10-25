@@ -12,6 +12,10 @@ const base: Record<string, Meta> = {
     title: 'Platform | Tacitous',
     description: 'Tacitous Next brings together the Expertise Map, Communities of Practice, expert profiles, lessons learned, knowledge forms and knowledge libraries in one governed knowledge hub.',
   },
+  '/explore': {
+    title: 'Explore features | Tacitous Next',
+    description: 'Explore Tacitous Next interactively: real screens of the Expertise Map, Constellation, Lessons Learned, Promote to Learning, Knowledge Retention and Transfer, communities and KM forms.',
+  },
   '/km-blueprint': {
     title: 'KM Blueprint | Tacitous',
     description: 'A practical blueprint for making Knowledge Management work, from methodology to the tools that put it into practice.',

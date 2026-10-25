@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, CalendarDays, Check, Cloud, Globe2, Handshake, History, Plus, ShieldCheck } from 'lucide-react';
+import { ArrowRight, BookMarked, CalendarDays, Check, Handshake, KeyRound, Network, Plus, ShieldCheck, UserRoundX } from 'lucide-react';
 import { ProductPreview } from '../components/ProductPreview';
 import { Showcase } from '../components/Showcase';
 import { CtaBand, SectionHead } from '../components/Blocks';
@@ -25,9 +25,9 @@ export default function Home() {
               <a href={links.bookCall} className="btn btn-ghost-light"><CalendarDays size={18} /> Book a call</a>
             </div>
             <ul className="hero-points">
-              <li><Check size={16} /> Cloud or secure on-premise</li>
-              <li><Check size={16} /> AI translation built in</li>
-              <li><Check size={16} /> Backed by a proven KM Blueprint</li>
+              <li><Check size={16} /> Expertise Map and Communities of Practice</li>
+              <li><Check size={16} /> Critical Knowledge Retention</li>
+              <li><Check size={16} /> Backed by a practical KM Blueprint</li>
             </ul>
           </div>
           <ProductPreview />
@@ -36,19 +36,20 @@ export default function Home() {
 
       <section className="trust">
         <div className="container trust-row">
-          <span><History size={18} /> 20+ years delivering KM</span>
+          <span><BookMarked size={18} /> KM methodology and software together</span>
           <span><Handshake size={18} /> Strategic partner of Knoco International</span>
-          <span><Cloud size={18} /> Cloud or on-premise</span>
-          <span><Globe2 size={18} /> Multilingual by design</span>
-          <span><ShieldCheck size={18} /> Secure, tenant-isolated</span>
+          <span><Network size={18} /> Exportable knowledge graph</span>
+          <span><KeyRound size={18} /> Sign in with Microsoft, Google or email</span>
+          <span><ShieldCheck size={18} /> Governed, approval-based sharing</span>
         </div>
       </section>
 
       <section className="section" id="about">
         <div className="container">
           <SectionHead eyebrow="How we do it" title="You have the knowledge. We have the solution.">
-            There is no one-size-fits-all knowledge platform. Tacitous combines purpose-built software with two decades of
-            KM delivery, so your Subject Matter Experts collaborate, capture what they know and keep it in the organisation.
+            Most knowledge tools give you somewhere to put documents. Tacitous combines Knowledge Management methodology,
+            purpose-built tools and hands-on support, so your Subject Matter Experts collaborate, capture what they know and
+            keep it in the organisation.
           </SectionHead>
           <div className="grid three">
             {approach.map((a, i) => (
@@ -59,7 +60,10 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="note">The result: better decisions, faster onboarding and a more knowledgeable, engaged workforce.</p>
+          <p className="note">
+            The result: better decisions, faster onboarding and a more knowledgeable, engaged workforce.{' '}
+            <Link to="/about">More about Tacitous</Link>
+          </p>
         </div>
       </section>
 
@@ -70,16 +74,33 @@ export default function Home() {
           </SectionHead>
           <div className="grid four">
             {modules.map((m) => (
-              <article className="card feature" key={m.title}>
+              <Link to={m.to} className="card feature link-card" key={m.title}>
                 <span className="icon-chip"><Icon name={m.icon} /></span>
                 <h3>{m.title}</h3>
                 <p>{m.body}</p>
-              </article>
+              </Link>
             ))}
           </div>
           <div className="center-row">
             <Link to="/platform" className="btn btn-outline">Explore the platform <ArrowRight size={18} /></Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section section-band" aria-labelledby="ckr-band">
+        <div className="container band">
+          <span className="band-icon"><UserRoundX size={28} aria-hidden="true" /></span>
+          <div>
+            <p className="eyebrow eyebrow-dark">Critical Knowledge Retention</p>
+            <h2 id="ckr-band">When experienced people leave, their knowledge shouldn’t leave with them.</h2>
+            <p>
+              Identify the knowledge at risk, capture the experience behind it and connect it to the people who will carry
+              it forward.
+            </p>
+          </div>
+          <Link to="/solutions/critical-knowledge-retention" className="btn btn-primary">
+            Protect critical knowledge <ArrowRight size={18} />
+          </Link>
         </div>
       </section>
 
@@ -98,7 +119,15 @@ export default function Home() {
             <SectionHead eyebrow="Business benefits" title="Keep critical knowledge where it belongs: inside your organisation">
               Encourage communities around shared interests and turn individual experience into shared intelligence.
             </SectionHead>
-            <Link to="/sectors" className="text-link">See how it works in energy and government <ArrowRight size={16} /></Link>
+            <p className="chips-label">Sectors we work with</p>
+            <div className="chips">
+              <Link to="/sectors#energy">Energy</Link>
+              <Link to="/sectors#public-sector">Government</Link>
+              <Link to="/sectors#nuclear">Nuclear and high-risk</Link>
+              <Link to="/sectors#engineering">Engineering</Link>
+              <Link to="/sectors#ngos">NGOs and foundations</Link>
+              <Link to="/sectors#associations">Professional associations</Link>
+            </div>
           </div>
           <ol className="benefit-list">
             {benefits.map((b, i) => (
@@ -129,7 +158,7 @@ export default function Home() {
             ))}
           </ol>
           <div className="center-row">
-            <Link to="/blueprint" className="btn btn-ghost-light">Read about the Blueprint <ArrowRight size={18} /></Link>
+            <Link to="/km-blueprint" className="btn btn-ghost-light">Read about the KM Blueprint <ArrowRight size={18} /></Link>
           </div>
         </div>
       </section>
@@ -138,11 +167,13 @@ export default function Home() {
         <div className="container split">
           <div>
             <p className="eyebrow eyebrow-dark">Ready for AI</p>
-            <h2>Without knowledge architecture, AI simply scales confusion faster.</h2>
+            <h2>AI is only as useful as the knowledge behind it.</h2>
             <p className="section-lead">
-              Data tells you what happened. Knowledge explains why. Communities help decide what to do next. Tacitous gives
-              your AI a trusted foundation of validated lessons, expertise and provenance.
+              Without knowledge architecture, AI simply scales confusion faster. Data tells you what happened. Knowledge
+              explains why. Communities help decide what to do next. Tacitous helps you build the trusted foundation of
+              validated lessons, expertise and provenance that AI depends on.
             </p>
+            <Link to="/platform#ai" className="text-link">Knowledge Management and AI <ArrowRight size={16} /></Link>
           </div>
           <div className="equation">
             <span>Data</span><Plus size={18} /><span>Context</span><Plus size={18} /><span>Experience</span><Plus size={18} /><span>Lessons</span>
@@ -184,7 +215,7 @@ export default function Home() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand secondary={{ label: 'Explore the platform', to: '/platform' }} />
     </>
   );
 }

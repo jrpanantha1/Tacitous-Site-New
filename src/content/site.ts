@@ -17,27 +17,29 @@ export const nav: NavItem[] = [
     label: 'Product',
     to: '/platform',
     children: [
-      { label: 'Platform', to: '/platform', blurb: 'Communities, learnings and expertise in one hub' },
-      { label: 'KM Blueprint', to: '/blueprint', blurb: 'The proven model behind every rollout' },
-      { label: 'Sectors', to: '/sectors', blurb: 'Energy, public sector and complex projects' },
+      { label: 'Platform', to: '/platform', blurb: 'Tacitous Next, the Knowledge & Expertise Hub' },
+      { label: 'KM Blueprint', to: '/km-blueprint', blurb: 'The methodology behind every implementation' },
+      { label: 'Knowledge Management tools', to: '/platform#tools', blurb: 'Forms, lessons learned, libraries and more' },
+      { label: 'Expertise Map', to: '/platform#expertise-map', blurb: 'See who knows what across your organisation' },
     ],
   },
   {
     label: 'What we do',
     to: '/services',
     children: [
-      { label: 'Consultancy', to: '/services#consultancy', blurb: 'KM strategy, governance and champions' },
-      { label: 'Development', to: '/services#development', blurb: 'Integrations, on-premise and bespoke builds' },
-      { label: 'Training', to: '/services#training', blurb: 'Capability building with Knoco International' },
+      { label: 'KM consultancy', to: '/services#consultancy', blurb: 'Strategy, governance and adoption support' },
+      { label: 'Critical Knowledge Retention', to: '/solutions/critical-knowledge-retention', blurb: 'Keep expertise when people move on' },
+      { label: 'Bespoke development', to: '/services#development', blurb: 'Integrations and tailored solutions' },
+      { label: 'Sectors', to: '/sectors', blurb: 'Energy, government, nuclear, NGOs and more' },
     ],
   },
   {
     label: 'Company',
-    to: '/partners',
+    to: '/about',
     children: [
-      { label: 'About us', to: '/#about', blurb: 'Twenty years of knowledge management delivery' },
-      { label: 'Partners', to: '/partners', blurb: 'Knoco International and I Blow The Whistle' },
-      { label: 'Contact', to: '/contact', blurb: 'Start the conversation' },
+      { label: 'About Tacitous', to: '/about', blurb: 'Our story, mission and approach' },
+      { label: 'Partners', to: '/partners', blurb: 'Knoco International' },
+      { label: 'Contact', to: '/contact', blurb: 'Talk to our team' },
     ],
   },
   { label: 'Press', to: '/press' },
@@ -45,12 +47,12 @@ export const nav: NavItem[] = [
 
 export const approach = [
   {
-    title: 'Proven Blueprint',
-    body: 'An industry-tested approach to Knowledge Management that gets you to value faster, with less trial and error.',
+    title: 'A practical Blueprint',
+    body: 'A structured approach to Knowledge Management that gets you to value faster, with less trial and error.',
   },
   {
-    title: 'Custom solutions',
-    body: 'We adapt the platform and the Blueprint to your organisation, your culture and the systems you already run.',
+    title: 'Tailored to you',
+    body: 'We adapt the platform and the Blueprint to your organisation, your culture and the way your people already work.',
   },
   {
     title: 'Focus on people',
@@ -58,15 +60,16 @@ export const approach = [
   },
 ];
 
+// Every module links to the place on the site that explains it in more depth.
 export const modules = [
-  { icon: 'users', title: 'Communities with purpose', body: 'Public, managed and private spaces for collaboration across your organisation.' },
-  { icon: 'book', title: 'Lessons learned, reusable', body: 'Capture lessons and best practices, organised by expertise and ready to find again.' },
-  { icon: 'search', title: 'Expertise you can find', body: 'Discover colleagues through their skills, interests and the topics they are happy to discuss.' },
-  { icon: 'map', title: 'Expertise map', body: 'See where critical knowledge sits, who holds it and where you are exposed to loss.' },
-  { icon: 'forms', title: 'Knowledge forms', body: 'After Action Reviews, retention interviews and innovation ideas, structured and governed.' },
-  { icon: 'library', title: 'Knowledge library', body: 'Documents, FAQs and validated answers with metadata and links to your existing storage.' },
-  { icon: 'languages', title: 'AI translation', body: 'Lessons and community content translated into dozens of languages, including Arabic, Hindi and Urdu.' },
-  { icon: 'plug', title: 'Open APIs', body: 'Lessons learned and best practices available to your internal systems and mobile apps.' },
+  { icon: 'users', title: 'Communities of Practice', to: '/platform#communities', body: 'Public, managed and private spaces with discussions, announcements, libraries, calendars and FAQs.' },
+  { icon: 'book', title: 'Lessons learned, reusable', to: '/platform#lessons-learned', body: 'Capture lessons and best practices, approve them and organise them by expertise so they are found again.' },
+  { icon: 'search', title: 'Expert profiles', to: '/platform#expert-profiles', body: 'Find colleagues by their skills, designated expertise and the topics they are happy to be asked about.' },
+  { icon: 'map', title: 'Expertise Map', to: '/platform#expertise-map', body: 'See how people, communities and organisations connect to each governed area of expertise.' },
+  { icon: 'forms', title: 'Knowledge forms', to: '/platform#knowledge-forms', body: 'After Action Reviews, Peer Assists, decision records and more, captured in a consistent structure.' },
+  { icon: 'library', title: 'Knowledge library', to: '/platform#knowledge-library', body: 'Approved learnings and resources gathered in one place, alongside the communities that use them.' },
+  { icon: 'retention', title: 'Critical knowledge retention', to: '/solutions/critical-knowledge-retention', body: 'Identify knowledge at risk and capture it from the people who hold it before they move on.' },
+  { icon: 'shield', title: 'Governed access', to: '/platform#deployment', body: 'Tenant-based access, membership approvals and sign-in with Microsoft, Google or an email link.' },
 ] as const;
 
 export const benefits = [
@@ -95,8 +98,8 @@ export const circle = [
 
 export const faqs = [
   {
-    q: 'Do you have a KM solution for on-premise?',
-    a: 'Yes. The Tacitous Blueprint can be deployed on-premise or in the cloud, depending on your requirements and security posture.',
+    q: 'Can Tacitous be hosted on-premise?',
+    a: 'Tacitous Next is delivered as a cloud service. If your security requirements call for private or on-premise hosting, talk to us about the options.',
   },
   {
     q: 'We already have a platform. Can you help us implement it?',
@@ -104,7 +107,7 @@ export const faqs = [
   },
   {
     q: 'What else do we need to start using Tacitous?',
-    a: 'Nothing. The cloud platform can be used straight away, and we can help you with implementation and adoption.',
+    a: 'Your people can sign in with their Microsoft, Google or email accounts, so you can start straight away. We can help with implementation and adoption.',
   },
   {
     q: 'Can you provide KM consultancy?',
@@ -116,11 +119,11 @@ export const faqs = [
   },
   {
     q: 'Our organisation works in many languages. Can you help?',
-    a: 'Yes. Tacitous uses AI machine translation for lessons learned and community content, so knowledge reaches everyone.',
+    a: 'Yes. Tell us which languages your teams work in and we will discuss how best to support them.',
   },
   {
-    q: 'How extensible is the platform?',
-    a: 'Lessons learned, best practices and other knowledge are available through APIs for your internal systems and mobile devices.',
+    q: 'Can Tacitous work with our other systems?',
+    a: 'The Expertise Map can be exported as a semantic knowledge graph, for example in Turtle format, for use in other tools. Talk to us about any other integrations you need.',
   },
   {
     q: 'Can you develop a KM system for us?',

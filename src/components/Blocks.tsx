@@ -25,7 +25,14 @@ export function SectionHead({ eyebrow, title, children, center }: { eyebrow?: st
   );
 }
 
-export function CtaBand({ title = 'Keep the knowledge that makes you great.', body = 'Talk to us about your knowledge challenges. We will show you the platform and how the Blueprint fits your organisation.' }: { title?: string; body?: string }) {
+type CtaLink = { label: string; to: string };
+
+export function CtaBand({
+  title = 'Keep the knowledge that makes you great.',
+  body = 'Talk to us about your knowledge challenges. We will show you the platform and how the Blueprint fits your organisation.',
+  primary = { label: 'Talk to our team', to: '/contact' },
+  secondary,
+}: { title?: string; body?: string; primary?: CtaLink; secondary?: CtaLink }) {
   return (
     <section className="section">
       <div className="container">
@@ -35,8 +42,12 @@ export function CtaBand({ title = 'Keep the knowledge that makes you great.', bo
             <p>{body}</p>
           </div>
           <div className="cta-actions">
-            <Link to="/contact" className="btn btn-light">Start the conversation <ArrowRight size={18} /></Link>
-            <a href={links.bookCall} className="btn btn-ghost-light"><CalendarDays size={18} /> Book a call</a>
+            <Link to={primary.to} className="btn btn-light">{primary.label} <ArrowRight size={18} /></Link>
+            {secondary ? (
+              <Link to={secondary.to} className="btn btn-ghost-light">{secondary.label}</Link>
+            ) : (
+              <a href={links.bookCall} className="btn btn-ghost-light"><CalendarDays size={18} /> Book a 30-minute call</a>
+            )}
           </div>
         </div>
       </div>

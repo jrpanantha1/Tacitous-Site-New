@@ -15,8 +15,18 @@
         "type": 301
       },
       {
-        "source": "/km-blueprint{,/**}",
-        "destination": "/blueprint",
+        "source": "/blueprint{,/**}",
+        "destination": "/km-blueprint",
+        "type": 301
+      },
+      {
+        "source": "/km-blueprint/**",
+        "destination": "/km-blueprint",
+        "type": 301
+      },
+      {
+        "source": "/about-us{,/**}",
+        "destination": "/about",
         "type": 301
       },
       {
@@ -41,7 +51,7 @@
       },
       {
         "source": "/i-blow-the-whistle{,/**}",
-        "destination": "/partners#whistleblowing",
+        "destination": "/about#speak-up",
         "type": 301
       },
       {

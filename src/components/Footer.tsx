@@ -17,25 +17,32 @@ export function Footer() {
             <a href={links.facebook} aria-label="Tacitous on Facebook"><FacebookIcon /></a>
           </div>
         </div>
-        <div>
-          <h4>Product</h4>
+        <nav aria-label="Product">
+          <h2 className="footer-head">Product</h2>
           <Link to="/platform">Platform</Link>
-          <Link to="/blueprint">KM Blueprint</Link>
-          <Link to="/sectors">Sectors</Link>
+          <Link to="/km-blueprint">KM Blueprint</Link>
+          <Link to="/platform#tools">Knowledge Management tools</Link>
           <a href={links.app}>Sign in</a>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <Link to="/services">What we do</Link>
+        </nav>
+        <nav aria-label="What we do">
+          <h2 className="footer-head">What we do</h2>
+          <Link to="/services#consultancy">KM consultancy</Link>
+          <Link to="/solutions/critical-knowledge-retention">Critical Knowledge Retention</Link>
+          <Link to="/services#development">Bespoke development</Link>
+          <Link to="/sectors">Sectors</Link>
+        </nav>
+        <nav aria-label="Company">
+          <h2 className="footer-head">Company</h2>
+          <Link to="/about">About Tacitous</Link>
           <Link to="/partners">Partners</Link>
           <Link to="/press">Press</Link>
-          <Link to="/partners#whistleblowing">Whistleblowing</Link>
-        </div>
+          <Link to="/about#speak-up">Speak up</Link>
+        </nav>
         <div>
-          <h4>Contact</h4>
+          <h2 className="footer-head">Contact</h2>
           <a href={`mailto:${links.email}`} className="with-icon"><Mail size={16} />{links.email}</a>
           <span className="with-icon"><MapPin size={16} />Nottingham, England</span>
-          <a href={links.bookCall}>Book a 30 minute call</a>
+          <a href={links.bookCall}>Book a 30-minute call</a>
         </div>
       </div>
       <div className="container footer-base">

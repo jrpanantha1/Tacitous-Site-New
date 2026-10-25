@@ -58,7 +58,10 @@ reCAPTCHA Enterprise.
 
 ## Still to do
 
-- Paste the full text of each press article into `src/content/press.ts` (WordPress: Tools > Export > Posts) and add dates.
-- Replace the draft Privacy and Terms text in `src/pages/Legal.tsx` with your approved wording.
-- Confirm the app sign-in URL in `src/content/site.ts` (`links.app`).
-- Add real testimonials and client logos when you have permission to show them.
+- Add real screenshots for the Knowledge retention, Knowledge forms and Knowledge library tabs: save a `.webp` in
+  `public/screens/` and add a `screen` entry to that tool in `src/content/tools.ts`.
+- Add each press article's verified publish date (`date`, as `YYYY-MM-DD`) and, where it first appeared elsewhere, its
+  `original` link in `src/content/press.ts`. Dates are hidden until set.
+- Add the Knoco International logo to the Partners page once Knoco has approved its use.
+- Replace the draft Terms text in `src/pages/Legal.tsx` with your approved wording.
+- Only add testimonials, client logos, statistics or certifications you have evidence and permission for.

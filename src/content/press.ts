@@ -1,12 +1,15 @@
 // Press articles. Body entries are paragraphs; an entry starting with "## " is a subheading.
-// TODO: add each article's original publish date.
+// Dates are left out until each article's original publish date is confirmed; never guess one.
 export type PressPost = {
   slug: string;
   title: string;
   excerpt: string;
   authors: string[];
   tags: string[];
+  /** ISO date (YYYY-MM-DD) of original publication, once verified. */
   date?: string;
+  /** Original article URL, for pieces first published elsewhere. */
+  original?: { label: string; url: string };
   image?: string;
   body: string[];
   external?: { label: string; url: string };
@@ -115,3 +118,14 @@ export const posts: PressPost[] = [
     ],
   },
 ];
+
+export const categories = [...new Set(posts.map((p) => p.tags[0]))];
+
+export function readingMinutes(post: PressPost) {
+  const words = [post.excerpt, ...post.body].join(' ').split(/\s+/).length;
+  return Math.max(1, Math.round(words / 220));
+}
+
+export function formatDate(iso: string) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+}

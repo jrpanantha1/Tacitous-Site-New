@@ -1,11 +1,11 @@
 import {
-  BookOpen, ClipboardList, Languages, Library, Map, Plug, Search, Users,
+  BookOpen, ClipboardList, History, Library, Map, Search, ShieldCheck, Users,
   type LucideIcon,
 } from 'lucide-react';
 
 const icons: Record<string, LucideIcon> = {
   users: Users, book: BookOpen, search: Search, map: Map,
-  forms: ClipboardList, library: Library, languages: Languages, plug: Plug,
+  forms: ClipboardList, library: Library, retention: History, shield: ShieldCheck,
 };
 
 export function Icon({ name, size = 22 }: { name: string; size?: number }) {

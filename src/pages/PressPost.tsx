@@ -22,7 +22,9 @@ export default function PressPost() {
       <section className="section">
         <article className="container narrow prose article">
           <p className="article-lead">{post.excerpt}</p>
-          {post.body.map((para, i) => <p key={i}>{para}</p>)}
+          {post.body.map((para, i) =>
+            para.startsWith('## ') ? <h2 key={i}>{para.slice(3)}</h2> : <p key={i}>{para}</p>,
+          )}
           {post.external && (
             <p><a href={post.external.url} className="text-link">{post.external.label} <ExternalLink size={15} /></a></p>
           )}

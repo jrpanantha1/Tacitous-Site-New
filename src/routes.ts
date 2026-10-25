@@ -10,23 +10,31 @@ const base: Record<string, Meta> = {
   },
   '/platform': {
     title: 'Platform | Tacitous',
-    description: 'Communities, lessons learned, expertise mapping, knowledge forms and AI translation in one secure knowledge hub, in the cloud or on-premise.',
+    description: 'Tacitous Next brings together the Expertise Map, Communities of Practice, expert profiles, lessons learned, knowledge forms and knowledge libraries in one governed knowledge hub.',
   },
-  '/blueprint': {
+  '/km-blueprint': {
     title: 'KM Blueprint | Tacitous',
-    description: 'The Tacitous Knowledge Management Blueprint: a proven, six-step virtuous circle of knowledge built on two decades of delivery.',
+    description: 'A practical blueprint for making Knowledge Management work, from methodology to the tools that put it into practice.',
+  },
+  '/solutions/critical-knowledge-retention': {
+    title: 'Critical Knowledge Retention | Tacitous',
+    description: 'When experienced people leave, their knowledge should not leave with them. Identify knowledge at risk, capture experience and keep it in use.',
+  },
+  '/about': {
+    title: 'About Tacitous | Built by people who understand Knowledge Management',
+    description: 'Tacitous brings together Knowledge Management methodology, practical experience and purpose-built technology to help organisations retain critical knowledge.',
   },
   '/services': {
-    title: 'Consultancy and development | Tacitous',
-    description: 'KM strategy, governance, training and bespoke development, delivered with our strategic partner Knoco International.',
+    title: 'What we do | Tacitous',
+    description: 'From Knowledge Management strategy to practical implementation: KM consultancy, Critical Knowledge Retention, training and bespoke development.',
   },
   '/sectors': {
     title: 'Sectors | Tacitous',
-    description: 'How Tacitous helps energy projects and governments retain critical knowledge, reduce rework and build institutional intelligence.',
+    description: 'How Tacitous supports energy, government, nuclear and high-risk industries, engineering, NGOs and professional associations to retain and share critical knowledge.',
   },
   '/partners': {
     title: 'Partners | Tacitous',
-    description: 'Tacitous is a strategic partner of Knoco International and a member of the I Blow The Whistle platform.',
+    description: 'Tacitous works with Knoco International, combining Knowledge Management methodology and training with the Tacitous Next platform.',
   },
   '/press': {
     title: 'Press | Tacitous',

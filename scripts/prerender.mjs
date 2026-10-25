@@ -18,8 +18,14 @@ function page(url) {
     `<meta property="og:title" content="${escape(meta.title)}" />`,
     `<meta property="og:description" content="${escape(meta.description)}" />`,
     `<meta property="og:url" content="${site}${url}" />`,
-    `<meta property="og:type" content="website" />`,
-    `<meta name="twitter:card" content="summary" />`,
+    `<meta property="og:type" content="${url.startsWith('/press/') ? 'article' : 'website'}" />`,
+    `<meta property="og:site_name" content="Tacitous" />`,
+    `<meta property="og:locale" content="en_GB" />`,
+    `<meta property="og:image" content="${site}/og-image.jpg" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta property="og:image:alt" content="Tacitous: knowledge that stays in your organisation" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
   ].join('\n    ');
   return template
     .replace(/<title>.*?<\/title>/, `<title>${escape(meta.title)}</title>`)

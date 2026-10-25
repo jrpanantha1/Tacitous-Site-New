@@ -6,6 +6,8 @@ import { metaFor } from './routes';
 import Home from './pages/Home';
 import Platform from './pages/Platform';
 import Blueprint from './pages/Blueprint';
+import About from './pages/About';
+import KnowledgeRetention from './pages/KnowledgeRetention';
 import Services from './pages/Services';
 import Sectors from './pages/Sectors';
 import Partners from './pages/Partners';
@@ -39,7 +41,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/platform" element={<Platform />} />
-          <Route path="/blueprint" element={<Blueprint />} />
+          <Route path="/km-blueprint" element={<Blueprint />} />
+          <Route path="/solutions/critical-knowledge-retention" element={<KnowledgeRetention />} />
+          <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/sectors" element={<Sectors />} />
           <Route path="/partners" element={<Partners />} />

@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+import { ArrowRight } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
 import { circle } from '../content/site';
 
@@ -8,7 +10,15 @@ const pillars = [
   { title: 'Forms and codified knowledge', items: ['After Action Reviews', 'Innovation and idea sharing', 'Knowledge-specific business processes', 'Codified collaboration'] },
 ];
 
-const foundations = ['Knowledge asset search', 'AI integration', 'Language translation', 'Mobile applications', 'Cloud or bespoke secure on-premise'];
+const foundations = ['Knowledge asset search', 'Secure, governed access', 'Integration with existing systems', 'Exportable knowledge graph', 'Trusted foundations for AI'];
+
+// How each Blueprint step is supported by Tacitous Next.
+const mapping = [
+  { step: 'Create', tools: ['Expertise profiles', 'Knowledge identification', 'Innovation and ideas'] },
+  { step: 'Collect', tools: ['Lessons Learned', 'After Action Reviews', 'Critical Knowledge Retention', 'Expert knowledge capture'] },
+  { step: 'Manage', tools: ['Structured knowledge forms', 'Expertise categories', 'Knowledge libraries', 'Review, approval and governed access'] },
+  { step: 'Share', tools: ['Communities of Practice', 'Expertise discovery', 'Knowledge exchange', 'Reusable practices'] },
+];
 
 const steps = [
   { title: 'Create', body: 'Identify the knowledge you already have, and the gaps.' },
@@ -20,10 +30,11 @@ const steps = [
 export default function Blueprint() {
   return (
     <>
-      <PageHero eyebrow="KM Blueprint" title="A world-standard blueprint for delivering knowledge management">
+      <PageHero eyebrow="KM Blueprint" title="A practical blueprint for making Knowledge Management work">
         <p>
-          Built on two decades of delivering Knowledge Management in real organisations, the Tacitous Blueprint guides you in
-          managing the flow of knowledge, finding where to improve and using what you know to inform decisions.
+          Built on practical experience of delivering Knowledge Management in real organisations, the Tacitous Blueprint
+          guides you in managing the flow of knowledge, finding where to improve and using what you know to inform
+          decisions.
         </p>
       </PageHero>
 
@@ -39,6 +50,27 @@ export default function Blueprint() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="section section-tint" id="methodology-to-tools">
+        <div className="container">
+          <SectionHead eyebrow="Methodology and platform" title="From Knowledge Management methodology to practical tools" center>
+            Tacitous is both a KM methodology and a working technology platform. Each step of the Blueprint is supported by
+            tools in Tacitous Next.
+          </SectionHead>
+          <ol className="mapping">
+            {mapping.map((m, i) => (
+              <li key={m.step}>
+                <div className="mapping-head"><span className="num">{i + 1}</span><h3>{m.step}</h3></div>
+                <ul>{m.tools.map((t) => <li key={t}>{t}</li>)}</ul>
+              </li>
+            ))}
+          </ol>
+          <div className="center-row gap">
+            <Link to="/platform#tools" className="btn btn-outline">Explore the tools <ArrowRight size={18} /></Link>
+            <Link to="/solutions/critical-knowledge-retention" className="btn btn-outline">Critical Knowledge Retention <ArrowRight size={18} /></Link>
+          </div>
         </div>
       </section>
 
@@ -71,6 +103,10 @@ export default function Blueprint() {
           <div className="foundation">
             {foundations.map((f) => <span key={f}>{f}</span>)}
           </div>
+          <p className="note">
+            These foundations sit beneath every part of the Blueprint. If you have specific hosting, integration or language
+            requirements, <Link to="/contact">talk to us</Link>.
+          </p>
         </div>
       </section>
 

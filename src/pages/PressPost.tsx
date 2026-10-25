@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { CtaBand } from '../components/Blocks';
-import { posts } from '../content/press';
+import { formatDate, posts, readingMinutes } from '../content/press';
 import NotFound from './NotFound';
 
 export default function PressPost() {
@@ -16,7 +16,11 @@ export default function PressPost() {
           <Link to="/press" className="back"><ArrowLeft size={16} /> All articles</Link>
           <p className="eyebrow">{post.tags.join(' · ')}</p>
           <h1>{post.title}</h1>
-          <p className="byline-light">By {post.authors.join(' and ')}{post.date ? ` · ${post.date}` : ''}</p>
+          <p className="byline-light">
+            By {post.authors.join(' and ')}
+            {post.date && <> · <time dateTime={post.date}>{formatDate(post.date)}</time></>}
+            {' · '}{readingMinutes(post)} min read
+          </p>
         </div>
       </section>
       <section className="section">
@@ -24,6 +28,9 @@ export default function PressPost() {
           <p className="article-lead">{post.excerpt}</p>
           {post.body.map((para, i) =>
             para.startsWith('## ') ? <h2 key={i}>{para.slice(3)}</h2> : <p key={i}>{para}</p>,
+          )}
+          {post.original && (
+            <p><a href={post.original.url} className="text-link" rel="noopener noreferrer">{post.original.label} <ExternalLink size={15} /></a></p>
           )}
           {post.external && (
             <p><a href={post.external.url} className="text-link">{post.external.label} <ExternalLink size={15} /></a></p>

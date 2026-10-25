@@ -1,7 +1,7 @@
 import { Cloud, Lock, Server, Smartphone } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
 import { Icon } from '../components/Icon';
-import { ProductPreview } from '../components/ProductPreview';
+import { Showcase } from '../components/Showcase';
 import { modules } from '../content/site';
 
 const deploy = [
@@ -23,15 +23,13 @@ export default function Platform() {
       </PageHero>
 
       <section className="section">
-        <div className="container split">
-          <div>
-            <SectionHead eyebrow="One hub" title="Find expertise, preserve what matters and continuously improve">
-              Communities of Practice, expert profiles, knowledge mapping, discussions, lessons learned and best practices,
-              critical knowledge retention, structured KM workflows, innovation and knowledge libraries, all designed to work
-              together.
-            </SectionHead>
-          </div>
-          <ProductPreview />
+        <div className="container">
+          <SectionHead eyebrow="One hub" title="Find expertise, preserve what matters and continuously improve" center>
+            Communities of Practice, expert profiles, knowledge mapping, discussions, lessons learned and best practices,
+            critical knowledge retention, structured KM workflows, innovation and knowledge libraries, all designed to work
+            together.
+          </SectionHead>
+          <Showcase />
         </div>
       </section>
 

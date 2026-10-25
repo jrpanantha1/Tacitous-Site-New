@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { ArrowRight, CalendarDays, Check, Cloud, Globe2, Handshake, History, Plus, ShieldCheck } from 'lucide-react';
 import { ProductPreview } from '../components/ProductPreview';
+import { Showcase } from '../components/Showcase';
 import { CtaBand, SectionHead } from '../components/Blocks';
 import { Icon } from '../components/Icon';
 import { approach, benefits, circle, faqs, links, modules } from '../content/site';
@@ -79,6 +80,15 @@ export default function Home() {
           <div className="center-row">
             <Link to="/platform" className="btn btn-outline">Explore the platform <ArrowRight size={18} /></Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionHead eyebrow="See it in action" title="One hub for the knowledge your organisation runs on" center>
+            Real screens from the Tacitous Knowledge &amp; Expertise Hub.
+          </SectionHead>
+          <Showcase />
         </div>
       </section>
 

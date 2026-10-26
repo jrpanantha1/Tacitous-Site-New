@@ -61,13 +61,14 @@ export default function Platform() {
             <SectionHead eyebrow="Knowledge Portability &amp; Interoperability" title="Knowledge shouldn’t end when a project does.">
               Tacitous helps organisations carry knowledge forward. Approved Lessons Learned, Best Practices, Knowledge
               Retention and Transfer records and Peer Assists stay tagged to expertise categories, so the next team can find
-              and build on them. Expertise relationships can be exported as RDF N-Triples and Turtle for compatible knowledge
-              graph technologies, and Tenant Administrators can request a structured export of the organisation’s knowledge
-              records.
+              and build on them. Through Data / Exit Package, the lessons, practices, critical knowledge and peer learnings
+              captured during a project can be exported as a structured package, approved by the Platform Administrator.
+              Expertise relationships can also be exported as RDF N-Triples and Turtle for compatible knowledge graph
+              technologies.
             </SectionHead>
             <div className="link-panel link-panel-light">
               <Link to="/explore#semantic-export">Semantic Expertise Map export <ArrowRight size={18} aria-hidden="true" /></Link>
-              <Link to="/explore#data-export">Tacitous Data export <ArrowRight size={18} aria-hidden="true" /></Link>
+              <Link to="/explore#data-export">Data / Exit Package <ArrowRight size={18} aria-hidden="true" /></Link>
             </div>
           </div>
           <Screenshot screen={featureById('semantic-export')!.screen} />

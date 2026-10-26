@@ -32,7 +32,7 @@ const carryForward = [
   },
   {
     title: 'A portable record of what you know',
-    body: 'Tenant Administrators can request a structured export of selected knowledge domains, as JSON and CSV with stable identifiers, for archival, portability or migration.',
+    body: 'Through Data / Exit Package, Tenant Administrators request an export of selected knowledge domains, approved by the Platform Administrator, as JSON and CSV with stable identifiers for archival, portability or migration.',
   },
 ];
 

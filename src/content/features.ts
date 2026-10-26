@@ -18,7 +18,7 @@ export type Feature = {
 };
 
 export const groups: { id: GroupId; title: string; purpose: string }[] = [
-  { id: 'expertise', title: 'Find expertise', purpose: 'Know who knows what, and how people, subjects and knowledge connect.' },
+  { id: 'expertise', title: 'Pathway to Expertise', purpose: 'A pathway to the knowledge and people you need.' },
   { id: 'learning', title: 'Learn from experience', purpose: 'Turn experience into reviewed, reusable Lessons Learned and Best Practices.' },
   { id: 'retention', title: 'Retain critical knowledge', purpose: 'Capture judgement and experience before people change roles or leave.' },
   { id: 'collaboration', title: 'Collaborate in communities', purpose: 'Give practitioners a place to ask, answer and build shared knowledge.' },
@@ -169,12 +169,12 @@ export const features: Feature[] = [
     name: 'Knowledge Retention and Transfer',
     group: 'retention',
     summary:
-      'A guided conversation that captures experience, practical judgement and advice from someone changing roles or leaving, recorded with an interviewer.',
+      'A structured way to capture the experience, practical judgement, insights and advice of knowledgeable employees, particularly those approaching retirement or moving into different roles.',
     value: 'Keep the knowledge that procedures miss when experienced people move on.',
     details: [
-      'Role introduction, conversation points and a closing question',
+      'Three sections: Role Introduction, Conversation Points and a Closing Question with advice for successors',
       'Prompts such as “What do you wish you had known when you started?”',
-      'Contributor, interviewer, role and one to three expertise categories',
+      'Associated with one to three expertise categories, connecting retained knowledge to the right area',
       'Restricted or tenant-wide audience, approval or direct publish, and PDF download',
     ],
     screen: s('app-krt.webp', 'A Knowledge Retention and Transfer record with role introduction, conversation points and closing advice'),

@@ -135,7 +135,7 @@ export const journeys: Journey[] = [
   {
     id: 'retention',
     title: 'Critical Knowledge Retention',
-    intro: 'A structured conversation that keeps experience and judgement when someone changes role or leaves.',
+    intro: 'A structured way to capture the experience, practical judgement, insights and advice of people approaching retirement or moving into different roles.',
     steps: [
       {
         title: 'Set up the conversation',
@@ -144,9 +144,9 @@ export const journeys: Journey[] = [
         screen: s('app-krt-editor.webp', 'New Knowledge Retention and Transfer record with contributor, role title, expertise categories and audience'),
       },
       {
-        title: 'Work through the prompts',
+        title: 'Role Introduction and Conversation Points',
         who: 'Interviewer and contributor',
-        body: 'Guided prompts draw out what procedures miss, from what they wish they had known at the start to three pieces of advice for their successor.',
+        body: 'The form guides the conversation through three sections: a Role Introduction, Conversation Points that draw out what procedures miss, and a Closing Question with advice for their successor.',
         screen: s('app-krt-prompts.webp', 'Conversation prompts such as what do you wish you had known when you started the job'),
       },
       {

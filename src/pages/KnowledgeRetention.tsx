@@ -22,8 +22,14 @@ const steps = [
   { title: 'Share and reuse', body: 'Make the knowledge easy to find and apply across the organisation, long after the original holder has moved on.' },
 ];
 
+const krtSections = [
+  { title: 'Role Introduction', body: 'The person describes their area in plain terms, so that someone new to the role, or to the subject, can understand it.' },
+  { title: 'Conversation Points', body: 'Seven optional questions draw out experience and insight, from what they wish they had known at the start to the shortcuts, workarounds and critical success factors others should know about.' },
+  { title: 'Closing Question', body: 'Three key pieces of advice for their successor, and why each one matters.' },
+]
+
 const capabilities = [
-  { id: 'knowledge-retention', label: 'Critical Knowledge Retention tools', body: 'Plan and capture knowledge transfer from people at risk of leaving.' },
+  { id: 'knowledge-retention', label: 'Knowledge Retention and Transfer', body: 'A guided conversation that captures knowledge from people retiring or moving into different roles.' },
   { id: 'expert-profiles', label: 'Expert profiles', body: 'Know who holds which expertise, and who they can hand it on to.' },
   { id: 'expertise-map', label: 'Expertise Map', body: 'See where expertise is concentrated in only one or two people.' },
   { id: 'km-forms', label: 'Knowledge forms', body: 'Structured capture, including Knowledge Retention and Transfer and Expert Practice Note forms.' },
@@ -43,7 +49,7 @@ const industries = [
 const scenarios = [
   {
     title: 'A senior engineer retiring in six months',
-    body: 'The engineer’s expertise areas are confirmed on the Expertise Map. Retention interviews and Expert Practice Notes capture key judgements, and a successor joins the relevant community to keep the knowledge current.',
+    body: 'The engineer’s expertise areas are confirmed on the Expertise Map. A Knowledge Retention and Transfer conversation and Expert Practice Notes capture key judgements, and a successor joins the relevant community to keep the knowledge current.',
   },
   {
     title: 'A project closing down',
@@ -117,6 +123,29 @@ export default function KnowledgeRetention() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="section section-tint" id="krt">
+        <div className="container">
+          <SectionHead eyebrow="Knowledge Retention and Transfer" title="A structured conversation before someone moves on">
+            Knowledge Retention and Transfer provides a structured way to capture the experience, practical judgement,
+            insights and advice of knowledgeable employees, particularly those approaching retirement or moving into
+            different roles. Each record can be associated with expertise categories, connecting retained knowledge with the
+            relevant areas of organisational expertise.
+          </SectionHead>
+          <ol className="process">
+            {krtSections.map((s, i) => (
+              <li key={s.title}>
+                <span className="num">{i + 1}</span>
+                <h3>{s.title}</h3>
+                <p>{s.body}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="note">
+            <Link to="/explore#journey-retention" className="text-link">Follow a Knowledge Retention and Transfer record step by step <ArrowRight size={16} /></Link>
+          </p>
         </div>
       </section>
 

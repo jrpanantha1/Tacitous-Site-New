@@ -23,8 +23,9 @@ export default function Explore() {
     <>
       <PageHero eyebrow="Explore Tacitous Next" title="See how knowledge moves through Tacitous Next.">
         <p>
-          Choose a capability to see the real screen behind it, follow a piece of knowledge from first idea to reuse, and
-          explore how people, expertise and knowledge connect.
+          Tacitous doesn’t simply store knowledge. It connects knowledge, people and expertise so that organisations can put
+          what they know to work. Choose a capability to see the real screen behind it, or follow a piece of knowledge from
+          first idea to reuse.
         </p>
         <nav className="explore-jump" aria-label="On this page">
           <a href="#how-it-works">How it works</a>
@@ -38,8 +39,9 @@ export default function Explore() {
       <section className="section" id="how-it-works">
         <div className="container">
           <SectionHead eyebrow="How it works" title="Everything starts with an expertise category">
-            Almost everything in Tacitous Next is linked to an expertise category, such as Finance, Legal or Fundraising. Each
-            category has Designated Experts, so when something new appears in their area they hear about it and can help.
+            Discussions, Learnings, Knowledge Retention and Transfer records and other knowledge are linked to expertise
+            categories, such as Finance, Legal or Fundraising. Each category has Designated Experts, who are notified about new
+            discussions and Learnings in their area so they can help.
           </SectionHead>
           <div id="journey-expertise">
             <JourneyStepper journey={journeyById('expertise')!} />

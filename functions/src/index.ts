@@ -10,10 +10,17 @@ initializeApp();
 const db = getFirestore();
 
 // Enquiries are emailed directly over SMTP. The connection URL, including the mailbox password, is kept in
-// Secret Manager as SMTP_URL, for example smtp://info%40tacitous.com:PASSWORD@smtp.office365.com:587
+// Secret Manager as SMTP_URL, for example smtps://collaboration%40tacitous.com:PASSWORD@mail.example.com:465
 const SMTP_URL = defineSecret('SMTP_URL');
 const NOTIFY_TO = process.env.CONTACT_NOTIFY_TO || 'info@tacitous.com';
-const MAIL_FROM = process.env.CONTACT_MAIL_FROM || `Tacitous website <${NOTIFY_TO}>`;
+
+// Mail servers usually only accept mail sent from the mailbox that signs in, so that is the default sender.
+function mailFrom(smtpUrl: string) {
+  if (process.env.CONTACT_MAIL_FROM) return process.env.CONTACT_MAIL_FROM;
+  let user = '';
+  try { user = decodeURIComponent(new URL(smtpUrl).username); } catch { /* fall back below */ }
+  return `Tacitous website <${user.includes('@') ? user : NOTIFY_TO}>`;
+}
 const MAX_PER_HOUR = 5;
 
 type Enquiry = { name: string; email: string; organisation: string; interest: string; message: string; page: string };
@@ -78,7 +85,7 @@ export const contact = onRequest({ region: 'europe-west2', cors: false, maxInsta
   // The enquiry is already stored, so a mail failure is logged and recorded rather than shown to the visitor.
   try {
     await nodemailer.createTransport(SMTP_URL.value()).sendMail({
-      from: MAIL_FROM,
+      from: mailFrom(SMTP_URL.value()),
       to: NOTIFY_TO,
       replyTo: enquiry.email,
       subject: `Website enquiry from ${enquiry.name}${enquiry.organisation ? ` (${enquiry.organisation})` : ''}`,

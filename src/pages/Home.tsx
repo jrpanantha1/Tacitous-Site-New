@@ -52,8 +52,8 @@ export default function Home() {
         <div className="container">
           <SectionHead eyebrow="How it works" title="Everything starts with an expertise category" center>
             Discussions, Learnings, Knowledge Retention and Transfer records and other knowledge are linked to expertise
-            categories, such as Finance, Legal or Fundraising. Each category has Designated Experts, who are notified about
-            new discussions and Learnings in their area so they can help.
+            categories, such as Finance, Legal or Fundraising. Each category has Designated Experts, who are notified about new
+            discussions, Learnings and Knowledge Retention and Transfer records in their area so they can help.
           </SectionHead>
           <ScrollStory journey={journeyById('expertise')!} />
         </div>

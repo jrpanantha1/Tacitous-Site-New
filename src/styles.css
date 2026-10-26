@@ -758,3 +758,9 @@ a.card:hover, .link-card:hover { transform: translateY(-4px); box-shadow: 0 18px
   .story-step { opacity: 1; }
   .shot-open, .shot-open:hover { transform: none; }
 }
+
+/* Key points list */
+.key-points { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.key-points li { display: flex; gap: 12px; align-items: flex-start; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.key-points li:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.key-points svg { flex: none; margin-top: 3px; color: var(--green-700); }

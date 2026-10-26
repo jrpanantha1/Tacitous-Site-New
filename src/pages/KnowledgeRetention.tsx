@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, Atom, Flame, HardHat, Landmark, Wrench } from 'lucide-react';
+import { ArrowRight, Atom, BellRing, Check, Flame, HardHat, Landmark, Wrench } from 'lucide-react';
 import { CtaBand, PageHero, SectionHead } from '../components/Blocks';
 import { featureById } from '../content/features';
 import { Screenshot } from '../components/Motion';
@@ -27,6 +27,14 @@ const krtSections = [
   { title: 'Conversation Points', body: 'Seven optional questions draw out experience and insight, from what they wish they had known at the start to the shortcuts, workarounds and critical success factors others should know about.' },
   { title: 'Closing Question', body: 'Three key pieces of advice for their successor, and why each one matters.' },
 ]
+
+const notificationPoints = [
+  'Sent when a record is published, not while it is being drafted or reviewed',
+  'Restricted records never generate expertise notifications',
+  'Respects tenant settings, individual preferences, active expertise assignments, category mutes, message blocks and access permissions',
+  'At most one notification per person, even when a record covers several expertise categories',
+  'Experts go straight from the notification to the record, provided they still have access',
+];
 
 const capabilities = [
   { id: 'knowledge-retention', label: 'Knowledge Retention and Transfer', body: 'A guided conversation that captures knowledge from people retiring or moving into different roles.' },
@@ -146,6 +154,25 @@ export default function KnowledgeRetention() {
           <p className="note">
             <Link to="/explore#journey-retention" className="text-link">Follow a Knowledge Retention and Transfer record step by step <ArrowRight size={16} /></Link>
           </p>
+        </div>
+      </section>
+
+      <section className="section" id="krt-experts">
+        <div className="container split split-top">
+          <div>
+            <span className="icon-chip big"><BellRing size={26} aria-hidden="true" /></span>
+            <SectionHead eyebrow="Expertise discovery" title="Retained knowledge, connected to the experts who need it.">
+              Tacitous goes beyond capturing critical knowledge. When a knowledge retention record is published for the
+              organisation, relevant Designated Experts can be notified automatically based on their expertise areas. This
+              helps connect valuable experience with the people best placed to understand, apply and share it, while
+              respecting access permissions and individual notification preferences.
+            </SectionHead>
+          </div>
+          <ul className="key-points">
+            {notificationPoints.map((p) => (
+              <li key={p}><Check size={18} aria-hidden="true" /> <span>{p}</span></li>
+            ))}
+          </ul>
         </div>
       </section>
 

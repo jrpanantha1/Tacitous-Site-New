@@ -42,8 +42,25 @@ export const features: Feature[] = [
       'Export a category as a semantic knowledge graph in JSON-LD, Turtle or N-Triples',
     ],
     screen: s('app-expertise-relationships.webp', 'Expertise Map Relationships view for Knowledge Management, listing people, knowledge and communities connected to the subject'),
-    related: ['constellation', 'expert-profiles', 'lessons-learned', 'communities'],
-    journey: 'connections',
+    related: ['expert-notifications', 'constellation', 'expert-profiles', 'lessons-learned', 'communities'],
+    journey: 'expertise',
+  },
+  {
+    id: 'expert-notifications',
+    name: 'Designated Expert notifications',
+    group: 'expertise',
+    summary:
+      'Each expertise category has Designated Experts. When a discussion starts or a Learning is published in their category, they are notified so they can help steer it.',
+    value: 'Questions reach the people who can answer them, without anyone having to know who to ask.',
+    details: [
+      'Administrators assign Designated Experts to each expertise category',
+      'Notifications for new discussions and published Learnings in the category',
+      'Only for content the expert is allowed to see, including private communities',
+      'Switched on by administrators; experts can turn them off or mute a category',
+    ],
+    screen: s('app-notifications.webp', 'Notifications telling a Designated Expert about a new Learning and a new discussion in their area of expertise'),
+    related: ['expertise-map', 'communities', 'lessons-learned', 'expert-profiles'],
+    journey: 'expertise',
   },
   {
     id: 'constellation',
@@ -250,4 +267,4 @@ export const features: Feature[] = [
 export const featureById = (id: string) => features.find((f) => f.id === id);
 
 // The smaller set introduced on the homepage.
-export const highlightIds = ['expertise-map', 'lessons-learned', 'promote-to-learning', 'knowledge-retention', 'communities', 'my-network'];
+export const highlightIds = ['expertise-map', 'expert-notifications', 'lessons-learned', 'promote-to-learning', 'knowledge-retention', 'communities'];

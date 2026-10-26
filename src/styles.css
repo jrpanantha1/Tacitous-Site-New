@@ -679,3 +679,4 @@ p { margin: 0 0 1em; }
   *, *::before, *::after { animation: none !important; }
   .net-line { stroke-dasharray: none; }
 }
+.section-tint .explorer-value { background: #fff; }

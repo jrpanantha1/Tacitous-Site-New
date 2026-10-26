@@ -5,7 +5,7 @@ import { ProductExplorer } from '../components/ProductExplorer';
 import { JourneyStepper } from '../components/JourneyStepper';
 import { ExpertiseNetwork } from '../components/ExpertiseNetwork';
 import { Reveal } from '../components/Motion';
-import { journeys } from '../content/journeys';
+import { journeyById, journeys } from '../content/journeys';
 
 // The structured forms in the Tacitous Next catalogue. Lessons Learned and Best Practices are Learnings, not forms.
 const forms = [
@@ -27,6 +27,7 @@ export default function Explore() {
           explore how people, expertise and knowledge connect.
         </p>
         <nav className="explore-jump" aria-label="On this page">
+          <a href="#how-it-works">How it works</a>
           <a href="#capabilities">Capabilities</a>
           <a href="#journeys">Knowledge journeys</a>
           <a href="#network">Expertise network</a>
@@ -34,7 +35,19 @@ export default function Explore() {
         </nav>
       </PageHero>
 
-      <section className="section" id="capabilities">
+      <section className="section" id="how-it-works">
+        <div className="container">
+          <SectionHead eyebrow="How it works" title="Everything starts with an expertise category">
+            Almost everything in Tacitous Next is linked to an expertise category, such as Finance, Legal or Fundraising. Each
+            category has Designated Experts, so when something new appears in their area they hear about it and can help.
+          </SectionHead>
+          <div id="journey-expertise">
+            <JourneyStepper journey={journeyById('expertise')!} />
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-tint" id="capabilities">
         <div className="container">
           <SectionHead eyebrow="Capabilities" title="Everything in the Knowledge & Expertise Hub, grouped by what it helps you do">
             Every screen is from Tacitous Next, captured from a local build with fictional demonstration people and content.
@@ -44,12 +57,12 @@ export default function Explore() {
         </div>
       </section>
 
-      <section className="section section-tint" id="journeys">
+      <section className="section" id="journeys">
         <div className="container">
           <SectionHead eyebrow="Knowledge journeys" title="Follow knowledge from experience to reuse">
             Step through the workflows exactly as they run in the application, including who takes each step.
           </SectionHead>
-          {journeys.map((j) => (
+          {journeys.filter((j) => j.id !== 'expertise').map((j) => (
             <Reveal key={j.id} className="journey-block">
               <div id={`journey-${j.id}`} className="journey-head">
                 <h3>{j.title}</h3>
@@ -61,7 +74,7 @@ export default function Explore() {
         </div>
       </section>
 
-      <section className="section" id="network">
+      <section className="section section-tint" id="network">
         <div className="container">
           <SectionHead eyebrow="Expertise relationships" title="How people, expertise and knowledge connect">
             Modelled on the Constellation in Tacitous Next. Each governed expertise category is sized by what is connected to
@@ -77,7 +90,7 @@ export default function Explore() {
         </div>
       </section>
 
-      <section className="section section-tint" id="forms">
+      <section className="section" id="forms">
         <div className="container">
           <SectionHead eyebrow="Structured Knowledge Management forms" title="A consistent structure for every kind of knowledge">
             Every form is tagged with expertise categories. After Action Reviews, decisions, Peer Assists, ideas and Knowledge

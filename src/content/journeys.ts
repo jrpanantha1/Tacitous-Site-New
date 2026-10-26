@@ -9,6 +9,37 @@ const s = (file: string, alt: string, w = 1440, h = 900): Screen => ({ file, w, 
 
 export const journeys: Journey[] = [
   {
+    id: 'expertise',
+    title: 'Everything starts with an expertise category',
+    intro: 'Discussions, Learnings and knowledge records are all tagged to governed expertise categories such as Finance or Legal, and each category has Designated Experts.',
+    steps: [
+      {
+        title: 'Define categories and experts',
+        who: 'Tenant administrators',
+        body: 'Administrators set up the organisation’s expertise categories, assign Designated Experts to each one and choose whether experts receive expertise notifications.',
+        screen: s('app-expertise-admin.webp', 'Expertise categories administration with Send expertise notifications switched on and Designated Experts assigned to each category'),
+      },
+      {
+        title: 'Tag the conversation',
+        who: 'Community managers',
+        body: 'Every discussion topic is created under an expertise category, so the conversation is connected to the subject and the people who know it from the start.',
+        screen: s('app-topic-new.webp', 'Add topic form with a title, summary and a required expertise category'),
+      },
+      {
+        title: 'The experts hear about it',
+        who: 'Designated Experts',
+        body: 'When a discussion starts or a Learning is published in their category, Designated Experts are notified so they can step in, steer and help. They only hear about what they can access, and can mute a category.',
+        screen: s('app-notifications.webp', 'Notifications telling a Designated Expert about a new Learning and a new discussion in their area of expertise'),
+      },
+      {
+        title: 'It all connects',
+        who: 'Everyone',
+        body: 'The category’s page on the Expertise Map brings together its experts, Learnings, other knowledge, communities and library resources.',
+        screen: s('app-expertise-relationships.webp', 'Expertise Map Relationships view for Knowledge Management listing its Designated Experts'),
+      },
+    ],
+  },
+  {
     id: 'learning',
     title: 'Lessons Learned and Best Practices',
     intro: 'From an experience worth sharing to a reviewed, reusable Learning that keeps improving.',

@@ -25,7 +25,7 @@ export default function Home() {
               <a href={links.bookCall} className="btn btn-ghost-light"><CalendarDays size={18} /> Book a call</a>
             </div>
             <ul className="hero-points">
-              <li><Check size={16} /> Expertise Map and Communities of Practice</li>
+              <li><Check size={16} /> Designated Experts for every area of expertise</li>
               <li><Check size={16} /> Critical Knowledge Retention</li>
               <li><Check size={16} /> Backed by a practical KM Blueprint</li>
             </ul>
@@ -70,7 +70,8 @@ export default function Home() {
       <section className="section section-tint" id="features">
         <div className="container">
           <SectionHead eyebrow="See it in action" title="One hub for the knowledge your organisation runs on" center>
-            Choose a capability to see the real screen, why it matters and what it connects to.
+            Everything is organised around expertise categories, each with Designated Experts who are notified when something
+            new appears in their area. Choose a capability to see the real screen and what it connects to.
           </SectionHead>
           <ProductExplorer ids={highlightIds} idPrefix="home" />
           <div className="center-row">

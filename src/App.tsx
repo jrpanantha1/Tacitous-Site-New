@@ -17,6 +17,7 @@ import PressPost from './pages/PressPost';
 import Contact from './pages/Contact';
 import { Privacy, Terms } from './pages/Legal';
 import NotFound from './pages/NotFound';
+import { useScrollReveal } from './components/Motion';
 
 function useRouteEffects() {
   const { pathname, hash } = useLocation();
@@ -34,6 +35,7 @@ function useRouteEffects() {
 
 export default function App() {
   useRouteEffects();
+  useScrollReveal(useLocation().pathname);
   return (
     <>
       <a className="skip" href="#main">Skip to content</a>

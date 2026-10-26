@@ -2,10 +2,12 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router';
 import { ArrowRight, CalendarDays } from 'lucide-react';
 import { links } from '../content/site';
+import { HeroBackdrop } from './HeroBackdrop';
 
 export function PageHero({ eyebrow, title, children }: { eyebrow: string; title: ReactNode; children?: ReactNode }) {
   return (
     <section className="hero hero-page">
+      <HeroBackdrop />
       <div className="container">
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>

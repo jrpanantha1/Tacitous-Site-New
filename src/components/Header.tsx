@@ -11,7 +11,11 @@ export function Header() {
 
   useEffect(() => setOpen(false), [pathname, hash]);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      document.querySelector<HTMLElement>('.site-header')?.style.setProperty('--progress', String(max > 0 ? window.scrollY / max : 0));
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);

@@ -1,6 +1,9 @@
 import { Link } from 'react-router';
 import { ArrowRight, BookMarked, CalendarDays, Check, Handshake, KeyRound, Network, Plus, ShieldCheck, UserRoundX } from 'lucide-react';
 import { ProductPreview } from '../components/ProductPreview';
+import { HeroBackdrop } from '../components/HeroBackdrop';
+import { ScrollStory } from '../components/ScrollStory';
+import { journeyById } from '../content/journeys';
 import { ProductExplorer } from '../components/ProductExplorer';
 import { CtaBand, SectionHead } from '../components/Blocks';
 import { approach, benefits, circle, faqs, links } from '../content/site';
@@ -11,8 +14,9 @@ export default function Home() {
   return (
     <>
       <section className="hero hero-home">
+        <HeroBackdrop />
         <div className="container hero-grid">
-          <div>
+          <div className="hero-copy">
             <p className="eyebrow">Knowledge that stays</p>
             <h1>Capture what your people already know, before it walks out the door.</h1>
             <p className="lead">
@@ -44,7 +48,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="about">
+      <section className="section section-story" id="how-it-works">
+        <div className="container">
+          <SectionHead eyebrow="How it works" title="Everything starts with an expertise category" center>
+            Discussions, Learnings, Knowledge Retention and Transfer records and other knowledge are linked to expertise
+            categories, such as Finance, Legal or Fundraising. Each category has Designated Experts, who are notified about
+            new discussions and Learnings in their area so they can help.
+          </SectionHead>
+          <ScrollStory journey={journeyById('expertise')!} />
+        </div>
+      </section>
+
+      <section className="section section-tint" id="about">
         <div className="container">
           <SectionHead eyebrow="How we do it" title="You have the knowledge. We have the solution.">
             Most knowledge tools give you somewhere to put documents. Tacitous combines Knowledge Management methodology,
@@ -67,7 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-tint" id="features">
+      <section className="section" id="features">
         <div className="container">
           <SectionHead eyebrow="Pathway to Expertise" title="A pathway to the knowledge and people you need." center>
             Tacitous helps people discover relevant expertise, connect with knowledgeable colleagues and access the lessons, practices and communities that support their work. By linking people with organisational knowledge, Tacitous makes expertise easier to find, share and reuse.

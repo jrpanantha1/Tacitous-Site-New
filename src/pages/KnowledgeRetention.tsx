@@ -1,7 +1,8 @@
 import { Link } from 'react-router';
 import { ArrowRight, Atom, Flame, HardHat, Landmark, Wrench } from 'lucide-react';
 import { CtaBand, PageHero, SectionHead } from '../components/Blocks';
-import { tools } from '../content/tools';
+import { featureById } from '../content/features';
+import { Screenshot } from '../components/Motion';
 
 const challenges = [
   { title: 'An ageing workforce', body: 'Retirements are approaching for many of the people who hold the deepest experience.' },
@@ -25,7 +26,7 @@ const capabilities = [
   { id: 'knowledge-retention', label: 'Critical Knowledge Retention tools', body: 'Plan and capture knowledge transfer from people at risk of leaving.' },
   { id: 'expert-profiles', label: 'Expert profiles', body: 'Know who holds which expertise, and who they can hand it on to.' },
   { id: 'expertise-map', label: 'Expertise Map', body: 'See where expertise is concentrated in only one or two people.' },
-  { id: 'knowledge-forms', label: 'Knowledge forms', body: 'Structured capture, including Critical Knowledge Retention and Expert Practice Note forms.' },
+  { id: 'km-forms', label: 'Knowledge forms', body: 'Structured capture, including Knowledge Retention and Transfer and Expert Practice Note forms.' },
   { id: 'lessons-learned', label: 'Lessons learned and best practices', body: 'Reviewed, approved learnings tagged by expertise.' },
   { id: 'knowledge-library', label: 'Knowledge libraries', body: 'One trusted place to find approved knowledge.' },
   { id: 'communities', label: 'Communities of Practice', body: 'Groups that take ownership of knowledge and keep it current.' },
@@ -54,7 +55,7 @@ const scenarios = [
   },
 ];
 
-const screen = tools.find((t) => t.id === 'expertise-map')!.screen!;
+const screen = featureById('knowledge-retention')!.screen;
 
 export default function KnowledgeRetention() {
   return (
@@ -67,7 +68,7 @@ export default function KnowledgeRetention() {
         </p>
         <div className="hero-actions">
           <Link to="/contact" className="btn btn-light">Talk to us <ArrowRight size={18} /></Link>
-          <Link to="/platform#knowledge-retention" className="btn btn-ghost-light">Explore the Platform</Link>
+          <Link to="/explore#journey-retention" className="btn btn-ghost-light">See how it works</Link>
         </div>
       </PageHero>
 
@@ -126,15 +127,13 @@ export default function KnowledgeRetention() {
             <ul className="capability-list">
               {capabilities.map((c) => (
                 <li key={c.id}>
-                  <Link to={`/platform#${c.id}`}>{c.label}</Link>
+                  <Link to={`/explore#${c.id}`}>{c.label}</Link>
                   <span>{c.body}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <figure className="showcase-frame">
-            <img src={`${import.meta.env.BASE_URL}screens/${screen.file}`} alt={screen.alt} width={screen.w} height={screen.h} loading="lazy" decoding="async" />
-          </figure>
+          <Screenshot screen={screen} />
         </div>
       </section>
 

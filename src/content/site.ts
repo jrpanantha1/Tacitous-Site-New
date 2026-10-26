@@ -18,9 +18,9 @@ export const nav: NavItem[] = [
     to: '/platform',
     children: [
       { label: 'Platform', to: '/platform', blurb: 'Tacitous Next, the Knowledge & Expertise Hub' },
+      { label: 'Explore features', to: '/explore', blurb: 'Interactive tour of every capability, with real screens' },
       { label: 'KM Blueprint', to: '/km-blueprint', blurb: 'The methodology behind every implementation' },
-      { label: 'Knowledge Management tools', to: '/platform#tools', blurb: 'Forms, lessons learned, libraries and more' },
-      { label: 'Expertise Map', to: '/platform#expertise-map', blurb: 'See who knows what across your organisation' },
+      { label: 'Expertise Map', to: '/explore#network', blurb: 'See how people, expertise and knowledge connect' },
     ],
   },
   {
@@ -59,18 +59,6 @@ export const approach = [
     body: 'Your people capture lessons learned, retain critical knowledge, share best practice and grow Communities of Practice.',
   },
 ];
-
-// Every module links to the place on the site that explains it in more depth.
-export const modules = [
-  { icon: 'users', title: 'Communities of Practice', to: '/platform#communities', body: 'Public, managed and private spaces with discussions, announcements, libraries, calendars and FAQs.' },
-  { icon: 'book', title: 'Lessons learned, reusable', to: '/platform#lessons-learned', body: 'Capture lessons and best practices, approve them and organise them by expertise so they are found again.' },
-  { icon: 'search', title: 'Expert profiles', to: '/platform#expert-profiles', body: 'Find colleagues by their skills, designated expertise and the topics they are happy to be asked about.' },
-  { icon: 'map', title: 'Expertise Map', to: '/platform#expertise-map', body: 'See how people, communities and organisations connect to each governed area of expertise.' },
-  { icon: 'forms', title: 'Knowledge forms', to: '/platform#knowledge-forms', body: 'After Action Reviews, Peer Assists, decision records and more, captured in a consistent structure.' },
-  { icon: 'library', title: 'Knowledge library', to: '/platform#knowledge-library', body: 'Approved learnings and resources gathered in one place, alongside the communities that use them.' },
-  { icon: 'retention', title: 'Critical knowledge retention', to: '/solutions/critical-knowledge-retention', body: 'Identify knowledge at risk and capture it from the people who hold it before they move on.' },
-  { icon: 'shield', title: 'Governed access', to: '/platform#deployment', body: 'Tenant-based access, membership approvals and sign-in with Microsoft, Google or an email link.' },
-] as const;
 
 export const benefits = [
   {

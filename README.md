@@ -58,8 +58,12 @@ reCAPTCHA Enterprise.
 
 ## Still to do
 
-- Add real screenshots for the Knowledge retention, Knowledge forms and Knowledge library tabs: save a `.webp` in
-  `public/screens/` and add a `screen` entry to that tool in `src/content/tools.ts`.
+- Product screens live in `public/screens/app-*.webp` (1440x900). They were captured from a local Tacitous Next build
+  running on emulators with the fictional demonstration personas, not from a customer tenant. To replace one, keep the
+  file name and size, or update the `screen` entry in `src/content/features.ts` or `src/content/journeys.ts`.
+- Pathway to Expertise is not on the Explore page because it was not found in the Tacitous Next source. Add it to
+  `src/content/features.ts` once its behaviour and a real screen are confirmed.
+- The expertise network on `/explore` uses illustrative data from `src/content/network.ts`. Keep it to fictional people.
 - Add each press article's verified publish date (`date`, as `YYYY-MM-DD`) and, where it first appeared elsewhere, its
   `original` link in `src/content/press.ts`. Dates are hidden until set.
 - Add the Knoco International logo to the Partners page once Knoco has approved its use.

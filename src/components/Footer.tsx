@@ -21,7 +21,7 @@ export function Footer() {
           <h2 className="footer-head">Product</h2>
           <Link to="/platform">Platform</Link>
           <Link to="/km-blueprint">KM Blueprint</Link>
-          <Link to="/platform#tools">Knowledge Management tools</Link>
+          <Link to="/explore">Explore features</Link>
           <a href={links.app}>Sign in</a>
         </nav>
         <nav aria-label="What we do">

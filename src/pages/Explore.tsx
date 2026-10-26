@@ -4,6 +4,7 @@ import { CtaBand, PageHero, SectionHead } from '../components/Blocks';
 import { ProductExplorer } from '../components/ProductExplorer';
 import { JourneyStepper } from '../components/JourneyStepper';
 import { ExpertiseNetwork } from '../components/ExpertiseNetwork';
+import { ScrollStory } from '../components/ScrollStory';
 import { Reveal } from '../components/Motion';
 import { journeyById, journeys } from '../content/journeys';
 
@@ -44,7 +45,7 @@ export default function Explore() {
             discussions and Learnings in their area so they can help.
           </SectionHead>
           <div id="journey-expertise">
-            <JourneyStepper journey={journeyById('expertise')!} />
+            <ScrollStory journey={journeyById('expertise')!} />
           </div>
         </div>
       </section>

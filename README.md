@@ -21,10 +21,13 @@ at the top of `src/styles.css`. To add a page, add its route in `src/App.tsx` an
 1. Create or pick a Firebase project and put its id in `.firebaserc`.
 2. Upgrade it to the Blaze plan (needed for Cloud Functions).
 3. Create a Firestore database (region `europe-west2`, London) and deploy the locked-down rules.
-4. Install the **Trigger Email from Firestore** extension (`firebase ext:install firebase/firestore-send-email`),
-   collection `mail`, with your SMTP details (for example Microsoft 365 or a SendGrid account).
+4. Store the SMTP connection URL as the secret `SMTP_URL` (`firebase functions:secrets:set SMTP_URL`, or Security >
+   Secret Manager in Google Cloud), for example `smtp://info%40tacitous.com:PASSWORD@smtp.office365.com:587`
+   (encode `@` in the username as `%40`). The contact function sends each enquiry with it. Create the secret before
+   the first deploy, and give the deploy service account the Secret Manager Admin role.
 5. Optional: set a TTL policy on `contactRateLimits.expiresAt` so rate-limit counters clean themselves up.
-6. Optional: set `CONTACT_NOTIFY_TO` in `functions/.env` to change where enquiries are emailed (default info@tacitous.com).
+6. Optional: set `CONTACT_NOTIFY_TO` and `CONTACT_MAIL_FROM` in `functions/.env` to change where enquiries are emailed
+   and the sender (default info@tacitous.com).
 
 ### Automatic deploys (recommended)
 

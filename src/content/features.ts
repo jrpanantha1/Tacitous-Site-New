@@ -50,11 +50,11 @@ export const features: Feature[] = [
     name: 'Designated Expert notifications',
     group: 'expertise',
     summary:
-      'Each expertise category has Designated Experts. When a discussion starts or a Learning is published in their category, they are notified so they can help steer it.',
+      'Each expertise category has Designated Experts. When a discussion starts, a Learning is published or a Knowledge Retention and Transfer record is published for the organisation in their category, they are notified so they can help.',
     value: 'Questions reach the people who can answer them, without anyone having to know who to ask.',
     details: [
       'Administrators assign Designated Experts to each expertise category',
-      'Notifications for new discussions and published Learnings in the category',
+      'Notifications for new discussions, published Learnings and published Knowledge Retention and Transfer records in the category',
       'Only for content the expert is allowed to see, including private communities',
       'Switched on by administrators; experts can turn them off or mute a category',
     ],
@@ -176,9 +176,10 @@ export const features: Feature[] = [
       'Prompts such as “What do you wish you had known when you started?”',
       'Associated with one to three expertise categories, connecting retained knowledge to the right area',
       'Restricted or tenant-wide audience, approval or direct publish, and PDF download',
+      'When published for the organisation, Designated Experts in its categories can be notified automatically',
     ],
     screen: s('app-krt.webp', 'A Knowledge Retention and Transfer record with role introduction, conversation points and closing advice'),
-    related: ['expert-practice-note', 'expertise-map', 'expert-profiles'],
+    related: ['expert-notifications', 'expert-practice-note', 'expertise-map', 'expert-profiles'],
     journey: 'retention',
   },
   {

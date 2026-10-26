@@ -28,7 +28,7 @@ export const journeys: Journey[] = [
       {
         title: 'The experts hear about it',
         who: 'Designated Experts',
-        body: 'When a discussion starts or a Learning is published in their category, Designated Experts are notified so they can step in, steer and help. They only hear about what they can access, and can mute a category.',
+        body: 'When a discussion starts, a Learning is published or a Knowledge Retention and Transfer record is published for the organisation in their category, Designated Experts are notified so they can step in, steer and help. They only hear about what they can access, and can mute a category.',
         screen: s('app-notifications.webp', 'Notifications telling a Designated Expert about a new Learning and a new discussion in their area of expertise'),
       },
       {
@@ -152,7 +152,7 @@ export const journeys: Journey[] = [
       {
         title: 'Review, publish and share',
         who: 'Tenant administrators',
-        body: 'Depending on tenant settings, records are published directly or submitted for approval, and can be returned for changes. Published records can be downloaded as a PDF.',
+        body: 'Depending on tenant settings, records are published directly or submitted for approval, and can be returned for changes. When a record is published for the organisation, Designated Experts in its expertise categories can be notified automatically. Published records can be downloaded as a PDF.',
         screen: s('app-krt.webp', 'Submitted Knowledge Retention and Transfer record with role introduction, conversation points and closing advice'),
       },
     ],

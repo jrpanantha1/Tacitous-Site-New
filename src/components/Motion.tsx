@@ -43,7 +43,7 @@ export function Reveal({ children, as: Tag = 'div', className = '', delay = 0 }:
 
 const REVEAL = [
   '.section-head', '.card', '.process > li', '.benefit-list > li', '.circle > li', '.forms-grid > li', '.link-panel > a',
-  '.shot', '.compare > div', '.capability-list > li', '.journey', '.journey-head', '.faq details', '.cta-band', '.equation',
+  '.shot', '.compare > div', '.key-points > li', '.capability-list > li', '.journey', '.journey-head', '.faq details', '.cta-band', '.equation',
   '.band', '.story-step', '.network', '.explorer', '.trust-row > span', '.chips', '.row-head',
 ].join(',');
 

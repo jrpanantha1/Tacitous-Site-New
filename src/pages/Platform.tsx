@@ -2,7 +2,8 @@ import { Link } from 'react-router';
 import { ArrowRight, Cloud, KeyRound, Lock, Share2 } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
 import { ProductExplorer } from '../components/ProductExplorer';
-import { highlightIds } from '../content/features';
+import { Screenshot } from '../components/Motion';
+import { featureById, highlightIds } from '../content/features';
 
 // The connected parts of the platform that make up the pathway to expertise.
 const pathway = [
@@ -17,7 +18,7 @@ const deploy = [
   { icon: Cloud, title: 'Cloud service', body: 'Tacitous Next runs as a secure cloud service, with each organisation in its own tenant.' },
   { icon: KeyRound, title: 'Simple sign-in', body: 'People sign in with their Microsoft or Google account, or with an emailed sign-in link.' },
   { icon: Lock, title: 'Governed access', body: 'Public, managed and private communities, membership approvals and tenant administration.' },
-  { icon: Share2, title: 'Open knowledge graph', body: 'Export the Expertise Map as a semantic knowledge graph for use in other tools.' },
+  { icon: Share2, title: 'Open knowledge graph', body: 'Export expertise categories as RDF N-Triples, Turtle or JSON-LD for use in compatible graph tools.' },
 ];
 
 const aiFoundations = [
@@ -54,7 +55,27 @@ export default function Platform() {
         </div>
       </section>
 
-      <section className="section section-tint" id="tools">
+      <section className="section section-tint" id="portability">
+        <div className="container split split-top">
+          <div>
+            <SectionHead eyebrow="Knowledge Portability &amp; Interoperability" title="Knowledge shouldn’t end when a project does.">
+              Tacitous helps organisations carry knowledge forward. Approved Lessons Learned, Best Practices, Knowledge
+              Retention and Transfer records and Peer Assists stay tagged to expertise categories, so the next team can find
+              and build on them. Through Data / Exit Package, the lessons, practices, critical knowledge and peer learnings
+              captured during a project can be exported as a structured package, approved by the Platform Administrator.
+              Expertise relationships can also be exported as RDF N-Triples and Turtle for compatible knowledge graph
+              technologies.
+            </SectionHead>
+            <div className="link-panel link-panel-light">
+              <Link to="/explore#semantic-export">Semantic Expertise Map export <ArrowRight size={18} aria-hidden="true" /></Link>
+              <Link to="/explore#data-export">Data / Exit Package <ArrowRight size={18} aria-hidden="true" /></Link>
+            </div>
+          </div>
+          <Screenshot screen={featureById('semantic-export')!.screen} />
+        </div>
+      </section>
+
+      <section className="section" id="tools">
         <div className="container">
           <SectionHead eyebrow="Knowledge Management tools" title="See Tacitous Next in action" center>
             Purpose-built tools for each part of Knowledge Management, from finding expertise to capturing and reusing what
@@ -68,7 +89,7 @@ export default function Platform() {
         </div>
       </section>
 
-      <section className="section" id="deployment">
+      <section className="section section-tint" id="deployment">
         <div className="container">
           <SectionHead eyebrow="Access and deployment" title="Secure, governed and simple to start">
             Tacitous Next fits around the way your organisation already works. If you have specific hosting or integration

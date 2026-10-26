@@ -13,6 +13,8 @@ type Sector = {
   points: string[];
   screen?: string;
   retention?: boolean;
+  // How knowledge is carried from one project to the next, using features that exist in Tacitous Next.
+  carryForward?: string;
 };
 
 const sectors: Sector[] = [
@@ -33,6 +35,8 @@ const sectors: Sector[] = [
       'Lessons from successes and failures never captured',
     ],
     retention: true,
+    carryForward:
+      'Before a project team disperses, an After Action Review records what was intended, what happened and what to do differently. Approved Lessons Learned and Best Practices stay tagged to expertise categories, so the next project finds them on the Expertise Map instead of in an archive, and a Peer Assist brings experienced colleagues in before significant work begins.',
   },
   {
     id: 'public-sector',
@@ -88,6 +92,8 @@ const sectors: Sector[] = [
       'Knowledge transfer between project teams',
     ],
     retention: true,
+    carryForward:
+      'Decision and Rationale records keep why a significant decision was made, the alternatives considered and where it applies. With Lessons Learned, Expert Practice Notes and Knowledge Retention and Transfer records tagged to the same expertise categories, the team that inherits an asset or a design can see what earlier teams learned and who to ask.',
   },
   {
     id: 'ngos',
@@ -160,6 +166,14 @@ export default function Sectors() {
                   <h3>{s.pointsTitle}</h3>
                   <ul className="ticks">{s.points.map((p) => <li key={p}>{p}</li>)}</ul>
                 </div>
+                {s.carryForward && (
+                  <div className="card carry-forward">
+                    <p className="eyebrow eyebrow-dark">Knowledge portability</p>
+                    <h3>Knowledge shouldn’t end when a project does.</h3>
+                    <p>{s.carryForward}</p>
+                    <Link to="/explore#data-export" className="text-link">Knowledge Portability &amp; Interoperability <ArrowRight size={16} /></Link>
+                  </div>
+                )}
                 {tool?.screen && (
                   <figure className="showcase-frame small">
                     <img src={`${import.meta.env.BASE_URL}screens/${tool.screen.file}`} alt={tool.screen.alt} width={tool.screen.w} height={tool.screen.h} loading="lazy" decoding="async" />

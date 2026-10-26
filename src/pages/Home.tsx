@@ -69,9 +69,8 @@ export default function Home() {
 
       <section className="section section-tint" id="features">
         <div className="container">
-          <SectionHead eyebrow="See it in action" title="One hub for the knowledge your organisation runs on" center>
-            Everything is organised around expertise categories, each with Designated Experts who are notified when something
-            new appears in their area. Choose a capability to see the real screen and what it connects to.
+          <SectionHead eyebrow="Pathway to Expertise" title="A pathway to the knowledge and people you need." center>
+            Tacitous helps people discover relevant expertise, connect with knowledgeable colleagues and access the lessons, practices and communities that support their work. By linking people with organisational knowledge, Tacitous makes expertise easier to find, share and reuse.
           </SectionHead>
           <ProductExplorer ids={highlightIds} idPrefix="home" />
           <div className="center-row">
@@ -87,8 +86,9 @@ export default function Home() {
             <p className="eyebrow eyebrow-dark">Critical Knowledge Retention</p>
             <h2 id="ckr-band">When experienced people leave, their knowledge shouldn’t leave with them.</h2>
             <p>
-              Identify the knowledge at risk, capture the experience behind it and connect it to the people who will carry
-              it forward.
+              Knowledge Retention and Transfer guides a structured conversation, from a Role Introduction and Conversation
+              Points to a Closing Question with advice for successors, and connects what is captured to the right areas of
+              expertise.
             </p>
           </div>
           <Link to="/solutions/critical-knowledge-retention" className="btn btn-primary">

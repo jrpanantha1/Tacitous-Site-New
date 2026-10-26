@@ -4,6 +4,15 @@ import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
 import { ProductExplorer } from '../components/ProductExplorer';
 import { highlightIds } from '../content/features';
 
+// The connected parts of the platform that make up the pathway to expertise.
+const pathway = [
+  { id: 'expert-profiles', label: 'Expert profiles' },
+  { id: 'expertise-map', label: 'Expertise categories and the Expertise Map' },
+  { id: 'communities', label: 'Communities of Practice' },
+  { id: 'lessons-learned', label: 'Lessons Learned and Best Practices' },
+  { id: 'knowledge-library', label: 'Knowledge Library and other resources' },
+];
+
 const deploy = [
   { icon: Cloud, title: 'Cloud service', body: 'Tacitous Next runs as a secure cloud service, with each organisation in its own tenant.' },
   { icon: KeyRound, title: 'Simple sign-in', body: 'People sign in with their Microsoft or Google account, or with an emailed sign-in link.' },
@@ -27,11 +36,25 @@ export default function Platform() {
         <p>
           Scientists, engineers, planners and managers depend on knowledge every day. Tacitous Next, the Knowledge &amp;
           Expertise Hub, puts it within reach: the people who know, the lessons they learned and the communities where they
-          work things out together.
+          work things out together. Tacitous doesn’t simply store knowledge. It connects knowledge, people and expertise so
+          that organisations can put what they know to work.
         </p>
       </PageHero>
 
-      <section className="section" id="tools">
+      <section className="section" id="pathway">
+        <div className="container split">
+          <SectionHead eyebrow="Pathway to Expertise" title="A pathway to the knowledge and people you need.">
+            Tacitous helps people discover relevant expertise, connect with knowledgeable colleagues and access the lessons, practices and communities that support their work. By linking people with organisational knowledge, Tacitous makes expertise easier to find, share and reuse.
+          </SectionHead>
+          <div className="link-panel link-panel-light">
+            {pathway.map((p) => (
+              <Link key={p.id} to={`/explore#${p.id}`}>{p.label} <ArrowRight size={18} aria-hidden="true" /></Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-tint" id="tools">
         <div className="container">
           <SectionHead eyebrow="Knowledge Management tools" title="See Tacitous Next in action" center>
             Purpose-built tools for each part of Knowledge Management, from finding expertise to capturing and reusing what

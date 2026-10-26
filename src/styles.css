@@ -764,3 +764,6 @@ a.card:hover, .link-card:hover { transform: translateY(-4px); box-shadow: 0 18px
 .key-points li { display: flex; gap: 12px; align-items: flex-start; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff; transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .key-points li:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .key-points svg { flex: none; margin-top: 3px; color: var(--green-700); }
+.carry-forward { border-left: 4px solid var(--blue-500); }
+.carry-forward h3 { margin-top: 0; }
+.carry-forward .text-link { margin-top: 12px; }

@@ -20,6 +20,22 @@ const mapping = [
   { step: 'Share', tools: ['Communities of Practice', 'Expertise discovery', 'Knowledge exchange', 'Reusable practices'] },
 ];
 
+// How validated knowledge travels beyond the project or community that created it.
+const carryForward = [
+  {
+    title: 'Reuse across projects',
+    body: 'Approved Learnings and knowledge records are tagged to expertise categories, not filed away with one project, so they surface on the Expertise Map for every team with access. “I Applied This Learning” records show where they were reused.',
+  },
+  {
+    title: 'Interoperable expertise relationships',
+    body: 'Each expertise category can be exported as RDF N-Triples, Turtle or JSON-LD, using standard vocabularies, for compatible knowledge graph technologies.',
+  },
+  {
+    title: 'A portable record of what you know',
+    body: 'Tenant Administrators can request a structured export of selected knowledge domains, as JSON and CSV with stable identifiers, for archival, portability or migration.',
+  },
+];
+
 const steps = [
   { title: 'Create', body: 'Identify the knowledge you already have, and the gaps.' },
   { title: 'Collect', body: 'Set clear criteria for capturing new knowledge and lessons.' },
@@ -86,6 +102,27 @@ export default function Blueprint() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="section section-tint" id="portability">
+        <div className="container">
+          <SectionHead eyebrow="Knowledge Portability &amp; Interoperability" title="Knowledge shouldn’t end when a project does." center>
+            Retained and validated knowledge should not become isolated in a project archive. The Blueprint treats each
+            lesson, practice and retained insight as an organisational asset that the next project, community or team can
+            find and build on.
+          </SectionHead>
+          <div className="grid three">
+            {carryForward.map((c) => (
+              <article className="card" key={c.title}>
+                <h3>{c.title}</h3>
+                <p>{c.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="center-row">
+            <Link to="/explore#semantic-export" className="btn btn-outline">See portability in Tacitous Next <ArrowRight size={18} /></Link>
+          </div>
         </div>
       </section>
 

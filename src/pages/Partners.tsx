@@ -33,6 +33,20 @@ export default function Partners() {
         </div>
       </section>
 
+      <section className="section section-tint">
+        <div className="container">
+          <article className="card partner">
+            <span className="tag tag-blue">Business partner</span>
+            <h2>NKM for You</h2>
+            <p>
+              NKM for You is a Tacitous business partner. Tacitous provides consultancy to NKM for You, particularly on
+              the technical side of bids.
+            </p>
+            <a href={links.nkm4you} className="text-link" rel="noopener noreferrer">nkm4you.com <ExternalLink size={15} /></a>
+          </article>
+        </div>
+      </section>
+
       <CtaBand
         title="Interested in partnering with Tacitous?"
         body="We are open to conversations with consultancies, integrators and organisations that share our approach to Knowledge Management."

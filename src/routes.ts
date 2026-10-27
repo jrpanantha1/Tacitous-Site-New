@@ -40,6 +40,10 @@ const base: Record<string, Meta> = {
     title: 'Partners | Tacitous',
     description: 'Tacitous works with Knoco International, combining Knowledge Management methodology and training with the Tacitous Next platform.',
   },
+  '/organisations': {
+    title: 'Organisations using Tacitous | Tacitous',
+    description: 'Foundations, networks, communities and professional organisations that have used Tacitous Next.',
+  },
   '/press': {
     title: 'Press | Tacitous',
     description: 'News, perspectives and announcements from Tacitous on knowledge management, AI and institutional intelligence.',

@@ -12,6 +12,7 @@ import KnowledgeRetention from './pages/KnowledgeRetention';
 import Services from './pages/Services';
 import Sectors from './pages/Sectors';
 import Partners from './pages/Partners';
+import Organisations from './pages/Organisations';
 import Press from './pages/Press';
 import PressPost from './pages/PressPost';
 import Contact from './pages/Contact';
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/sectors" element={<Sectors />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/organisations" element={<Organisations />} />
           <Route path="/press" element={<Press />} />
           <Route path="/press/:slug" element={<PressPost />} />
           <Route path="/contact" element={<Contact />} />

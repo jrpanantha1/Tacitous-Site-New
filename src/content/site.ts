@@ -38,6 +38,7 @@ export const nav: NavItem[] = [
     to: '/about',
     children: [
       { label: 'About Tacitous', to: '/about', blurb: 'Our story, mission and approach' },
+      { label: 'Organisations', to: '/organisations', blurb: 'Who has used Tacitous' },
       { label: 'Partners', to: '/partners', blurb: 'Knoco International' },
       { label: 'Contact', to: '/contact', blurb: 'Talk to our team' },
     ],

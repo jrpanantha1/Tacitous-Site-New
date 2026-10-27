@@ -6,6 +6,7 @@ export const links = {
   x: 'https://twitter.com/TacitousKM',
   facebook: 'https://www.facebook.com/Tacitous',
   knoco: 'https://knoco.com/',
+  nkm4you: 'https://nkm4you.com/',
   whistle: 'https://apps.iblowthewhistle.com',
   video: 'https://www.youtube.com/watch?v=LVfRJYdvgQ0',
 };
@@ -39,7 +40,7 @@ export const nav: NavItem[] = [
     children: [
       { label: 'About Tacitous', to: '/about', blurb: 'Our story, mission and approach' },
       { label: 'Organisations', to: '/organisations', blurb: 'Who has used Tacitous' },
-      { label: 'Partners', to: '/partners', blurb: 'Knoco International' },
+      { label: 'Partners', to: '/partners', blurb: 'Knoco International and NKM for You' },
       { label: 'Contact', to: '/contact', blurb: 'Talk to our team' },
     ],
   },

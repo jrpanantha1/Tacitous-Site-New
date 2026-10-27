@@ -34,6 +34,7 @@ export function Footer() {
         <nav aria-label="Company">
           <h2 className="footer-head">Company</h2>
           <Link to="/about">About Tacitous</Link>
+          <Link to="/organisations">Organisations</Link>
           <Link to="/partners">Partners</Link>
           <Link to="/press">Press</Link>
           <Link to="/about#speak-up">Speak up</Link>

@@ -13,9 +13,51 @@ export type PressPost = {
   image?: string;
   body: string[];
   external?: { label: string; url: string };
+  /** A file to download alongside the article, such as a PDF version, with an optional cover image. */
+  download?: { label: string; href: string; size: string; cover?: string };
 };
 
 export const posts: PressPost[] = [
+  {
+    slug: 'tacitous-executive-brief',
+    title: 'Tacitous Executive Brief',
+    excerpt:
+      'Your organisation already knows the answer. The hard part is finding it, and keeping it. A two-page introduction to Tacitous, the Knowledge & Expertise Hub.',
+    authors: ['Tacitous'],
+    tags: ['Executive brief'],
+    download: {
+      label: 'Download the Executive Brief',
+      href: '/downloads/tacitous-executive-brief.pdf',
+      size: 'PDF, 2 pages, 1.2 MB',
+      cover: '/downloads/tacitous-executive-brief-cover.webp',
+    },
+    body: [
+      'Tacitous is a Knowledge & Expertise Hub. It connects what your people know to the people who need it, and captures that knowledge before it walks out of the door.',
+      '## What is it?',
+      'Everything starts with an expertise category. You define the areas of expertise that matter to your organisation and name Designated Experts for each one. People, Learnings, decisions, communities and library resources are then connected through those categories, so knowledge reaches the people who need it, and anyone can find the knowledge and the experts behind it.',
+      'Tacitous doesn’t simply store knowledge. It connects knowledge, people and expertise so that organisations can put what they know to work.',
+      '## How does it help me?',
+      'When experienced people leave, their knowledge shouldn’t leave with them. Most of what an organisation knows is never written down. It lives in judgement, context and relationships.',
+      'Find who knows what. Stop relying on whoever people happen to know. Find the colleague who solved it last year, and what they learned.',
+      'Keep expertise when people leave. Retirements, restructures and turnover no longer mean losing years of experience after a handover of a few days and a folder of documents.',
+      'Reuse what you have learned. Lessons become Learnings that people can find and apply, so the same mistakes don’t return. That matters for AI too: it is only as useful as the knowledge behind it.',
+      'Communities and professional organisations get the most value from Tacitous. It works in federated environments and can be run in most regions.',
+      '## Four ways to put what you know to work',
+      'See who knows what. The Expertise Map links each category to its experts, Learnings, organisations, communities and events. A network view shows how people are connected.',
+      'Keep knowledge before people move on. A structured conversation covers the role, up to seven conversation points and three pieces of advice for a successor, tagged to the right expertise.',
+      'Learn once, apply it again. Lessons learned and best practice become Learnings, with optional approval. People record when they applied one and the benefit it brought.',
+      'Tell the right experts. When switched on, Designated Experts are notified of new discussions, published Learnings and retained knowledge in their categories, with access always respected.',
+      'Also included: public, managed and private Communities of Practice, where discussions can be promoted into published Learnings, plus structured forms for After Action Reviews, Decision and Rationale, Peer Assists, Knowledge Cafés, Innovation and Ideas, and Expert Practice Notes.',
+      '## Built to fit. Yours to keep.',
+      'Open-standard export. Export any expertise category as a knowledge graph in JSON-LD, Turtle or N-Triples, using SKOS, FOAF and Dublin Core.',
+      'Data / Exit Package. Administrators can request a full export of chosen data as JSON and CSV, with stable identifiers and checksums.',
+      'Federated and regional. Works in federated environments and can be run in most regions. Private communities stay private, and access is always respected.',
+      '## How do I get it?',
+      'Talk to us. Book a call or email us, and tell us where knowledge is at risk in your organisation.',
+      'We set you up in minutes. Our team sets up your organisation with all the Knowledge Management tools in a few minutes. Every organisation is set up by a person, never by automatic sign-up, to keep the platform secure.',
+      'Start with one expertise category. Name your Designated Experts and grow from there, guided by our proven KM Blueprint and supported by our consultancy and our strategic partner Knoco International.',
+    ],
+  },
   {
     slug: 'tacitous-knoco-international-strategic-partnership',
     title: 'Tacitous announces strategic partnership with Knoco International',

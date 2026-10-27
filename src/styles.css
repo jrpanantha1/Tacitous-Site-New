@@ -767,3 +767,10 @@ a.card:hover, .link-card:hover { transform: translateY(-4px); box-shadow: 0 18px
 .carry-forward { border-left: 4px solid var(--blue-500); }
 .carry-forward h3 { margin-top: 0; }
 .carry-forward .text-link { margin-top: 12px; }
+
+/* Downloadable version of an article, such as the Executive Brief PDF. */
+.download-card { display: flex; gap: 1.5rem; align-items: center; margin: 2rem 0; }
+.download-card img { width: 120px; height: auto; border-radius: 6px; box-shadow: 0 6px 18px rgba(15, 30, 60, 0.18); flex-shrink: 0; }
+.download-card h2 { margin: 0 0 0.25rem; }
+.download-card p { margin: 0 0 1rem; }
+@media (max-width: 520px) { .download-card { flex-direction: column; align-items: flex-start; } }

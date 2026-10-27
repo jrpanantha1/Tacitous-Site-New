@@ -1,6 +1,6 @@
 import { PageHero, CtaBand } from '../components/Blocks';
 
-// Organisations that have used Tacitous Next, shown with their permission. Logos are supplied by Tacitous; add one
+// Organisations that have used Tacitous Next or Tacitous consultancy, shown with their permission. Logos are supplied by Tacitous; add one
 // here only once the organisation has agreed to be listed.
 const organisations = [
   { name: 'Dhwani Foundation', logo: 'dhwani-foundation.webp', w: 132, h: 81 },
@@ -9,6 +9,7 @@ const organisations = [
   { name: 'KM4 Youth', logo: 'km4youth.webp', w: 320, h: 315 },
   { name: 'Knoco', logo: 'knoco.webp', w: 320, h: 320 },
   { name: 'Mission of Hope Foundation', logo: 'mission-of-hope-foundation.webp', w: 104, h: 88 },
+  { name: 'NKM for You', logo: 'nkm-for-you.webp', w: 144, h: 144 },
   { name: 'Refugee Welfare Association', logo: 'refugee-welfare-association.webp', w: 307, h: 320 },
   { name: 'TIYAC Foundation', logo: 'tiyac-foundation.webp', w: 320, h: 269 },
   { name: 'Visions of Hope for Africa', logo: 'visions-of-hope-for-africa.webp', w: 320, h: 315 },
@@ -19,8 +20,8 @@ export default function Organisations() {
     <>
       <PageHero eyebrow="Organisations" title="Organisations that have used Tacitous">
         <p>
-          Foundations, networks, communities and professional organisations have used Tacitous Next to connect their
-          people, knowledge and expertise.
+          Foundations, networks, communities and professional organisations have used Tacitous Next, or worked with our
+          consultancy team, to connect their people, knowledge and expertise.
         </p>
       </PageHero>
 

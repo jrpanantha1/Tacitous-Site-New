@@ -42,7 +42,7 @@ const base: Record<string, Meta> = {
   },
   '/organisations': {
     title: 'Organisations using Tacitous | Tacitous',
-    description: 'Foundations, networks, communities and professional organisations that have used Tacitous Next.',
+    description: 'Foundations, networks, communities and professional organisations that have used Tacitous Next or worked with Tacitous consultancy.',
   },
   '/press': {
     title: 'Press | Tacitous',

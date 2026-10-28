@@ -82,6 +82,11 @@ export default function Services() {
               We can build bespoke systems from scratch or enhance the ones you have, for example adding analytics to workflow
               processes, and we support you with care and attention to detail throughout.
             </p>
+            <p>
+              We can also connect Tacitous Next to the systems you already use through its read-only{' '}
+              <Link to="/explore#knowledge-api">Knowledge API</Link>, for example to show approved Lessons Learned on your
+              intranet or SharePoint site.
+            </p>
           </div>
         </div>
       </section>

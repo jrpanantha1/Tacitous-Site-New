@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, Cloud, KeyRound, Lock, Share2 } from 'lucide-react';
+import { ArrowRight, Cloud, KeyRound, Lock, Package, Plug, Share2 } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
 import { ProductExplorer } from '../components/ProductExplorer';
 import { Screenshot } from '../components/Motion';
@@ -19,6 +19,8 @@ const deploy = [
   { icon: KeyRound, title: 'Simple sign-in', body: 'People sign in with their Microsoft or Google account, or with an emailed sign-in link.' },
   { icon: Lock, title: 'Governed access', body: 'Public, managed and private communities, membership approvals and tenant administration.' },
   { icon: Share2, title: 'Open knowledge graph', body: 'Export expertise categories as RDF N-Triples, Turtle or JSON-LD for use in compatible graph tools.' },
+  { icon: Plug, title: 'Knowledge API', body: 'A secure, read-only API lets your own systems, such as an intranet or SharePoint site, show approved Lessons Learned and expertise.' },
+  { icon: Package, title: 'Data / Exit Package', body: 'Request a structured export of chosen knowledge domains as JSON and CSV, approved by the Platform Administrator.' },
 ];
 
 const aiFoundations = [
@@ -69,6 +71,7 @@ export default function Platform() {
             <div className="link-panel link-panel-light">
               <Link to="/explore#semantic-export">Semantic Expertise Map export <ArrowRight size={18} aria-hidden="true" /></Link>
               <Link to="/explore#data-export">Data / Exit Package <ArrowRight size={18} aria-hidden="true" /></Link>
+              <Link to="/explore#knowledge-api">Knowledge API <ArrowRight size={18} aria-hidden="true" /></Link>
             </div>
           </div>
           <Screenshot screen={featureById('semantic-export')!.screen} />
@@ -95,7 +98,7 @@ export default function Platform() {
             Tacitous Next fits around the way your organisation already works. If you have specific hosting or integration
             requirements, <Link to="/contact">talk to us</Link> about the options.
           </SectionHead>
-          <div className="grid four">
+          <div className="grid three">
             {deploy.map(({ icon: I, title, body }) => (
               <article className="card" key={title}>
                 <span className="icon-chip"><I size={22} strokeWidth={1.8} aria-hidden="true" /></span>

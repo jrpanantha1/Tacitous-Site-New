@@ -278,7 +278,7 @@ export const features: Feature[] = [
       'Contains only what the person exporting is allowed to see. It is a one-way export, not a live synchronisation',
     ],
     screen: s('app-semantic-export.webp', 'Expertise Map category page with Export semantic knowledge graph, a Turtle format option and a Download button', 1192, 538),
-    related: ['expertise-map', 'constellation', 'data-export'],
+    related: ['expertise-map', 'constellation', 'knowledge-api', 'data-export'],
   },
   {
     id: 'data-export',
@@ -295,6 +295,22 @@ export const features: Feature[] = [
     ],
     screen: s('app-data-export.webp', 'Request Tacitous Data / Exit Package dialog with export scope, showing Knowledge Retention / KRT, After Action Reviews, Peer Assists and Learnings selected'),
     related: ['semantic-export', 'knowledge-retention', 'lessons-learned'],
+  },
+  {
+    id: 'knowledge-api',
+    name: 'Knowledge API',
+    group: 'portability',
+    summary:
+      'A secure, read-only Knowledge API lets your own systems, such as an intranet or SharePoint site, show approved Lessons Learned and expertise from Tacitous.',
+    value: 'Approved knowledge reaches people in the tools they already use, without copying it by hand or opening up the whole platform.',
+    details: [
+      'Read approved Lessons Learned, expertise categories and their descriptions, and knowledge graph exports for a chosen category in JSON-LD, Turtle or N-Triples',
+      'Tenant Administrators create each integration and grant only the permissions it needs; secrets can be rotated and integrations revoked at any time',
+      'Public communities only by default; managed and private communities must be selected one by one',
+      'Read-only, rate-limited and recorded in an activity log. Your own systems, or our bespoke development team, build the connection on the other side',
+    ],
+    screen: s('app-knowledge-api.webp', 'Knowledge API Integrations in Manage Tenant, with an intranet knowledge feed integration granted Lessons Learned and expertise read access to one managed community', 1440, 820),
+    related: ['lessons-learned', 'expertise-map', 'semantic-export', 'data-export'],
   },
 ];
 

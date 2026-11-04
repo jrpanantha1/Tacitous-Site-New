@@ -5,19 +5,18 @@ export type Meta = { title: string; description: string };
 const base: Record<string, Meta> = {
   '/': {
     title: 'Tacitous | Knowledge management that keeps expertise in your organisation',
-    description:
-      'Capture what your people already know, before it walks out the door. Communities of Practice, lessons learned and a living directory of expertise in one platform.',
+    description: 'Capture what your people already know, before it walks out the door. Communities of Practice, lessons learned and a living directory of expertise.',
   },
   '/platform': {
-    title: 'Platform | Tacitous',
-    description: 'Tacitous Next brings together the Expertise Map, Communities of Practice, expert profiles, lessons learned, knowledge forms and libraries, integrations and personal-data tools in one governed knowledge hub.',
+    title: 'Knowledge Management platform: Tacitous Next | Tacitous',
+    description: 'The Tacitous Next Knowledge & Expertise Hub: Expertise Map, Communities of Practice, lessons learned, KM forms, integrations and privacy tools.',
   },
   '/explore': {
-    title: 'Explore features | Tacitous Next',
-    description: 'Explore Tacitous Next interactively: real screens of the Expertise Map, Constellation, Lessons Learned, Promote to Learning, Knowledge Retention and Transfer, community quizzes, personal tags, privacy tools and integrations.',
+    title: 'Explore Tacitous Next features | Tacitous',
+    description: 'Explore Tacitous Next with real screens: the Expertise Map, lessons learned, knowledge retention, community quizzes, privacy tools and integrations.',
   },
   '/km-blueprint': {
-    title: 'KM Blueprint | Tacitous',
+    title: 'KM Blueprint: a proven Knowledge Management method | Tacitous',
     description: 'A practical blueprint for making Knowledge Management work, from methodology to the tools that put it into practice.',
   },
   '/solutions/critical-knowledge-retention': {
@@ -29,15 +28,15 @@ const base: Record<string, Meta> = {
     description: 'Tacitous brings together Knowledge Management methodology, practical experience and purpose-built technology to help organisations retain critical knowledge.',
   },
   '/services': {
-    title: 'What we do | Tacitous',
+    title: 'Knowledge Management consultancy and services | Tacitous',
     description: 'From Knowledge Management strategy to practical implementation: KM consultancy, Critical Knowledge Retention, training and bespoke development.',
   },
   '/sectors': {
-    title: 'Sectors | Tacitous',
-    description: 'How Tacitous supports energy, government, nuclear and high-risk industries, engineering, NGOs and professional associations to retain and share critical knowledge.',
+    title: 'Knowledge Management by sector | Tacitous',
+    description: 'How Tacitous helps energy, government, nuclear, engineering, NGOs and professional associations retain and share critical knowledge.',
   },
   '/partners': {
-    title: 'Partners | Tacitous',
+    title: 'Partners: Knoco International and NKM for You | Tacitous',
     description: 'Tacitous works with Knoco International and NKM for You, combining Knowledge Management methodology, training and consultancy with the Tacitous Next platform.',
   },
   '/organisations': {
@@ -45,12 +44,12 @@ const base: Record<string, Meta> = {
     description: 'Foundations, networks, communities and professional organisations that have used Tacitous Next or worked with Tacitous consultancy.',
   },
   '/press': {
-    title: 'Press | Tacitous',
+    title: 'Press and Knowledge Management insights | Tacitous',
     description: 'News, perspectives and announcements from Tacitous on knowledge management, AI and institutional intelligence.',
   },
   '/contact': {
-    title: 'Contact | Tacitous',
-    description: 'Talk to Tacitous about knowledge management, the platform or our KM Blueprint.',
+    title: 'Contact Tacitous | Book a Knowledge Management demo',
+    description: 'Talk to Tacitous about Knowledge Management, a demonstration of Tacitous Next or our KM Blueprint. Based in the UK.',
   },
   '/privacy': { title: 'Privacy and GDPR | Tacitous', description: 'How Tacitous collects, uses and protects your personal data.' },
   '/terms': { title: 'Terms of service | Tacitous', description: 'Terms of service for the Tacitous website.' },

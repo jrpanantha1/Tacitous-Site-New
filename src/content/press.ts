@@ -19,6 +19,35 @@ export type PressPost = {
 
 export const posts: PressPost[] = [
   {
+    slug: 'community-quizzes-turn-shared-knowledge-into-active-learning',
+    title: 'Community quizzes: turn shared knowledge into active learning',
+    excerpt:
+      'Publishing knowledge is only half the job. Community quizzes in Tacitous Next help members engage with what their community knows, and check their own understanding.',
+    authors: ['Tacitous'],
+    tags: ['Product update', 'Communities'],
+    date: '2026-11-04',
+    body: [
+      'Most organisations are good at publishing knowledge. Lessons are written up, practices are documented and libraries fill up. The harder part is making sure people actually engage with that knowledge, and that it changes how they work.',
+      'Tacitous Next now includes community quizzes, a simple way for Communities of Practice to turn shared knowledge into active learning.',
+      '## What is it?',
+      'A community quiz is a short, timed set of questions that a community administrator creates for the community’s members. Each quiz has up to 20 single- or multiple-choice questions, with points for each question and an optional explanation of the right answer.',
+      'Administrators choose when the quiz opens and closes. Members get one attempt, and Tacitous scores each submission automatically. When the quiz closes, members can see their score, the correct answers and the explanations.',
+      'A quiz can be linked to a related Learning, so the questions lead people back to the Lesson Learned or Best Practice they are based on. It can also be shared with members by a direct link or on WhatsApp. Sharing a link never gives access to anyone outside the community.',
+      '## How does it help me?',
+      'Reinforce what has been learned. A quiz built around a recent After Action Review or a new Best Practice asks people to recall and apply it, rather than simply read it once.',
+      'Encourage participation. Quizzes give members a reason to come back to the community and take part, especially in communities where most people read but few post.',
+      'Let people check their own understanding. Explanations shown after the quiz closes turn every question into a short learning moment, whether the answer was right or wrong.',
+      'See how engaged your community is. Administrators get a participation report showing how many eligible members took part, the participation rate, and the average and highest scores. Results can be shown on a named leaderboard, anonymously or kept private, so each community can choose what suits its culture.',
+      'Support continuing professional development. For professional associations and knowledge networks, quizzes offer a light way to keep members’ knowledge current between events.',
+      '## Part of a wider set of community tools',
+      'Quizzes sit alongside the tools communities already use in Tacitous Next: discussions with helpful answers marked, polls for quick opinions, announcements, calendars, FAQs and community libraries. Useful discussions can be promoted into published Learnings, and Designated Experts can be notified about new discussions in their area of expertise.',
+      'Members can also add private Personal Tags and notes to colleagues’ profiles, such as “AAR facilitator”, to remember who helped with what and find them again in the People directory. Only the member who adds them can see them.',
+      '## How do I get it?',
+      'Community quizzes are available in Tacitous Next today. If your organisation already uses Tacitous, community administrators will find Quizzes alongside Discussions, Learnings and Polls in each community.',
+      'If you are new to Tacitous, book a call or email us. Our team sets up your organisation, and we can help you plan how quizzes and your other community tools support your Knowledge Management goals.',
+    ],
+  },
+  {
     slug: 'tacitous-executive-brief',
     title: 'Tacitous Executive Brief',
     excerpt:

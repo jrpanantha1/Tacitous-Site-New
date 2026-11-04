@@ -196,6 +196,7 @@ p { margin: 0 0 1em; }
 .section-head.center { margin-inline: auto; text-align: center; }
 .section-lead { font-size: 1.12rem; color: var(--muted); }
 .note { margin-top: 28px; color: var(--muted); font-weight: 600; }
+.note.center { text-align: center; max-width: 760px; margin-inline: auto; }
 .center-row { display: flex; justify-content: center; margin-top: 40px; }
 .row-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
 .row-head .section-head { margin-bottom: 32px; }
@@ -444,7 +445,7 @@ p { margin: 0 0 1em; }
   .menu-toggle { display: inline-flex; }
   .hero-grid, .split, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .preview { transform: none; }
-  .grid.three, .circle { grid-template-columns: repeat(2, 1fr); }
+  .grid.three, .grid.four, .circle { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .split.reverse > :first-child { order: 0; }

@@ -113,7 +113,7 @@ export const faqs = [
   },
   {
     q: 'Can Tacitous work with our other systems?',
-    a: 'The Expertise Map can be exported as a semantic knowledge graph, for example in Turtle format, for use in other tools. Talk to us about any other integrations you need.',
+    a: 'Yes. A secure, read-only Knowledge API lets your own systems show approved Lessons Learned and expertise categories, and expertise categories can be exported as RDF (N-Triples, Turtle or JSON-LD) for knowledge graph tools. A one-way connector that publishes approved knowledge into SharePoint Online is in pilot. Talk to us about any other integrations you need.',
   },
   {
     q: 'Can you develop a KM system for us?',

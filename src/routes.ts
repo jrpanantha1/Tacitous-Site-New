@@ -10,11 +10,11 @@ const base: Record<string, Meta> = {
   },
   '/platform': {
     title: 'Platform | Tacitous',
-    description: 'Tacitous Next brings together the Expertise Map, Communities of Practice, expert profiles, lessons learned, knowledge forms and knowledge libraries in one governed knowledge hub.',
+    description: 'Tacitous Next brings together the Expertise Map, Communities of Practice, expert profiles, lessons learned, knowledge forms and libraries, integrations and personal-data tools in one governed knowledge hub.',
   },
   '/explore': {
     title: 'Explore features | Tacitous Next',
-    description: 'Explore Tacitous Next interactively: real screens of the Expertise Map, Constellation, Lessons Learned, Promote to Learning, Knowledge Retention and Transfer, communities and KM forms.',
+    description: 'Explore Tacitous Next interactively: real screens of the Expertise Map, Constellation, Lessons Learned, Promote to Learning, Knowledge Retention and Transfer, community quizzes, personal tags, privacy tools and integrations.',
   },
   '/km-blueprint': {
     title: 'KM Blueprint | Tacitous',

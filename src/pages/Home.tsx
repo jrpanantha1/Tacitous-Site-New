@@ -88,6 +88,10 @@ export default function Home() {
             Tacitous helps people discover relevant expertise, connect with knowledgeable colleagues and access the lessons, practices and communities that support their work. By linking people with organisational knowledge, Tacitous makes expertise easier to find, share and reuse.
           </SectionHead>
           <ProductExplorer ids={highlightIds} idPrefix="home" />
+          <p className="note center">
+            Also in Tacitous Next: community quizzes, private personal tags, Download My Data, Forget Me, a read-only
+            Knowledge API and open-format exports.
+          </p>
           <div className="center-row">
             <Link to="/explore" className="btn btn-primary">Explore every feature <ArrowRight size={18} /></Link>
           </div>

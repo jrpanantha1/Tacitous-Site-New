@@ -128,6 +128,7 @@ const sectors: Sector[] = [
       'Exchange knowledge between member organisations',
       'Use public and private communities',
       'Collaborate and learn as a profession',
+      'Reinforce learning with community quizzes',
     ],
     screen: 'expert-profiles',
   },

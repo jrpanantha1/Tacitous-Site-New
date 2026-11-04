@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, Cloud, KeyRound, Lock, Package, Plug, Share2 } from 'lucide-react';
+import { ArrowRight, ClipboardList, Cloud, Download, KeyRound, Lock, Package, Plug, Share2, UserRoundX, Users } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
 import { ProductExplorer } from '../components/ProductExplorer';
 import { Screenshot } from '../components/Motion';
@@ -16,11 +16,23 @@ const pathway = [
 
 const deploy = [
   { icon: Cloud, title: 'Cloud service', body: 'Tacitous Next runs as a secure cloud service, with each organisation in its own tenant.' },
-  { icon: KeyRound, title: 'Simple sign-in', body: 'People sign in with their Microsoft or Google account, or with an emailed sign-in link.' },
+  { icon: KeyRound, title: 'Simple sign-in', body: 'People sign in with their Microsoft or Google account, or with an emailed sign-in link, and can add an authenticator app as an optional second step.' },
   { icon: Lock, title: 'Governed access', body: 'Public, managed and private communities, membership approvals and tenant administration.' },
-  { icon: Share2, title: 'Open knowledge graph', body: 'Export expertise categories as RDF N-Triples, Turtle or JSON-LD for use in compatible graph tools.' },
-  { icon: Plug, title: 'Knowledge API', body: 'A secure, read-only API lets your own systems, such as an intranet or SharePoint site, show approved Lessons Learned and expertise.' },
-  { icon: Package, title: 'Data / Exit Package', body: 'Request a structured export of chosen knowledge domains as JSON and CSV, approved by the Platform Administrator.' },
+];
+
+// Integration capabilities verified in the Tacitous Next source. Business value first, formats second.
+const integrations = [
+  { icon: Plug, title: 'Knowledge API', body: 'A secure, read-only API lets your own systems, such as an intranet, show approved Lessons Learned and expertise categories. Tenant Administrators grant each integration only the access it needs.', to: '/explore#knowledge-api' },
+  { icon: Share2, title: 'Open knowledge graph', body: 'Export an expertise category and the knowledge connected to it as RDF N-Triples, Turtle or JSON-LD, for compatible knowledge graph tools.', to: '/explore#semantic-export' },
+  { icon: Package, title: 'Data / Exit Package', body: 'A structured export of chosen knowledge domains as JSON and CSV, approved by the Platform Administrator, for archiving, portability or migration.', to: '/explore#data-export' },
+];
+
+// Personal data and governance capabilities. Product functionality, not a compliance certification.
+const governance: { icon: typeof Users; title: string; body: string; to?: string }[] = [
+  { icon: Users, title: 'Who sees what', body: 'Public, managed and private communities, and optional Directory Groups that limit which people members can find.' },
+  { icon: ClipboardList, title: 'Access and consent review', body: 'Administrators can review a person’s roles, permissions and recorded activity, and members’ privacy and consent settings, with CSV or PDF downloads.' },
+  { icon: Download, title: 'Download My Data', body: 'Members download a structured copy of the personal information and contributions held about them, without a manual request.', to: '/explore#download-my-data' },
+  { icon: UserRoundX, title: 'Forget Me', body: 'Where enabled, members can have their identifying information removed while eligible knowledge stays as “Former Contributor”.', to: '/explore#forget-me' },
 ];
 
 const aiFoundations = [
@@ -63,8 +75,8 @@ export default function Platform() {
             <SectionHead eyebrow="Knowledge Portability &amp; Interoperability" title="Knowledge shouldn’t end when a project does.">
               Tacitous helps organisations carry knowledge forward. Approved Lessons Learned, Best Practices, Knowledge
               Retention and Transfer records and Peer Assists stay tagged to expertise categories, so the next team can find
-              and build on them. Through Data / Exit Package, the lessons, practices, critical knowledge and peer learnings
-              captured during a project can be exported as a structured package, approved by the Platform Administrator.
+              and build on them. Through Data / Exit Package, the Lessons Learned, Best Practices, Knowledge Retention and Transfer
+              records and Peer Assists captured during a project can be exported as a structured package, approved by the Platform Administrator.
               Expertise relationships can also be exported as RDF N-Triples and Turtle for compatible knowledge graph
               technologies.
             </SectionHead>
@@ -107,6 +119,56 @@ export default function Platform() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section" id="integrations">
+        <div className="container">
+          <SectionHead eyebrow="Integrate and reuse" title="Knowledge Management that connects with your existing technology.">
+            Tacitous works alongside the systems your organisation already uses. Your document management keeps the
+            documents. Tacitous adds the structured layer around them: who knows what, what was learned and which knowledge
+            has been reviewed. Approved knowledge can then reach people in the tools they already use.
+          </SectionHead>
+          <div className="grid three">
+            {integrations.map(({ icon: I, title, body, to }) => (
+              <article className="card" key={title}>
+                <span className="icon-chip"><I size={22} strokeWidth={1.8} aria-hidden="true" /></span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+                <Link to={to} className="text-link">See how it works <ArrowRight size={16} /></Link>
+              </article>
+            ))}
+          </div>
+          <p className="note">
+            <strong>Microsoft SharePoint:</strong> we are piloting a one-way connector that publishes approved Lessons Learned
+            and Best Practices from Tacitous into a SharePoint Online list, so people can find validated knowledge where they
+            already work. It does not import or index SharePoint content. <Link to="/contact">Talk to us</Link> if you would
+            like to take part.
+          </p>
+        </div>
+      </section>
+
+      <section className="section section-tint" id="trust">
+        <div className="container">
+          <SectionHead eyebrow="Govern and protect" title="Designed with individual privacy and organisational continuity in mind.">
+            Tacitous is both a community platform and an organisational knowledge repository. Its account and personal-data
+            tools help organisations respect individual privacy while keeping appropriate governance over institutional
+            knowledge.
+          </SectionHead>
+          <div className="grid four">
+            {governance.map(({ icon: I, title, body, to }) => (
+              <article className="card" key={title}>
+                <span className="icon-chip"><I size={22} strokeWidth={1.8} aria-hidden="true" /></span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+                {to && <Link to={to} className="text-link">See the screen <ArrowRight size={16} /></Link>}
+              </article>
+            ))}
+          </div>
+          <p className="note">
+            These product capabilities support your organisation’s own data protection processes. They are not a
+            certification, and your organisation remains responsible for its legal and contractual retention requirements.
+          </p>
         </div>
       </section>
 

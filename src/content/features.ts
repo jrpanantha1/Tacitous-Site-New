@@ -3,7 +3,7 @@
 
 export type Screen = { file: string; w: number; h: number; alt: string };
 
-export type GroupId = 'expertise' | 'learning' | 'retention' | 'collaboration' | 'library' | 'portability';
+export type GroupId = 'capture' | 'discover' | 'connect' | 'learn' | 'govern' | 'integrate';
 
 export type Feature = {
   id: string;
@@ -17,13 +17,14 @@ export type Feature = {
   journey?: string;
 };
 
+// Marketing groupings by business outcome. They are not the application's menu names.
 export const groups: { id: GroupId; title: string; purpose: string }[] = [
-  { id: 'expertise', title: 'Pathway to Expertise', purpose: 'A pathway to the knowledge and people you need.' },
-  { id: 'learning', title: 'Learn from experience', purpose: 'Turn experience into reviewed, reusable Lessons Learned and Best Practices.' },
-  { id: 'retention', title: 'Retain critical knowledge', purpose: 'Capture judgement and experience before people change roles or leave.' },
-  { id: 'collaboration', title: 'Collaborate in communities', purpose: 'Give practitioners a place to ask, answer and build shared knowledge.' },
-  { id: 'library', title: 'Organise and reuse', purpose: 'Keep trusted resources and structured records in one governed place.' },
-  { id: 'portability', title: 'Knowledge Portability & Interoperability', purpose: 'Carry knowledge forward, and use it beyond Tacitous in open formats.' },
+  { id: 'capture', title: 'Capture knowledge', purpose: 'Turn experience, judgement and decisions into structured records that can be found and reused.' },
+  { id: 'discover', title: 'Discover expertise', purpose: 'Pathway to Expertise: a pathway to the knowledge and people you need.' },
+  { id: 'connect', title: 'Connect and collaborate', purpose: 'Give practitioners a place to ask, answer and build shared knowledge.' },
+  { id: 'learn', title: 'Learn and improve', purpose: 'Turn shared knowledge into active learning, and show where it is reused.' },
+  { id: 'govern', title: 'Govern and protect', purpose: 'Give members visibility and control over their own information, within governed access.' },
+  { id: 'integrate', title: 'Integrate and reuse', purpose: 'Carry knowledge forward, and use it beyond Tacitous in open formats.' },
 ];
 
 const s = (file: string, alt: string, w = 1440, h = 900): Screen => ({ file, w, h, alt });
@@ -32,7 +33,7 @@ export const features: Feature[] = [
   {
     id: 'expertise-map',
     name: 'Expertise Map',
-    group: 'expertise',
+    group: 'discover',
     summary:
       'Browse governed expertise categories and see the people, knowledge, communities, organisations and library resources connected to each one.',
     value: 'Find the right expert or existing knowledge on a subject in one place, instead of asking around.',
@@ -49,7 +50,7 @@ export const features: Feature[] = [
   {
     id: 'expert-notifications',
     name: 'Designated Expert notifications',
-    group: 'expertise',
+    group: 'discover',
     summary:
       'Each expertise category has Designated Experts. When a discussion starts, a Learning is published or a Knowledge Retention and Transfer record is published for the organisation in their category, they are notified so they can help.',
     value: 'Questions reach the people who can answer them, without anyone having to know who to ask.',
@@ -66,7 +67,7 @@ export const features: Feature[] = [
   {
     id: 'constellation',
     name: 'Constellation',
-    group: 'expertise',
+    group: 'discover',
     summary:
       'An organisation-wide view of expertise categories, sized by how much is connected to them. Select a category to see the discoverable people linked to it.',
     value: 'See at a glance where expertise is concentrated and which subjects have little depth.',
@@ -83,7 +84,7 @@ export const features: Feature[] = [
   {
     id: 'expert-profiles',
     name: 'Expert profiles and people directory',
-    group: 'expertise',
+    group: 'discover',
     summary:
       'Profiles bring together a person’s role, biography, skills, interests, Ask Me About topics and the expertise categories they are designated in.',
     value: 'Make expertise visible across sites and teams, so people know who to approach.',
@@ -100,7 +101,7 @@ export const features: Feature[] = [
   {
     id: 'my-network',
     name: 'My Network',
-    group: 'expertise',
+    group: 'discover',
     summary:
       'An interactive map of follow relationships: who you follow, who follows you and mutual connections, with the option to explore a colleague’s network.',
     value: 'Understand and grow the professional connections that knowledge travels through.',
@@ -115,9 +116,25 @@ export const features: Feature[] = [
     journey: 'connections',
   },
   {
+    id: 'personal-tags',
+    name: 'Personal Tags & Notes',
+    group: 'discover',
+    summary:
+      'Add your own private tags and a note to a colleague’s profile, such as “AAR facilitator”, then filter the People directory by your tags or find someone from a phrase in your note.',
+    value: 'Remember who helped with what, and find them again when you need them, without changing anyone’s profile.',
+    details: [
+      'Up to 12 personal tags and a private note on a colleague’s profile',
+      'Visible only to you: other members and administrators cannot see them, and the person is not notified',
+      'Filter the People directory by My tags, or search for a phrase from your note',
+      'Separate from governed expertise categories and Designated Expert assignments',
+    ],
+    screen: s('app-personal-tags.webp', 'A colleague’s profile with the My Notes & Tags panel showing three personal tags and a private note'),
+    related: ['expert-profiles', 'my-network', 'expertise-map'],
+  },
+  {
     id: 'lessons-learned',
     name: 'Lessons Learned and Best Practices',
-    group: 'learning',
+    group: 'capture',
     summary:
       'Learnings capture what happened, why it matters and what to do next time, tagged to an expertise category and linked to relevant communities.',
     value: 'Stop repeating mistakes and spread proven approaches across teams and sites.',
@@ -134,7 +151,7 @@ export const features: Feature[] = [
   {
     id: 'promote-to-learning',
     name: 'Promote a discussion to a Learning',
-    group: 'learning',
+    group: 'learn',
     summary:
       'Turn a useful community discussion into a Lesson Learned or Best Practice. Choose the contributions to include and Tacitous assembles an editable draft.',
     value: 'Valuable answers stop being lost in discussion threads and become reusable knowledge.',
@@ -151,7 +168,7 @@ export const features: Feature[] = [
   {
     id: 'knowledge-reuse',
     name: 'Knowledge reuse',
-    group: 'learning',
+    group: 'learn',
     summary:
       'People record when they have applied a Learning, how they applied it and the outcome. Organisations can review and validate the reported benefits.',
     value: 'Show where knowledge is actually being reused, not just viewed.',
@@ -168,7 +185,7 @@ export const features: Feature[] = [
   {
     id: 'knowledge-retention',
     name: 'Knowledge Retention and Transfer',
-    group: 'retention',
+    group: 'capture',
     summary:
       'A structured way to capture the experience, practical judgement, insights and advice of knowledgeable employees, particularly those approaching retirement or moving into different roles.',
     value: 'Keep the knowledge that procedures miss when experienced people move on.',
@@ -186,7 +203,7 @@ export const features: Feature[] = [
   {
     id: 'expert-practice-note',
     name: 'Expert Practice Notes and decisions',
-    group: 'retention',
+    group: 'capture',
     summary:
       'Capture the judgement behind recurring situations and significant decisions: what to notice, how to approach it, its limits and the alternatives considered.',
     value: 'Preserve the reasoning behind expert practice and decisions, not just the outcome.',
@@ -202,7 +219,7 @@ export const features: Feature[] = [
   {
     id: 'communities',
     name: 'Communities of Practice',
-    group: 'collaboration',
+    group: 'connect',
     summary:
       'Public, managed and private communities with discussions, Learnings, announcements, a library, calendar, FAQs, links, polls and members.',
     value: 'Give practitioners a home where questions get answered and knowledge stays findable.',
@@ -219,7 +236,7 @@ export const features: Feature[] = [
   {
     id: 'related-knowledge',
     name: 'Related knowledge in discussions',
-    group: 'collaboration',
+    group: 'connect',
     summary:
       'Discussions show related Learnings and people who may be able to help, based on expertise categories and matching skills.',
     value: 'Connect a question to existing answers and the people who know, while it is being asked.',
@@ -235,7 +252,7 @@ export const features: Feature[] = [
   {
     id: 'km-forms',
     name: 'Structured KM forms',
-    group: 'library',
+    group: 'capture',
     summary:
       'Purpose-built forms for common Knowledge Management processes, each producing a consistent record that can be found, reused and linked to expertise.',
     value: 'Make good KM practice repeatable, with less reliance on templates and meeting notes.',
@@ -251,7 +268,7 @@ export const features: Feature[] = [
   {
     id: 'knowledge-library',
     name: 'Knowledge Library',
-    group: 'library',
+    group: 'capture',
     summary:
       'Tenant and community libraries of files and curated links, assigned to expertise categories so resources appear where people look for them.',
     value: 'Keep approved reference material in one place, connected to the subjects it supports.',
@@ -265,9 +282,59 @@ export const features: Feature[] = [
     related: ['expertise-map', 'communities', 'km-forms'],
   },
   {
+    id: 'community-quizzes',
+    name: 'Community quizzes',
+    group: 'learn',
+    summary:
+      'Community administrators create short, timed quizzes for their members, with single- and multiple-choice questions, points and an optional link to a related Learning. Tacitous scores each submission and publishes the results when the quiz closes.',
+    value: 'Turn shared knowledge into active learning. Members engage with what the community knows and can check their own understanding.',
+    details: [
+      'Up to 20 single- or multiple-choice questions, each with points and an optional explanation',
+      'Opening and closing times, one attempt per member, and answers with explanations once the quiz closes',
+      'Named, anonymous or private results, chosen by the administrator',
+      'A participation report for administrators: eligible members, submissions, participation rate, average and highest score',
+      'Link a quiz to a related Learning, and share it by link or WhatsApp. A shared link never grants access',
+    ],
+    screen: s('app-quiz-results.webp', 'A closed community quiz showing the member’s score, the correct answers with explanations, a named leaderboard and the administrator’s participation report', 1192, 1280),
+    related: ['communities', 'lessons-learned', 'promote-to-learning'],
+  },
+  {
+    id: 'download-my-data',
+    name: 'Download My Data',
+    group: 'govern',
+    summary:
+      'Members can request a copy of the personal information, privacy settings and eligible contributions held about them in their organisation, and download it themselves as a structured archive.',
+    value: 'Your information, accessible to you. Members can see what is held about them without waiting for a manual request.',
+    details: [
+      'Self-service from Preferences, with a recent sign-in required before requesting or downloading',
+      'Includes the member’s profile (including fields not shown publicly), membership, privacy and notification settings, consent history, authored contributions and notifications',
+      'Structured JSON and CSV files with a manifest of what was included; the archive expires after 24 hours',
+      'Excludes other people’s messages, other organisations, administrator security logs, integration secrets and records the member is not entitled to see',
+    ],
+    screen: s('app-download-my-data.webp', 'Download My Data in Preferences, describing what the archive includes and excludes, with Request My Data and Download archive buttons', 1160, 465),
+    related: ['forget-me', 'expert-profiles', 'data-export'],
+  },
+  {
+    id: 'forget-me',
+    name: 'Forget Me',
+    group: 'govern',
+    summary:
+      'Where an organisation has enabled it, a member can ask for their personal profile and identifying information to be removed from that organisation. Eligible contributions to shared knowledge can remain, attributed to “Former Contributor”.',
+    value: 'Respect individual privacy while keeping the lessons and discussions the organisation depends on.',
+    details: [
+      'Removes the profile, contact details, directory presence, memberships, preferences, follows, bookmarks and other identifying records in that organisation',
+      'Eligible Learnings, discussions and replies remain as “Former Contributor”, with their original dates and visibility',
+      'Applies to one organisation only. It does not delete the person’s sign-in or their other memberships',
+      'Some cases go to individual review, such as content that names the person or records kept for legal reasons',
+      'Available where enabled for the organisation. Members are prompted to download their data first',
+    ],
+    screen: s('app-forget-me.webp', 'Forget Me in Preferences, explaining what is removed, what remains as Former Contributor and the two confirmations required', 1160, 590),
+    related: ['download-my-data', 'lessons-learned', 'communities'],
+  },
+  {
     id: 'semantic-export',
     name: 'Semantic Expertise Map export',
-    group: 'portability',
+    group: 'integrate',
     summary:
       'Export an expertise category from the Expertise Map as RDF, so its expertise relationships can be used in compatible knowledge graph and semantic tools.',
     value: 'The expertise relationships you maintain in Tacitous are not locked in. Take them into other graph environments in open standard formats.',
@@ -283,7 +350,7 @@ export const features: Feature[] = [
   {
     id: 'data-export',
     name: 'Data / Exit Package',
-    group: 'portability',
+    group: 'integrate',
     summary:
       'Carry knowledge forward. Tenant Administrators choose which domains to export, such as Lessons Learned, Knowledge Retention and Transfer records and Peer Assists, and the Platform Administrator approves and generates a portable package for archival, portability or migration.',
     value: 'Your organisation’s knowledge remains yours, in structured, documented files that other systems can read.',
@@ -299,7 +366,7 @@ export const features: Feature[] = [
   {
     id: 'knowledge-api',
     name: 'Knowledge API',
-    group: 'portability',
+    group: 'integrate',
     summary:
       'A secure, read-only Knowledge API lets your own systems, such as an intranet or SharePoint site, show approved Lessons Learned and expertise from Tacitous.',
     value: 'Approved knowledge reaches people in the tools they already use, without copying it by hand or opening up the whole platform.',
@@ -308,6 +375,7 @@ export const features: Feature[] = [
       'Tenant Administrators create each integration and grant only the permissions it needs; secrets can be rotated and integrations revoked at any time',
       'Public communities only by default; managed and private communities must be selected one by one',
       'Read-only, rate-limited and recorded in an activity log. Your own systems, or our bespoke development team, build the connection on the other side',
+      'A one-way connector that publishes approved Lessons Learned and Best Practices into a SharePoint Online list is in pilot',
     ],
     screen: s('app-knowledge-api.webp', 'Knowledge API Integrations in Manage Tenant, with an intranet knowledge feed integration granted Lessons Learned and expertise read access to one managed community', 1440, 820),
     related: ['lessons-learned', 'expertise-map', 'semantic-export', 'data-export'],

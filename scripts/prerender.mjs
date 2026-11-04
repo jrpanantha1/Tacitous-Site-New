@@ -11,10 +11,32 @@ const { render, prerenderPaths } = await import(pathToFileURL(path.join(root, 'd
 const site = 'https://www.tacitous.com';
 const escape = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
+// Structured data so search engines can identify the organisation behind the site.
+const organisation = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${site}/#organisation`,
+      name: 'Tacitous',
+      url: `${site}/`,
+      logo: `${site}/icon-512.png`,
+      email: 'info@tacitous.com',
+      address: { '@type': 'PostalAddress', addressCountry: 'GB' },
+      sameAs: ['https://www.linkedin.com/company/tacitous', 'https://twitter.com/TacitousKM', 'https://www.facebook.com/Tacitous'],
+    },
+    { '@type': 'WebSite', '@id': `${site}/#website`, url: `${site}/`, name: 'Tacitous', inLanguage: 'en-GB', publisher: { '@id': `${site}/#organisation` } },
+  ],
+};
+const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
+
 function page(url) {
   const { html, meta } = render(url);
+  const notFound = url === '/404';
   const head = [
-    `<link rel="canonical" href="${site}${url === '/' ? '/' : url}" />`,
+    ...(notFound ? ['<meta name="robots" content="noindex" />'] : []),
+    ...(url === '/' ? [jsonLd(organisation)] : []),
+    ...(notFound ? [] : [`<link rel="canonical" href="${site}${url === '/' ? '/' : url}" />`]),
     `<meta property="og:title" content="${escape(meta.title)}" />`,
     `<meta property="og:description" content="${escape(meta.description)}" />`,
     `<meta property="og:url" content="${site}${url}" />`,

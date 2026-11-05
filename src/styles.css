@@ -783,3 +783,15 @@ a.card:hover, .link-card:hover { transform: translateY(-4px); box-shadow: 0 18px
 .logo-box img { max-height: 140px; max-width: 100%; width: auto; height: auto; object-fit: contain; border-radius: 10px; }
 .logo-name { font-weight: 600; color: var(--navy-900); }
 @media (max-width: 520px) { .logo-box { height: 100px; } .logo-box img { max-height: 100px; } }
+
+/* Pricing */
+.plan-card { display: flex; flex-direction: column; gap: 10px; }
+.plan-card h3 { margin: 0; }
+.plan-card .plan-price { margin: 0; color: var(--ink); }
+.plan-card .plan-price strong { font-size: 1.6rem; display: block; }
+.plan-card .plan-price span { color: var(--muted); font-size: 0.9rem; }
+.plan-card .plan-size { margin: 0; color: var(--ink); font-weight: 600; }
+.plan-points { list-style: none; padding: 0; margin: auto 0 0; display: grid; gap: 6px; }
+.plan-points li { display: flex; align-items: center; gap: 8px; color: var(--ink); font-size: 0.95rem; }
+.plan-points svg { color: var(--blue-500); flex: none; }
+.plan-note { margin-top: 24px; color: var(--muted); text-align: center; }

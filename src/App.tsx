@@ -16,6 +16,7 @@ import Organisations from './pages/Organisations';
 import Press from './pages/Press';
 import PressPost from './pages/PressPost';
 import Contact from './pages/Contact';
+import Pricing from './pages/Pricing';
 import { Privacy, Terms } from './pages/Legal';
 import NotFound from './pages/NotFound';
 import { useScrollReveal } from './components/Motion';
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="/organisations" element={<Organisations />} />
           <Route path="/press" element={<Press />} />
           <Route path="/press/:slug" element={<PressPost />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />

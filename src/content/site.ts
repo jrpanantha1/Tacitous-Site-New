@@ -44,6 +44,7 @@ export const nav: NavItem[] = [
       { label: 'Contact', to: '/contact', blurb: 'Talk to our team' },
     ],
   },
+  { label: 'Pricing', to: '/pricing' },
   { label: 'Press', to: '/press' },
 ];
 
@@ -121,6 +122,6 @@ export const faqs = [
   },
   {
     q: 'How is Tacitous priced?',
-    a: 'Pricing starts from a 500 user band, including implementation and one year of initial consultancy, and scales with your organisation.',
+    a: 'Plans start at USD 35 a month for one community and up to 20 users, on a 12-month term, with Team and Growth plans as you grow and quoted plans from 500 users. Registered charities and non-profits can apply for a free plan. All plans are subject to fair use of storage and bandwidth. See the pricing page for details.',
   },
 ];

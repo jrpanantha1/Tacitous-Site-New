@@ -63,6 +63,24 @@ export function trackBookCall() {
   try { w.gtag?.('event', 'book_call'); } catch { /* never block the visitor */ }
 }
 
+const REOPEN = 'tacitous:cookie-settings';
+
+// Opens the banner again so visitors can change or withdraw their choice at any time.
+export function openCookieSettings() {
+  window.dispatchEvent(new Event(REOPEN));
+}
+
+// Removes the first-party Google Analytics and LinkedIn cookies set on this site.
+function clearTrackingCookies() {
+  const host = location.hostname;
+  const domains = ['', host, '.' + host, '.' + host.split('.').slice(-2).join('.')];
+  for (const c of document.cookie.split(';')) {
+    const name = c.split('=')[0].trim();
+    if (!/^(_ga|_gid|_gat|_gcl|li_|lidc|bcookie|bscookie|UserMatchHistory|AnalyticsSyncHistory)/.test(name)) continue;
+    for (const d of domains) document.cookie = `${name}=; Max-Age=0; path=/${d ? `; domain=${d}` : ''}`;
+  }
+}
+
 export function CookieConsent() {
   const [choice, setChoice] = useState<Choice | null | undefined>(undefined);
 
@@ -76,13 +94,21 @@ export function CookieConsent() {
       if (a) trackBookCall();
     };
     document.addEventListener('click', onClick, true);
-    return () => document.removeEventListener('click', onClick, true);
+    const onReopen = () => setChoice(null);
+    window.addEventListener(REOPEN, onReopen);
+    return () => {
+      document.removeEventListener('click', onClick, true);
+      window.removeEventListener(REOPEN, onReopen);
+    };
   }, []);
 
   const decide = (c: Choice) => {
+    const before = readChoice();
     try { localStorage.setItem(KEY, c); } catch { /* storage unavailable: choice lasts for this visit */ }
     setChoice(c);
     if (c === 'accepted') loadTags();
+    // Withdrawing consent: remove the cookies and reload so the tags already running stop.
+    else if (before === 'accepted') { clearTrackingCookies(); location.reload(); }
   };
 
   if (choice !== null) return null;

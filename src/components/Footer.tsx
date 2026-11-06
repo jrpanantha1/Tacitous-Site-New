@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { openCookieSettings } from './CookieConsent';
 import { Mail, MapPin } from 'lucide-react';
 import { Logo } from './Logo';
 import { FacebookIcon, LinkedInIcon, XIcon } from './Icon';
@@ -52,6 +53,7 @@ export function Footer() {
         <span>
           <Link to="/privacy">Privacy &amp; GDPR</Link>
           <Link to="/terms">Terms of service</Link>
+          <button type="button" className="footer-link-button" onClick={openCookieSettings}>Cookie settings</button>
         </span>
       </div>
     </footer>

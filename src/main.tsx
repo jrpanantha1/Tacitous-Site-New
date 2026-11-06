@@ -2,6 +2,12 @@ import { StrictMode } from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter, HashRouter } from 'react-router';
 import App from './App';
+// Fonts are served from this site, so no visitor data goes to Google Fonts.
+import '@fontsource/source-sans-3/latin-400.css';
+import '@fontsource/source-sans-3/latin-500.css';
+import '@fontsource/source-sans-3/latin-600.css';
+import '@fontsource/source-sans-3/latin-700.css';
+import '@fontsource/source-sans-3/latin-800.css';
 import './styles.css';
 
 const container = document.getElementById('root')!;

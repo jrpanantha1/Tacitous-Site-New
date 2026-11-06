@@ -7,71 +7,91 @@ const ext = (href: string, label = href) => <a href={href} rel="noopener norefer
 export function Privacy() {
   return (
     <>
-      <PageHero eyebrow="Legal" title="Privacy and GDPR" />
+      <PageHero eyebrow="Legal" title="Privacy and GDPR">
+        <p>How Tacitous collects, uses and protects personal data on this website. Last updated 6 November 2026.</p>
+      </PageHero>
       <section className="section">
         <div className="container narrow prose">
-          <h2>Introduction</h2>
-          <p>We at Tacitous are committed to respecting your online privacy and recognize your need for appropriate protection and management of any personally identifiable information (“Personal Information”) you share with us. Tacitous has established this Online Privacy Policy so that you can understand the care with which we intend to treat your Personal Information. For the purposes of this statement, “Personal Information” means any information that may be used to identify an individual, including, but not limited to, a first and last name, a home or other physical address and an email address or other contact information, whether at work or at home. The following discloses our information gathering and dissemination practices for the Tacitous website <Link to="/">www.tacitous.com</Link>.</p>
+          <h2>Who we are</h2>
+          <p>This website, <Link to="/">www.tacitous.com</Link>, is run by Tacitous (“Tacitous”, “we”, “us”), based in the United Kingdom. We are the controller of the personal data described in this notice. You can contact us about privacy at any time at <a href={`mailto:${links.email}`}>{links.email}</a>.</p>
+          <p>This notice applies to visitors to this website, wherever they are, including in the United Kingdom and the European Economic Area. It is written to meet the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, the Privacy and Electronic Communications Regulations (PECR) and the EU General Data Protection Regulation (EU GDPR).</p>
+          <p>Personal data held in the Tacitous Next platform is handled under your organisation’s agreement with Tacitous, not under this notice.</p>
 
-          <h2>Information collection</h2>
-          <p>Tacitous doesn’t collect any kind of personal information when you use our applications.</p>
-          <p>We will ask you when we need information that personally identifies you (“Personal Information”) or allows us to contact you. Generally, this information is requested when you want to provide us with your personal data, to give us the opportunity to get in touch with you.</p>
-          <p>If you choose to create an account on Help Desk to contact the Tacitous Support Team, you enter your email address, name, and surname, password, location. This data is not listed publicly. It is saved within the Help Desk program and is used by the technical support only to get in touch with you.</p>
-          <p>When you enter a contest or other promotional event, we may ask for information such as your name, address, telephone number, and e-mail address so we can administer the contest and notify winners.</p>
-          <p>We use Google Analytics ({ext('https://www.google.com/analytics')}) to track our website traffic. It is a web analytics service offered by Google that tracks and reports website traffic.</p>
-          <p>We may use your IP address to help diagnose problems with our server and to administer our Web site. Your IP address is also used to help identify you and your time spent at our sites, and to gather broad demographic information. This allows us to see which parts of our site users are visiting. We do not link IP addresses to anything personally identifiable. This means, for instance, that a user’s session will be tracked, but the user will remain anonymous. We do not use this information for any other purposes.</p>
-          <p>When a user submits personal information, it is kept on a private server not accessible from the Internet. This limits the possibility of any malicious use of your information.</p>
-          <p>Credit Card Purchase: Tacitous doesn’t process credit card data itself. All payments are accepted through the payment service providers {ext('https://fastspring.com/', 'FastSpring')}, {ext('https://stripe.com/', 'Stripe')}, and {ext('https://www.paypal.com', 'PayPal')}. Information about your credit card is not kept in or recorded by Tacitous, it is simply passed through to the credit card company. In this respect, credit card purchase on the internet is like a credit card purchase at any store.</p>
-          <p>Such information as email address, name, and surname, transaction ID, a serial number are kept by Tacitous for further delivery and/or registration of the product.</p>
+          <h2>What we collect and why</h2>
+          <h3>When you send an enquiry</h3>
+          <p>When you use our <Link to="/contact">contact form</Link>, we collect your name, email address, organisation (optional), the topic you choose, your message and the page you sent it from. When you email us directly, we receive your email address and whatever you include in your message.</p>
+          <p>We use this only to reply to you and to discuss how we might work together. Our lawful basis is our legitimate interest in responding to enquiries, or taking steps at your request before entering into a contract. We keep enquiries for up to 24 months after our last contact with you, unless they lead to a contract, in which case we keep them for as long as the contract requires.</p>
 
-          <h2>GDPR (General Data Protection Regulation) privacy rights</h2>
-          <p>It gives citizens of the European Economic Area (EEA) certain rights when you use services that process personal data. To allow you to exercise these rights, we made changes, so you can now better control your data.</p>
-          <p>The GDPR provides the following rights for individuals, many of which apply whatever the basis of processing, although there are some exceptions:</p>
-          <ol>
-            <li>The right to be informed how personal data is processed</li>
-            <li>The right of access to their personal data</li>
-            <li>The right to rectification</li>
-            <li>The right to erasure</li>
-            <li>The right to restrict processing</li>
-            <li>The right to data portability</li>
-            <li>The right to object</li>
-            <li>Rights in relation to automated decision making and profiling</li>
-          </ol>
-          <p>This Tacitous privacy policy describes our practices in detail using simple language. Everything you need to know is here. If you have more questions, feel free to <Link to="/contact">contact our team</Link>.</p>
-          <p>If you believe we have the wrong data about you, or that your data is incomplete, or you want to delete your data, or you want to object to the processing of certain forms of data or just want to access it and receive a file from us containing this data, feel free to contact us.</p>
+          <h3>Protecting the contact form from abuse</h3>
+          <p>To stop automated spam, the form limits how many messages can be sent from one connection each hour. For this we store a one-way hashed form of your IP address with a count, set to expire after two hours. We never store your IP address itself. Our lawful basis is our legitimate interest in keeping the website secure.</p>
 
-          <h2>Use of personal information</h2>
-          <p>Tacitous software does not intend to transfer Personal Information without your consent to third parties who are not bound to act on Tacitous behalf unless such transfer is legally required. Similarly, it is against Tacitous policy to sell Personal Information collected online without consent. In short, Tacitous does not sell registrant information to lists. In some cases, Tacitous may use a visitor’s personal information to understand overall patterns for site usage, to contact the user for clarification on inaccurate information, or to follow up on a customer service issue. Personal information may include name, address, telephone number, etc.</p>
+          <h3>Running the website</h3>
+          <p>Like any website, our hosting provider (Google Firebase Hosting) processes technical information such as your IP address, browser type and the pages you request in order to deliver pages to you and keep the service secure. Our lawful basis is our legitimate interest in operating a secure website.</p>
 
-          <h2>Links to other sites</h2>
-          <p>This site contains links to other sites. Please be aware that Tacitous is not responsible for the privacy practices or the content of such Web Sites as well as any information they might collect, even though our name or logo may appear on those sites. We encourage you to be aware when you leave our site and to read the Privacy Statements of each and every Web site that you visit, as the privacy policy of those sites may differ from ours. Our Privacy Statement applies solely to <Link to="/">www.tacitous.com</Link>.</p>
+          <h3 id="cookies">Analytics and advertising measurement, only with your consent</h3>
+          <p>If you choose <strong>Accept</strong> in the cookie banner, we load:</p>
+          <ul>
+            <li><strong>Google Analytics 4</strong>, to understand how visitors use the site, for example which pages are visited and how visitors arrive. Google processes this data under its own {ext('https://policies.google.com/privacy', 'privacy policy')}.</li>
+            <li><strong>The LinkedIn Insight Tag</strong>, to measure how our LinkedIn adverts perform, including when a visitor clicks to book a call or sends the contact form. LinkedIn processes this data under its own {ext('https://www.linkedin.com/legal/privacy-policy', 'privacy policy')}.</li>
+          </ul>
+          <p>Neither is loaded unless you accept, and nothing changes if you decline. Our lawful basis is your consent, which you can withdraw at any time using <strong>Cookie settings</strong> at the bottom of every page.</p>
 
-          <h2>Third-party ads</h2>
-          <p>We use third-party advertising companies to serve ads when you visit our Web site. These companies may use aggregated information (not including your name, address, email address or telephone number) about your visits to this and other Web sites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, please see: {ext('https://www.networkadvertising.org', 'www.networkadvertising.org')}.</p>
+          <h3>Booking a call</h3>
+          <p>Our “Book a call” links take you to {ext(links.bookCall, 'zcal')}, a separate scheduling service. Information you enter there is collected by zcal under its own privacy policy and shared with us so we can hold the meeting.</p>
 
-          <h2 id="cookies">Analytics and advertising cookies</h2>
-          <p>With your consent, this website uses Google Analytics to understand how visitors use the site, for example which pages are visited and how visitors arrive. Google sets cookies for this and processes the data under its own {ext('https://policies.google.com/privacy', 'privacy policy')}. Google Analytics is only loaded if you choose Accept in the cookie banner.</p>
-          <p>With your consent, this website uses the LinkedIn Insight Tag to measure how our LinkedIn adverts perform, for example how many visitors from an advert book a call. LinkedIn sets cookies for this and processes the data under its own {ext('https://www.linkedin.com/legal/privacy-policy', 'privacy policy')}. The tag is only loaded if you choose Accept in the cookie banner. To change your choice, clear this site’s data in your browser and the banner will appear again.</p>
+          <h2>Cookies and similar technologies</h2>
+          <ul>
+            <li><strong>Your cookie choice</strong> (stored in your browser’s local storage as <code>tacitous-cookie-consent-v2</code>). Strictly necessary to remember whether you accepted or declined. It is not sent to us.</li>
+            <li><strong>Google Analytics cookies</strong> (names beginning <code>_ga</code>). Set only if you accept. Google’s standard expiry for these is up to two years.</li>
+            <li><strong>LinkedIn cookies</strong> (for example <code>li_sugr</code>, <code>bcookie</code>, <code>lidc</code>, <code>UserMatchHistory</code> and <code>AnalyticsSyncHistory</code>). Set only if you accept. LinkedIn describes them in its {ext('https://www.linkedin.com/legal/cookie-policy', 'cookie policy')}.</li>
+          </ul>
+          <p>To change your choice, select <strong>Cookie settings</strong> at the bottom of any page. If you withdraw consent, we remove the Google Analytics and LinkedIn cookies set on this site and stop loading the tags. Fonts and all other files on this site are served from our own domain, so no other third party receives your data when you browse.</p>
 
-          <h2>About the use of cookies and personal data</h2>
-          <p>This website uses cookies and similar technologies that store information on your PC, mobile phone or tablet. This is usually stored on the device’s browser. We use cookies to grant visitors’ access to different functions on our websites, differentiate the users from each other, and analyze our website’s performance and to utilize user-adapted interest-based advertising. This relies to some degree on the use of personally identifiable information from our users – as described below – and helps us improve our website and make our digital communication more relevant for our recipients.</p>
-          <p>Our visitors can voluntarily choose to accept the use of cookies through the settings on your browser or device. In your browser settings, you can adjust the preferences of which cookies your browser downloads. There, you can also delete all existing cookies that are stored on your browser or device. Please advise that if you block all cookies on your browser or device, this can result in a drop in our (and others) website performance and functions.</p>
+          <h2>Who we share personal data with</h2>
+          <p>We do not sell personal data. We share it only with service providers who process it on our behalf, under contracts that require them to protect it:</p>
+          <ul>
+            <li><strong>Google</strong> (Firebase Hosting, Cloud Functions and Cloud Firestore) to host the website and store enquiries, and Google Analytics if you accept cookies.</li>
+            <li><strong>GoDaddy</strong>, which hosts our email, so that enquiries reach our team.</li>
+            <li><strong>LinkedIn</strong>, if you accept cookies.</li>
+          </ul>
+          <p>We may also disclose personal data where the law requires it, or to professional advisers under a duty of confidentiality.</p>
 
-          <h2>Purpose of cookies on this website</h2>
-          <p>We collect a number of cookies from our users for various reasons, not least to track our own performance – but also to let us serve you content tailored to your own specifications, hopefully improving your overall experience of the website. Amongst other things, the cookies we use allow users to register to make comments, allow us to calculate how many visitors we have and how long they stay on our site.</p>
+          <h2>International transfers</h2>
+          <p>Some of our providers, including Google and LinkedIn, may process data outside the UK and the European Economic Area, for example in the United States. Where they do, the transfer is protected by recognised safeguards, such as the EU–US Data Privacy Framework and its UK Extension, or standard contractual clauses approved for UK and EU transfers.</p>
 
-          <h2>Contact – inquiry of access</h2>
-          <p>If you have an inquiry please contact us via <a href="mailto:support@tacitous.com">support@tacitous.com</a>.</p>
+          <h2>Your rights</h2>
+          <p>Under the UK GDPR and the EU GDPR you have the right to:</p>
+          <ul>
+            <li>be informed about how your personal data is used</li>
+            <li>access a copy of your personal data</li>
+            <li>have inaccurate data corrected</li>
+            <li>have your data erased</li>
+            <li>restrict how we use your data</li>
+            <li>receive your data in a portable format</li>
+            <li>object to processing based on our legitimate interests</li>
+            <li>withdraw consent at any time, without affecting processing before you withdrew it</li>
+          </ul>
+          <p>We do not make decisions about you based solely on automated processing.</p>
+          <p>To exercise any of these rights, email <a href={`mailto:${links.email}`}>{links.email}</a>. There is no charge, and we will reply within one month. We may need to confirm your identity first.</p>
 
-          <h2>Children’s privacy</h2>
-          <p>The Tacitous website is not structured to attract children. Accordingly, we do not intend to collect Personal Information from anyone we know to be under 13 years of age.</p>
+          <h2>Complaints</h2>
+          <p>If you are unhappy with how we have handled your data, please contact us first so we can try to put it right. You also have the right to complain to a data protection supervisory authority:</p>
+          <ul>
+            <li>In the UK, the Information Commissioner’s Office: {ext('https://ico.org.uk/make-a-complaint/', 'ico.org.uk')}.</li>
+            <li>In the European Economic Area, the authority in the country where you live or work, or where you believe the problem happened. The European Data Protection Board lists them: {ext('https://www.edpb.europa.eu/about-edpb/about-edpb/members_en', 'edpb.europa.eu')}.</li>
+          </ul>
 
-          <h2>YouTube API Services</h2>
-          <p>We use YouTube API Services in consistence with YouTube {ext('https://www.youtube.com/t/terms', 'Terms of Service')} (ToS) and {ext('https://policies.google.com/privacy', 'Google Privacy Policy')}.</p>
+          <h2>Keeping your data secure</h2>
+          <p>The website is served only over encrypted HTTPS connections. Enquiries are stored in access-controlled cloud storage that only our team can reach, and the credentials our systems use are kept in a secret manager, not in code.</p>
 
-          <h2>Your consent</h2>
-          <p>By using this Web site, you consent to the terms of our Online Privacy Policy and to Tacitous’s processing of Personal Information for the purposes given above. Should the Online Privacy Policy change, we intend to take every reasonable step to ensure that these changes are brought to your attention by posting all changes prominently on our web site for a reasonable period of time.</p>
-          <p>If you have any comments or questions regarding our Online Privacy Policy, please <Link to="/contact">contact us</Link>. While we cannot guarantee privacy perfection, we will address any issue to the best of our abilities as soon as possible.</p>
+          <h2>Children</h2>
+          <p>This website is intended for organisations and professionals. It is not aimed at children, and we do not knowingly collect personal data from anyone under 16.</p>
+
+          <h2>Links to other websites</h2>
+          <p>This site links to other websites, such as LinkedIn, YouTube and our partners’ sites. We are not responsible for their privacy practices, so please read their privacy notices when you visit them.</p>
+
+          <h2>Changes to this notice</h2>
+          <p>We will update this notice when our practices change, and show the date of the latest version at the top of this page.</p>
         </div>
       </section>
     </>

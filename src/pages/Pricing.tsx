@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
 import { links } from '../content/site';
 

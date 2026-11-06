@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { trackBookCall } from './CookieConsent';
 import { Link } from 'react-router';
 import { CheckCircle2, Send } from 'lucide-react';
 
@@ -28,6 +29,7 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
       }
       form.reset();
       setStatus('sent');
+      trackBookCall();
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
       setStatus('error');

@@ -49,7 +49,8 @@ export function Privacy() {
           <h2>Third-party ads</h2>
           <p>We use third-party advertising companies to serve ads when you visit our Web site. These companies may use aggregated information (not including your name, address, email address or telephone number) about your visits to this and other Web sites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, please see: {ext('https://www.networkadvertising.org', 'www.networkadvertising.org')}.</p>
 
-          <h2 id="cookies">LinkedIn advertising cookie</h2>
+          <h2 id="cookies">Analytics and advertising cookies</h2>
+          <p>With your consent, this website uses Google Analytics to understand how visitors use the site, for example which pages are visited and how visitors arrive. Google sets cookies for this and processes the data under its own {ext('https://policies.google.com/privacy', 'privacy policy')}. Google Analytics is only loaded if you choose Accept in the cookie banner.</p>
           <p>With your consent, this website uses the LinkedIn Insight Tag to measure how our LinkedIn adverts perform, for example how many visitors from an advert book a call. LinkedIn sets cookies for this and processes the data under its own {ext('https://www.linkedin.com/legal/privacy-policy', 'privacy policy')}. The tag is only loaded if you choose Accept in the cookie banner. To change your choice, clear this site’s data in your browser and the banner will appear again.</p>
 
           <h2>About the use of cookies and personal data</h2>

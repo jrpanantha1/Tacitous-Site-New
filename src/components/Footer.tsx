@@ -43,7 +43,7 @@ export function Footer() {
         <div>
           <h2 className="footer-head">Contact</h2>
           <a href={`mailto:${links.email}`} className="with-icon"><Mail size={16} />{links.email}</a>
-          <span className="with-icon"><MapPin size={16} />Nottingham, England</span>
+          <span className="with-icon"><MapPin size={16} />UK</span>
           <a href={links.bookCall}>Book a 30-minute call</a>
         </div>
       </div>

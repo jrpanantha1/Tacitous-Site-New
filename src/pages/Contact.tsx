@@ -28,7 +28,7 @@ export default function Contact() {
             </a>
             <div className="card contact-option static">
               <MapPin size={22} />
-              <div><h3>Where we are</h3><p>Nottingham, England</p></div>
+              <div><h3>Where we are</h3><p>UK</p></div>
             </div>
           </aside>
         </div>

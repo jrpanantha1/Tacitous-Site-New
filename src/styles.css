@@ -795,3 +795,11 @@ a.card:hover, .link-card:hover { transform: translateY(-4px); box-shadow: 0 18px
 .plan-points li { display: flex; align-items: center; gap: 8px; color: var(--ink); font-size: 0.95rem; }
 .plan-points svg { color: var(--blue-500); flex: none; }
 .plan-note { margin-top: 24px; color: var(--muted); text-align: center; }
+
+/* Cookie banner */
+.cookie-banner { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60; max-width: 720px; margin: 0 auto;
+  background: var(--navy-900); color: #fff; border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 14px; padding: 16px 20px; box-shadow: 0 18px 40px rgba(10, 18, 33, 0.35);
+  display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.cookie-banner p { margin: 0; flex: 1 1 320px; color: #dbe6fb; font-size: 0.95rem; }
+.cookie-banner a { color: #fff; }
+.cookie-actions { display: flex; gap: 10px; }

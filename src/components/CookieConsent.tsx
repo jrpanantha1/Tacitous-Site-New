@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 // LinkedIn Insight Tag, loaded only after the visitor accepts advertising cookies (UK PECR / GDPR).
 const LINKEDIN_PARTNER_ID = '6358524';
 const KEY = 'tacitous-cookie-consent';
+// Campaign Manager conversion "Book a call" (event-specific).
+const BOOK_CALL_CONVERSION_ID = 30398364;
 
 type Choice = 'accepted' | 'declined';
 
@@ -31,6 +33,12 @@ function loadLinkedInTag() {
   document.head.appendChild(s);
 }
 
+// Reports a "Book a call" conversion. Does nothing unless the visitor accepted and the tag is loaded.
+export function trackBookCall() {
+  const w = window as unknown as { lintrk?: (...args: unknown[]) => void };
+  try { w.lintrk?.('track', { conversion_id: BOOK_CALL_CONVERSION_ID }); } catch { /* never block the visitor */ }
+}
+
 export function CookieConsent() {
   const [choice, setChoice] = useState<Choice | null | undefined>(undefined);
 
@@ -38,6 +46,13 @@ export function CookieConsent() {
     const c = readChoice();
     setChoice(c);
     if (c === 'accepted') loadLinkedInTag();
+    // Any link to the booking page, anywhere on the site, counts as a "Book a call" conversion.
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as Element | null)?.closest?.('a[href*="zcal.co/tacitous"]');
+      if (a) trackBookCall();
+    };
+    document.addEventListener('click', onClick, true);
+    return () => document.removeEventListener('click', onClick, true);
   }, []);
 
   const decide = (c: Choice) => {

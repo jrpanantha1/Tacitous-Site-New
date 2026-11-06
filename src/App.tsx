@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { CookieConsent } from './components/CookieConsent';
 import { metaFor } from './routes';
 import Home from './pages/Home';
 import Platform from './pages/Platform';
@@ -64,6 +65,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <CookieConsent />
     </>
   );
 }

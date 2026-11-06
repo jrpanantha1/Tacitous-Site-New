@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { PageHero, SectionHead, CtaBand } from '../components/Blocks';
 import { links } from '../content/site';
 
@@ -78,24 +78,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="section section-tint" id="charities">
-        <div className="container split">
-          <SectionHead eyebrow="Charities and non-profits" title="Free for registered charities and non-profits" />
-          <div className="prose">
-            <p>
-              Registered charities, NGOs and non-profit organisations can apply
-              for Tacitous Next free of charge, with the same limits as the Starter plan: one community and up to 20 users.
-            </p>
-            <p>
-              Tell us about your organisation and your registration number, and what knowledge you want to capture and share.
-              We review each application, and free plans are reviewed once a year.
-            </p>
-            <Link to="/contact" className="text-link">Apply for a free plan <ArrowRight size={16} /></Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="fair-use">
+      <section className="section section-tint" id="fair-use">
         <div className="container split">
           <SectionHead eyebrow="Fair use" title="Fair use of storage and bandwidth" />
           <div className="prose">

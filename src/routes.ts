@@ -48,8 +48,8 @@ const base: Record<string, Meta> = {
     description: 'News, perspectives and announcements from Tacitous on knowledge management, AI and institutional intelligence.',
   },
   '/pricing': {
-    title: 'Pricing: Starter, Team, Growth and charity plans | Tacitous',
-    description: 'Tacitous Next plans from USD 35 a month for one community and 20 users. Free for registered charities and non-profits. Fair use applies.',
+    title: 'Pricing: Starter, Team, Growth and Organisation plans | Tacitous',
+    description: 'Tacitous Next plans from USD 35 a month for one community and 20 users. Fair use applies.',
   },
   '/contact': {
     title: 'Contact Tacitous | Book a Knowledge Management demo',

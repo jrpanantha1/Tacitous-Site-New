@@ -122,6 +122,6 @@ export const faqs = [
   },
   {
     q: 'How is Tacitous priced?',
-    a: 'Plans start at USD 35 a month for one community and up to 20 users, on a 12-month term, with Team and Growth plans as you grow and quoted plans from 500 users. Registered charities and non-profits can apply for a free plan. All plans are subject to fair use of storage and bandwidth. See the pricing page for details.',
+    a: 'Plans start at USD 35 a month for one community and up to 20 users, on a 12-month term, with Team and Growth plans as you grow and quoted plans from 500 users. All plans are subject to fair use of storage and bandwidth. See the pricing page for details.',
   },
 ];

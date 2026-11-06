@@ -13,7 +13,7 @@ export function Privacy() {
       <section className="section">
         <div className="container narrow prose">
           <h2>Who we are</h2>
-          <p>This website, <Link to="/">www.tacitous.com</Link>, is run by Tacitous Ltd (“Tacitous”, “we”, “us”), a company registered in England and Wales with its registered office at 71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom. We are the controller of the personal data described in this notice. You can contact us about privacy at any time at <a href={`mailto:${links.email}`}>{links.email}</a>.</p>
+          <p>This website, <Link to="/">www.tacitous.com</Link>, is run by Tacitous Ltd (“Tacitous”, “we”, “us”), a company registered in England and Wales (company number 15313336) with its registered office at 71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom. We are the controller of the personal data described in this notice. You can contact us about privacy at any time at <a href={`mailto:${links.email}`}>{links.email}</a>.</p>
           <p>This notice applies to visitors to this website, wherever they are, including in the United Kingdom and the European Economic Area. It is written to meet the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, the Privacy and Electronic Communications Regulations (PECR) and the EU General Data Protection Regulation (EU GDPR).</p>
           <p>Personal data held in the Tacitous Next platform is handled under your organisation’s agreement with Tacitous, not under this notice.</p>
 

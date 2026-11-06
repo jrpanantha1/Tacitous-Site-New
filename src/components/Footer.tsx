@@ -49,7 +49,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container footer-base">
-        <span>© {new Date().getFullYear()} Tacitous Ltd. Registered office: 71–75 Shelton Street, Covent Garden, London WC2H 9JQ.</span>
+        <span>© {new Date().getFullYear()} Tacitous Ltd, registered in England and Wales, company number 15313336. Registered office: 71–75 Shelton Street, Covent Garden, London WC2H 9JQ.</span>
         <span>
           <Link to="/privacy">Privacy &amp; GDPR</Link>
           <Link to="/terms">Terms of service</Link>

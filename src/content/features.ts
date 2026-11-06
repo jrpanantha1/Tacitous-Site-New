@@ -230,7 +230,7 @@ export const features: Feature[] = [
       'Optional community hierarchies to organise discovery',
     ],
     screen: s('app-community.webp', 'A community home page with discussions, Learnings, announcements, library, calendar, FAQs and polls'),
-    related: ['promote-to-learning', 'related-knowledge', 'lessons-learned'],
+    related: ['promote-to-learning', 'related-knowledge', 'knowledge-digest', 'lessons-learned'],
     journey: 'promote',
   },
   {
@@ -248,6 +248,24 @@ export const features: Feature[] = [
     screen: s('app-discussion.webp', 'A community discussion with replies from colleagues'),
     related: ['communities', 'expert-profiles', 'lessons-learned'],
     journey: 'connections',
+  },
+  {
+    id: 'knowledge-digest',
+    name: 'Community Knowledge Digest',
+    group: 'connect',
+    summary:
+      'A branded email newsletter that brings together the latest approved Learnings, new discussions, busy discussions, quizzes and polls from your communities, with links back into Tacitous.',
+    value: 'Members keep up with what their communities have learned without logging in every day, and come back to the knowledge that matters to them.',
+    details: [
+      'Content is selected automatically for each reporting period, with no newsletter to write by hand',
+      'Tenant Administrators set the schedule: weekly, fortnightly, monthly, quarterly, every six months or on demand',
+      'Each member only sees items from communities they are allowed to see',
+      'Preview the digest and send a test to yourself before it goes to members',
+      'Members subscribe or unsubscribe in their email preferences, and every digest has an unsubscribe link',
+      'An optional capability: ask us to switch it on for your organisation',
+    ],
+    screen: s('app-knowledge-digest.webp', 'Community Knowledge Digest email listing a new Learning, an active discussion and a new discussion for the reporting period, with a View more activity in Tacitous button', 1440, 903),
+    related: ['communities', 'lessons-learned', 'community-quizzes'],
   },
   {
     id: 'km-forms',

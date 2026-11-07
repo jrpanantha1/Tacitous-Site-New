@@ -15,6 +15,10 @@ const base: Record<string, Meta> = {
     title: 'Explore Tacitous Next features | Tacitous',
     description: 'Explore Tacitous Next with real screens: the Expertise Map, lessons learned, knowledge retention, community quizzes, privacy tools and integrations.',
   },
+  '/compare': {
+    title: 'Knowledge Management platform comparison: Tacitous vs SharePoint, Dgroups | Tacitous',
+    description: 'Compare Knowledge Management software: what Tacitous, Microsoft SharePoint and Dgroups include as standard, from Lessons Learned to After Action Reviews.',
+  },
   '/km-blueprint': {
     title: 'KM Blueprint: a proven Knowledge Management method | Tacitous',
     description: 'A practical blueprint for making Knowledge Management work, from methodology to the tools that put it into practice.',

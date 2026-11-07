@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, BookMarked, CalendarDays, Check, Handshake, KeyRound, Network, Plus, ShieldCheck, UserRoundX } from 'lucide-react';
+import { ArrowRight, BookMarked, CalendarDays, Check, Handshake, KeyRound, Network, Plus, Scale, ShieldCheck, UserRoundX } from 'lucide-react';
 import { ProductPreview } from '../components/ProductPreview';
 import { HeroBackdrop } from '../components/HeroBackdrop';
 import { ScrollStory } from '../components/ScrollStory';
@@ -95,6 +95,24 @@ export default function Home() {
           <div className="center-row">
             <Link to="/explore" className="btn btn-primary">Explore every feature <ArrowRight size={18} /></Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section section-tint cmp-home" aria-labelledby="compare-band">
+        <div className="container band">
+          <span className="band-icon"><Scale size={28} aria-hidden="true" /></span>
+          <div>
+            <p className="eyebrow eyebrow-dark">Compare platforms</p>
+            <h2 id="compare-band">Already using SharePoint or another collaboration platform?</h2>
+            <p>
+              You may already have the tools to manage information and conversations. Discover what purpose-built Knowledge
+              Management adds, from structured Lessons Learned and After Action Reviews to expertise discovery and critical
+              knowledge retention.
+            </p>
+          </div>
+          <Link to="/compare" className="btn btn-outline">
+            Compare KM Platforms <ArrowRight size={18} />
+          </Link>
         </div>
       </section>
 

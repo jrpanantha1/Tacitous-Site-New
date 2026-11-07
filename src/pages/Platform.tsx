@@ -143,7 +143,7 @@ export default function Platform() {
             <strong>Microsoft SharePoint:</strong> we are piloting a one-way connector that publishes approved Lessons Learned
             and Best Practices from Tacitous into a SharePoint Online list, so people can find validated knowledge where they
             already work. It does not import or index SharePoint content. <Link to="/contact">Talk to us</Link> if you would
-            like to take part.
+            like to take part. <Link to="/compare">See how Tacitous compares with SharePoint</Link>.
           </p>
         </div>
       </section>

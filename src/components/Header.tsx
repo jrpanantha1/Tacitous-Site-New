@@ -31,7 +31,7 @@ export function Header() {
         <nav className="primary-nav" aria-label="Main">
           <ul>
             {nav.map((item) => (
-              <li key={item.label} className={item.children ? 'has-menu' : undefined}>
+              <li key={item.label} className={[item.children ? 'has-menu' : '', item.optional ? 'nav-optional' : ''].join(' ').trim() || undefined}>
                 <NavLink to={item.to} className="nav-link">
                   {item.label}
                   {item.children && <ChevronDown size={15} aria-hidden="true" />}

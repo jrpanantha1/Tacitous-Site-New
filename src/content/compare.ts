@@ -7,7 +7,7 @@
 
 export const reviewed = 'November 2026';
 
-export type PlatformId = 'tacitous' | 'sharepoint' | 'dgroups' | 'lighthouse';
+export type PlatformId = 'tacitous' | 'sharepoint' | 'dgroups';
 
 export type Platform = { id: PlatformId; name: string; short: string; category: string; focus: string };
 
@@ -32,13 +32,6 @@ export const platforms: Platform[] = [
     short: 'Dgroups',
     category: 'Email-based community communication',
     focus: 'Mailing lists and group discussions with moderation, searchable archives, hashtags and, on Premium, files, wiki, calendar, polls and databases.',
-  },
-  {
-    id: 'lighthouse',
-    name: 'KMS Lighthouse',
-    short: 'KMS Lighthouse',
-    category: 'Operational knowledge delivery and AI-assisted answers',
-    focus: 'Contact centres, help centres, self-service, field service and onboarding, with instant answers, decision flows and service-platform integrations.',
   },
 ];
 
@@ -97,7 +90,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: { status: 'partial', note: 'Sites can host a community’s content and pages. Community discussion in Microsoft 365 sits in Viva Engage, a separate product.' },
       dgroups: { status: 'core', note: 'Groups with moderation, announcement-only and restricted groups, and subgroups.' },
-      lighthouse: nd(),
     },
   },
   {
@@ -112,7 +104,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: { status: 'partial', note: 'Community conversations in Microsoft 365 are provided by Viva Engage, a separate product.' },
       dgroups: { status: 'core', note: 'Email and web discussion with searchable archives, hashtags and muting.' },
-      lighthouse: nd(),
     },
   },
   {
@@ -126,7 +117,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: { status: 'available', note: 'In Microsoft Forms, a separate Microsoft 365 app.' },
       dgroups: { status: 'available', note: 'A Premium group feature.' },
-      lighthouse: nd(),
     },
   },
   {
@@ -141,7 +131,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: { status: 'available', note: 'Quizzes in Microsoft Forms, a separate Microsoft 365 app; not linked to Learnings or communities.' },
       dgroups: nd('Polls are documented; quizzes are not.'),
-      lighthouse: nd(),
     },
   },
 
@@ -158,7 +147,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: add(),
       dgroups: nd('A wiki and databases (Premium) can hold notes, but no Lessons Learned workflow is documented.'),
-      lighthouse: nd('Governed knowledge content for service teams; a Lessons Learned method is not documented.'),
     },
   },
   {
@@ -169,7 +157,7 @@ export const rows: Row[] = [
     description: 'The second Learning type, with the same structure, review and reuse tracking as Lessons Learned.',
     why: 'Spreads proven approaches across teams and sites instead of leaving them with one team.',
     link: '/explore#lessons-learned',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd() },
   },
   {
     id: 'aar',
@@ -179,7 +167,7 @@ export const rows: Row[] = [
     description: 'A structured review: what was expected, what actually happened, the results, what went well and what did not and why, what to repeat and what to do differently, with owned and dated actions.',
     why: 'Completed work informs the next piece of work, instead of the review ending as an unstructured meeting note.',
     link: '/explore#km-forms',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd() },
   },
   {
     id: 'knowledge-cafe',
@@ -189,7 +177,7 @@ export const rows: Row[] = [
     description: 'Records a facilitated Knowledge Café: facilitator, attendees, conversation points, critical issues and closing questions, tagged to expertise categories.',
     why: 'Insights from a group conversation are kept and connected to the subject, rather than lost when the session ends.',
     link: '/explore#km-forms',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd() },
   },
   {
     id: 'ckr',
@@ -199,7 +187,7 @@ export const rows: Row[] = [
     description: 'Knowledge Retention and Transfer records guide a structured conversation, from a Role Introduction and Conversation Points to a Closing Question with advice for a successor.',
     why: 'Preserves expertise at risk of being lost through retirement, turnover or organisational change.',
     link: '/solutions/critical-knowledge-retention',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd() },
   },
   {
     id: 'decisions',
@@ -209,7 +197,7 @@ export const rows: Row[] = [
     description: 'Records the question, what was decided, the rationale, alternatives considered, assumptions, risks, where it applies and when to review it.',
     why: 'People who inherit a decision can see why it was made, not only what was decided.',
     link: '/explore#km-forms',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd() },
   },
   {
     id: 'ideas',
@@ -223,7 +211,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: add(),
       dgroups: { status: 'partial', note: 'Ideas can be discussed or kept in a wiki or database (Premium); no ideas workflow is documented.' },
-      lighthouse: nd(),
     },
   },
   {
@@ -234,7 +221,7 @@ export const rows: Row[] = [
     description: 'The discussion author or a community manager selects contributions from a discussion and turns them into a Lesson Learned or Best Practice that links back to its source.',
     why: 'Valuable answers outlive the thread and become structured, reviewed knowledge.',
     link: '/explore#promote-to-learning',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd('Discussion archives are searchable, but turning them into structured records is not documented.'), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd('Discussion archives are searchable, but turning them into structured records is not documented.') },
   },
 
   // C. Expertise discovery
@@ -246,7 +233,7 @@ export const rows: Row[] = [
     description: 'Governed expertise categories, each with Designated Experts, showing the people, Learnings, records, communities and library resources connected to it.',
     why: 'Find the right expert or existing knowledge on a subject in one place, instead of asking around.',
     link: '/explore#expertise-map',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add('A governed expertise directory with designated experts needs to be built or added.'), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add('A governed expertise directory with designated experts needs to be built or added.'), dgroups: nd() },
   },
   {
     id: 'constellation',
@@ -256,7 +243,7 @@ export const rows: Row[] = [
     description: 'An interactive view of every expertise category and the experts and knowledge connected to it.',
     why: 'Shows where the organisation’s expertise sits, and where it is thin, at a glance.',
     link: '/explore#constellation',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add('An equivalent visualisation needs to be built or added.'), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add('An equivalent visualisation needs to be built or added.'), dgroups: nd() },
   },
   {
     id: 'pathway',
@@ -266,7 +253,7 @@ export const rows: Row[] = [
     description: 'Start from a question, a person or a subject and follow the links to Designated Experts, Learnings, communities and library resources.',
     why: 'People reach the knowledge and the colleagues they need through the organisation’s own expertise structure.',
     link: '/explore#how-it-works',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add('An equivalent route through governed expertise needs to be built.'), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add('An equivalent route through governed expertise needs to be built.'), dgroups: nd() },
   },
   {
     id: 'profiles',
@@ -280,7 +267,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: add('Profiles linked to governed expertise categories and KM contributions need to be built or added.'),
       dgroups: nd('Member management is documented; expertise profiles are not.'),
-      lighthouse: nd(),
     },
   },
 
@@ -297,7 +283,6 @@ export const rows: Row[] = [
       tacitous: { status: 'available', note: 'An optional capability, switched on for each organisation.' },
       sharepoint: add('A permission-aware digest of Learnings and community activity needs to be built.'),
       dgroups: { status: 'partial', note: 'Email digests and daily summaries of group messages, rather than a selection of structured knowledge.' },
-      lighthouse: nd(),
     },
   },
   {
@@ -308,7 +293,7 @@ export const rows: Row[] = [
     description: 'Members record where they applied a Learning and what happened, and reviewers can validate the reported benefits.',
     why: 'Shows which knowledge is actually used, and the value it creates.',
     link: '/explore#knowledge-reuse',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd() },
   },
   {
     id: 'related',
@@ -318,7 +303,7 @@ export const rows: Row[] = [
     description: 'Discussions show related Learnings and people who may be able to help, based on expertise categories and skills, respecting what each person can see.',
     why: 'Connects a question to existing answers and the people who know while it is being asked.',
     link: '/explore#related-knowledge',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: add(), dgroups: nd() },
   },
 
   // E. Governance and continuity
@@ -330,7 +315,7 @@ export const rows: Row[] = [
     description: 'A tenant-level package of chosen knowledge domains in documented JSON and CSV files with stable identifiers and checksums, approved and generated by the Platform Administrator.',
     why: 'Your organisation’s knowledge remains yours, in a structured form other systems can read.',
     link: '/explore#data-export',
-    cells: { tacitous: { status: 'built-in' }, sharepoint: nd('Not documented as a Knowledge Management package.'), dgroups: nd(), lighthouse: nd() },
+    cells: { tacitous: { status: 'built-in' }, sharepoint: nd('Not documented as a Knowledge Management package.'), dgroups: nd() },
   },
   {
     id: 'permissions',
@@ -343,7 +328,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: { status: 'core', note: 'Granular permission settings at site, list and item level.' },
       dgroups: { status: 'available', note: 'Restricted and moderated groups, with owner and moderator roles.' },
-      lighthouse: nd(),
     },
   },
   {
@@ -357,7 +341,6 @@ export const rows: Row[] = [
       tacitous: { status: 'built-in' },
       sharepoint: { status: 'available', note: 'SharePoint activity is recorded in the Microsoft Purview audit log.' },
       dgroups: { status: 'available', note: 'Activity log and email delivery tracking.' },
-      lighthouse: nd(),
     },
   },
 
@@ -373,7 +356,6 @@ export const rows: Row[] = [
       tacitous: df('Community libraries hold files and links; Tacitous is not a document or records management system.'),
       sharepoint: { status: 'core', note: 'Intranets, team sites and content management.' },
       dgroups: { status: 'available', note: 'Files and photos on Premium.' },
-      lighthouse: df(),
     },
   },
   {
@@ -387,21 +369,6 @@ export const rows: Row[] = [
       tacitous: df('Members receive notifications and digests, but discussion happens in communities, not by email.'),
       sharepoint: df(),
       dgroups: { status: 'core' },
-      lighthouse: df(),
-    },
-  },
-  {
-    id: 'service-delivery',
-    name: 'Contact-centre knowledge delivery',
-    category: 'infrastructure',
-    km: false,
-    description: 'Real-time answers, decision flows and guidance for agents, help centres and self-service, inside service platforms.',
-    why: 'Serves customer and employee support at the moment of an enquiry.',
-    cells: {
-      tacitous: df(),
-      sharepoint: df(),
-      dgroups: df(),
-      lighthouse: { status: 'core', note: 'Call centre, help centre, self-service and field service, with integrations such as Salesforce, Zendesk and Microsoft Teams.' },
     },
   },
   {
@@ -415,7 +382,6 @@ export const rows: Row[] = [
       tacitous: df('Tacitous builds the validated, attributed knowledge that AI depends on. It does not offer AI-generated answers.'),
       sharepoint: { status: 'available', note: 'Through Microsoft 365 Copilot and agents, licensed separately.' },
       dgroups: nd(),
-      lighthouse: { status: 'core', note: 'Instant answers in natural language, with an Azure OpenAI integration.' },
     },
   },
 ];
@@ -435,9 +401,5 @@ export const sources: Record<Exclude<PlatformId, 'tacitous'>, Source[]> = {
     { label: 'Dgroups pricing', url: 'https://dgroups.io/static/pricing' },
     { label: 'About Dgroups', url: 'https://dgroups.io/g/dgroups' },
     { label: 'Groups.io: about digests', url: 'https://groups.io/helpcenter/single/topicsmsgs/msgs_digests.htm' },
-  ],
-  lighthouse: [
-    { label: 'About KMS Lighthouse', url: 'https://kmslh.com/about-us/' },
-    { label: 'KMS Lighthouse for Microsoft Teams (AppSource)', url: 'https://appsource.microsoft.com/product/office/WA200007506' },
   ],
 };

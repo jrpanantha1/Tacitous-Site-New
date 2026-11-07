@@ -9,7 +9,6 @@ const views: { id: View; label: string }[] = [
   { id: 'all', label: 'Compare all platforms' },
   { id: 'sharepoint', label: 'Tacitous vs SharePoint' },
   { id: 'dgroups', label: 'Tacitous vs Dgroups' },
-  { id: 'lighthouse', label: 'Tacitous vs KMS Lighthouse' },
 ];
 
 export function StatusBadge({ status }: { status: Status }) {

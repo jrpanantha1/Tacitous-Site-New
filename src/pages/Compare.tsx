@@ -113,7 +113,7 @@ export default function Compare() {
           <Link to="/pricing" className="btn btn-ghost-light">Start a KM Community</Link>
         </div>
         <nav className="explore-jump" aria-label="On this page">
-          <a href="#purposes">Four purposes</a>
+          <a href="#purposes">Three purposes</a>
           <a href="#comparison">Comparison</a>
           <a href="#discussion-to-learning">Discussion to Learning</a>
           <a href="#methods">KM methods</a>
@@ -123,9 +123,9 @@ export default function Compare() {
 
       <section className="section" id="purposes">
         <div className="container">
-          <SectionHead eyebrow="Built for Knowledge Management. Not adapted for it." title="Four products, four different purposes">
+          <SectionHead eyebrow="Built for Knowledge Management. Not adapted for it." title="Three products, three different purposes">
             These products are not identical alternatives. SharePoint manages information. Dgroups supports community
-            communication. KMS Lighthouse delivers operational knowledge and answers. Tacitous provides integrated tools for
+            communication. Tacitous provides integrated tools for
             capturing, connecting, developing, preserving and reusing organisational knowledge.
           </SectionHead>
           <div className="cmp-platforms">

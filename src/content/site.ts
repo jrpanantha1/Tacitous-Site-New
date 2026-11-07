@@ -21,7 +21,7 @@ export const nav: NavItem[] = [
     children: [
       { label: 'Platform', to: '/platform', blurb: 'Tacitous Next, the Knowledge & Expertise Hub' },
       { label: 'Explore features', to: '/explore', blurb: 'Interactive tour of every capability, with real screens' },
-      { label: 'Compare platforms', to: '/compare', blurb: 'Tacitous alongside SharePoint, Dgroups and KMS Lighthouse' },
+      { label: 'Compare platforms', to: '/compare', blurb: 'Tacitous alongside SharePoint and Dgroups' },
       { label: 'KM Blueprint', to: '/km-blueprint', blurb: 'The methodology behind every implementation' },
       { label: 'Expertise Map', to: '/explore#network', blurb: 'See how people, expertise and knowledge connect' },
     ],

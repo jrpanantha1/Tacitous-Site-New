@@ -111,7 +111,7 @@ export default function Explore() {
             <Link to="/explore#journey-learning" className="text-link">See the Learning journey <ArrowRight size={16} /></Link>
           </p>
           <p className="note">
-            Wondering how these methods compare with SharePoint, Dgroups or KMS Lighthouse?{' '}
+            Wondering how these methods compare with SharePoint or Dgroups?{' '}
             <Link to="/compare" className="text-link">Compare KM platforms <ArrowRight size={16} /></Link>
           </p>
         </div>

@@ -17,7 +17,7 @@ const base: Record<string, Meta> = {
   },
   '/compare': {
     title: 'Knowledge Management platform comparison: Tacitous vs SharePoint, Dgroups | Tacitous',
-    description: 'Compare Knowledge Management software: what Tacitous, SharePoint, Dgroups and KMS Lighthouse include as standard, from Lessons Learned to After Action Reviews.',
+    description: 'Compare Knowledge Management software: what Tacitous, Microsoft SharePoint and Dgroups include as standard, from Lessons Learned to After Action Reviews.',
   },
   '/km-blueprint': {
     title: 'KM Blueprint: a proven Knowledge Management method | Tacitous',

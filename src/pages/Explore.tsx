@@ -110,6 +110,10 @@ export default function Explore() {
             Lessons Learned and Best Practices are captured as Learnings, with their own review and reuse workflow.{' '}
             <Link to="/explore#journey-learning" className="text-link">See the Learning journey <ArrowRight size={16} /></Link>
           </p>
+          <p className="note">
+            Wondering how these methods compare with SharePoint, Dgroups or KMS Lighthouse?{' '}
+            <Link to="/compare" className="text-link">Compare KM platforms <ArrowRight size={16} /></Link>
+          </p>
         </div>
       </section>
 

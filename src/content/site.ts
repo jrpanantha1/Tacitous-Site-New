@@ -11,7 +11,8 @@ export const links = {
   video: 'https://www.youtube.com/watch?v=LVfRJYdvgQ0',
 };
 
-export type NavItem = { label: string; to: string; children?: { label: string; to: string; blurb: string }[] };
+// `optional` items are hidden from the desktop bar when space is tight; they stay in a dropdown and the mobile menu.
+export type NavItem = { label: string; to: string; optional?: boolean; children?: { label: string; to: string; blurb: string }[] };
 
 export const nav: NavItem[] = [
   {
@@ -20,6 +21,7 @@ export const nav: NavItem[] = [
     children: [
       { label: 'Platform', to: '/platform', blurb: 'Tacitous Next, the Knowledge & Expertise Hub' },
       { label: 'Explore features', to: '/explore', blurb: 'Interactive tour of every capability, with real screens' },
+      { label: 'Compare platforms', to: '/compare', blurb: 'Tacitous alongside SharePoint, Dgroups and KMS Lighthouse' },
       { label: 'KM Blueprint', to: '/km-blueprint', blurb: 'The methodology behind every implementation' },
       { label: 'Expertise Map', to: '/explore#network', blurb: 'See how people, expertise and knowledge connect' },
     ],
@@ -44,6 +46,7 @@ export const nav: NavItem[] = [
       { label: 'Contact', to: '/contact', blurb: 'Talk to our team' },
     ],
   },
+  { label: 'Compare Platforms', to: '/compare', optional: true },
   { label: 'Pricing', to: '/pricing' },
   { label: 'Press', to: '/press' },
 ];
